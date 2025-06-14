@@ -13,9 +13,9 @@ public class largestNumber {
         int B = sc.nextInt();
 
         if(A>B){
-            System.out.println("The NUmber A Is Greater:"+ A);
+            System.out.println("The NUmber A Is Greater:"+  A);
         }else if (B>A){
-            System.out.println("THe Number B is Greater" + B);
+            System.out.println("THe Number B is Greater" +  B);
         }else  if(A==B) {
             System.out.println("Both Are Equal ");
         }else {
