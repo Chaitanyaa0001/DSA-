@@ -9,11 +9,10 @@ public class reversenumber {
         int number = sc.nextInt();
         
         while (number>0) {
+            
             int lastDigit =  number % 10;
-
             System.out.print(lastDigit);
             number=  number /10;
-            // System.out.println(number);
         }
        System.out.print(number);
     }
