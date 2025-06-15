@@ -1,4 +1,4 @@
-package conditionalStatements;
+package conditionalStatements.BasicifElse;
 
 import java.util.Scanner;
 
