@@ -16,7 +16,7 @@ public class binarysearch {
             else if(numbers[mid] < n){
                 start = mid + 1;
             }else {
-                                end = mid - 1;
+                end = mid - 1;
 
                 
             }
