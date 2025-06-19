@@ -1,4 +1,4 @@
-package conditionalStatements.BasicifElse;
+package APNACOLLEGEPRACTICE.conditionalStatements.BasicifElse;
 
 public class fever {
     public static void main(String[] args) {

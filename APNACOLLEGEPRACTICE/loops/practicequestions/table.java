@@ -1,4 +1,4 @@
-package loops.practicequestions;
+package APNACOLLEGEPRACTICE.loops.practicequestions;
 
 import java.util.Scanner;
 

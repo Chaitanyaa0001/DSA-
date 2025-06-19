@@ -1,4 +1,4 @@
-package Functions.practicequestions;
+package APNACOLLEGEPRACTICE.Functions.practicequestions;
 
 import java.util.Scanner;
 
@@ -12,13 +12,9 @@ public class sumofintegers {
             n = n/10;
             sum = sum + lastdigit;
         }
-
         n = n/10;
-
         return sum ;
-    }
-
-    
+    };
 
     public static void main(String[] args) {
 
@@ -29,7 +25,5 @@ public class sumofintegers {
 
         int result  = integer(n);
         System.out.println("The sum of a integer is: " + result);
-    }
-
-    
-}
+    };
+};

@@ -1,8 +1,8 @@
-package Functions.basicques;
+package APNACOLLEGEPRACTICE.Functions.basicques;
 
 import java.util.Scanner;
 
-import loops.practicequestions.factroial;
+import APNACOLLEGEPRACTICE.loops.practicequestions.factroial;
 
 public class bionomial {
     public static long factorial(  long number){

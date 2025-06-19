@@ -1,4 +1,4 @@
-package patterns.NumberPatterns;
+package APNACOLLEGEPRACTICE.patterns.NumberPatterns;
 
 import java.util.Scanner;
 

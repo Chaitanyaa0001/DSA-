@@ -1,4 +1,4 @@
-package loops.ForLoops;
+package APNACOLLEGEPRACTICE.loops.ForLoops;
 
 import java.util.Scanner;
 

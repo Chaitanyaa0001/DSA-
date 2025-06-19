@@ -1,4 +1,4 @@
-package loops.ForLoops;
+package APNACOLLEGEPRACTICE.loops.ForLoops;
 
 public class forloop {
      public static void main(String[] args) {
