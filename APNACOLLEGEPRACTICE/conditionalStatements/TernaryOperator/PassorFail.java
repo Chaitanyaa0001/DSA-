@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.conditionalStatements.TernaryOperator;
+package conditionalStatements.TernaryOperator;
 
 import java.util.Scanner;
 

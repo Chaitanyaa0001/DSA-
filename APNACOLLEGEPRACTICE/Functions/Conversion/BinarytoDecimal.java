@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.Functions.Conversion;
+package Functions.Conversion;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.conditionalStatements.BasicifElse;
+package conditionalStatements.BasicifElse;
 
 import java.util.*;
 

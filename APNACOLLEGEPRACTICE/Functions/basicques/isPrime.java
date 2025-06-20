@@ -1,10 +1,8 @@
-package APNACOLLEGEPRACTICE.Functions.basicques;
+package Functions.basicques;
 
 import java.util.Scanner;
 
 import javax.sound.sampled.SourceDataLine;
-
-import APNACOLLEGEPRACTICE.loops.practicequestions.sumofevenodd;
 
 public class isPrime{
 

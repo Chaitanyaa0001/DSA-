@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.Functions.basicques;
+package Functions.basicques;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.patterns.NumberPatterns;
+package patterns.NumberPatterns;
 
 import java.util.*;
 

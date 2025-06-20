@@ -1,8 +1,6 @@
-package APNACOLLEGEPRACTICE.Functions.Conversion;
+package Functions.Conversion;
 
 import java.util.Scanner;
-
-import APNACOLLEGEPRACTICE.patterns.BasicPatterns.starPattern;
 
 public class DecimaltoBinary {
 

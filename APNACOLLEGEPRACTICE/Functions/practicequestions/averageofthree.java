@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.Functions.practicequestions;
+package Functions.practicequestions;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package APNACOLLEGEPRACTICE.conditionalStatements.switchproblems;
+package conditionalStatements.switchproblems;
 
 import java.util.Scanner;
 
