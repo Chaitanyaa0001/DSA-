@@ -25,8 +25,6 @@ public class armsstrongnumber {
 
          boolean result = isArmstriong(n);
         System.out.println(result);
-
-        
     }
 }
 
