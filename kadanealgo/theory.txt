@@ -1,0 +1,6 @@
+kadans algorithm = 
+when we add :
++ve with +ve = +ve;
+when a Big +ve number + small -ve  == +ve ;\
+but when we add big -ve + small +ve = -ve (kadan recognies this thing )
+
