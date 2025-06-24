@@ -10,7 +10,7 @@ public class kadan {
             if(cs < 0){
                 cs = 0;
             }
-                                max =Math.max(cs, max);
+            max =Math.max(cs, max);
 
         }
         System.out.println("kadan also sub arrayu sum " + max);
