@@ -12,7 +12,7 @@ public class secondlargest {
                 findlargest = numbers[i];
                 for(int j = 0; j<= i;j++){
                     secondlargest = numbers[j];
-                
+            
                 if( ! (findlargest) == secondlargest){
                     secondlargest = numbers[j];
                 }
@@ -21,11 +21,10 @@ public class secondlargest {
         return secondlargest;
     }
     public static void main(String[] args) {
-        int numbers [] = {8,8,7,6,5} ;
+        int numbers [] = {8,8,7,6,5};
          int result =secondlargest(numbers);
          System.out.println(result);
 
-        
     }
     
 }

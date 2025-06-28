@@ -1,4 +1,4 @@
-package kadanealgo;
+package important;
 
 public class kadan {
 
