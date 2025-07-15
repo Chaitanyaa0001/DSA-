@@ -13,7 +13,7 @@ public class secondlargest {
                 for(int j = 0; j<= i;j++){
                     secondlargest = numbers[j];
             
-                if( ! (findlargest) == secondlargest){
+                if( (findlargest) == secondlargest){
                     secondlargest = numbers[j];
                 }
             }
