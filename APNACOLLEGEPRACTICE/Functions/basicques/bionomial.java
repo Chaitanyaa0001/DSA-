@@ -6,7 +6,7 @@ class Binomial {
 
     public static long binomialCoefficient(int n, int r) {
         if (r > n - r) {
-            r = n - r; // Since C(n, r) == C(n, n - r)
+            r = n - r; 
         }
 
         long result = 1;

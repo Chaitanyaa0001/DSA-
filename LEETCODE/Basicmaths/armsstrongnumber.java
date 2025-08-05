@@ -4,17 +4,16 @@ import java.util.Scanner;
 
 public class armsstrongnumber {
     public static boolean isArmstriong(int n){
+        int power = (int)Math.log10(n) + 1;
         int num = n;
-        int sum = 0;
-        int digits = String.valueOf(num).length();
-
-        while (num > 0 ){
+        int armnumber = 0;
+        while (num>0) {
             int lastdigit = num % 10;
-            sum += Math.pow(lastdigit,digits );
-            n/= 10;
-            return true;
+            armnumber = armnumber  + (int)Math.pow(lastdigit,power);
+            num /=10;
         }
-        return false ;
+        return armnumber == n ;
+ 
     }
 
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class armsstrongnumber {
         System.out.println("enter the value of n ");
         int n = sc.nextInt();
 
-         boolean result = isArmstriong(n);
+        boolean result = isArmstriong(n);
         System.out.println(result);
     }
 }
