@@ -2,43 +2,37 @@ package Functions.basicques;
 
 import java.util.Scanner;
 
-public class bionomial {
-    public static long factorial(  long number){
-        long f = 1;
-        for (int i = 1;i <=number;i++){
-            f= f*i;
-            System.out.println( "The factorial function " +f);
+class Binomial {
+
+    public static long binomialCoefficient(int n, int r) {
+        if (r > n - r) {
+            r = n - r; // Since C(n, r) == C(n, n - r)
         }
-        return number ;
+
+        long result = 1;
+        for (int i = 0; i < r; i++) {
+            result *= (n - i);
+            result /= (i + 1);
+        }
+
+        return result;
     }
-    public static long  bionomail ( int n, int r){
 
-        if (r>n){
-            System.out.println("r should not ");
-        }
-        long fn = factorial(n);
-        long fr = factorial(r);
-        long NmR = factorial(n-r);
-
-        long BIONOMIAL = 1;
-        BIONOMIAL =  fn / (fr * NmR); 
-
-        return BIONOMIAL;
-
-        }
-    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("enter the vauue of n to calculate the bionomial :");
+        System.out.print("Enter the value of n: ");
         int n = sc.nextInt();
-        System.out.println("enter the vauue of r to calculate the bionomial :");
+
+        System.out.print("Enter the value of r: ");
         int r = sc.nextInt();
 
-        bionomail(n, r);
+        if (r < 0 || r > n) {
+            System.out.println("Invalid values! r should be between 0 and n");
+            return;
+        }
 
-       
-        
+        long result = binomialCoefficient(n, r);
+        System.out.println("Binomial Coefficient C(" + n + "," + r + ") = " + result);
     }
-    
 }
