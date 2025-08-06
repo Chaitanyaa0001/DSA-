@@ -1,5 +1,6 @@
-package Functions.practicequestions;
+package LEETCODE.Basicmaths;
 
+// to calculate the digits of  a number  which the user inputs
 import java.nio.channels.DatagramChannel;
 import java.util.Scanner;
 
