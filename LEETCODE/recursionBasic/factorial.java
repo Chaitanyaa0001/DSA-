@@ -7,7 +7,6 @@ public class factorial {
         if(a>n) return 1;
         System.out.println(a);
         return  a * factoriall(a +1, n);
-        
     }
 
     public static void main(String[] args) {
