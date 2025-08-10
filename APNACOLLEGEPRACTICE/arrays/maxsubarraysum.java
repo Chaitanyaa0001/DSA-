@@ -17,7 +17,7 @@ public class maxsubarraysum {
                     max  = currentsum;
                 }
             }
-            
+
         }
         System.out.println(max);
 
