@@ -2,30 +2,28 @@ package arrays;
 
 public class prefixsum {
 
+    // to use prifix sum we need to follow some steps and to make a prefix array and then calculate this 
     public static void checkprefixsum(int[] numbers) {
-        int n = numbers.length;
-        int[] prefix = new int[n];
-        int max = Integer.MIN_VALUE;
-        int currentsum;
-
-        // Step 1: Create prefix sum array
+        int maxsum = Integer.MIN_VALUE;
+        int prefix [] = new int[numbers.length];
         prefix[0] = numbers[0];
-        for (int i = 1; i < n; i++) {
-            prefix[i] = prefix[i - 1] + numbers[i];
+        for(int i = 1; i < prefix.length; i++){
+            prefix[i] = prefix[i-1] + numbers[i];
         }
 
-        // Step 2: Find max subarray sum using prefix
-        for (int start = 0; start < n; start++) {
-            for (int end = start; end < n; end++) {
-                currentsum = (start == 0) ? prefix[end] : prefix[end] - prefix[start - 1];
-                System.out.println("Subarray (" + start + " to " + end + ") sum: " + currentsum);
-                if (currentsum > max) {
-                    max = currentsum;
+        for(int i = 0; i< numbers.length;i++){
+            int start = i;
+            for(int j = 0; j< numbers.length; j++){
+                int end = j;
+                int currentsum = 0;
+                currentsum = start== 0? prefix[end] :prefix[end] - prefix[start-1];
+                if(currentsum > maxsum){
+                    maxsum = currentsum;
                 }
             }
+            
         }
-
-        System.out.println("Maximum Subarray Sum = " + max);
+        System.out.println("max sum :"+ maxsum);
     }
 
     public static void main(String[] args) {
