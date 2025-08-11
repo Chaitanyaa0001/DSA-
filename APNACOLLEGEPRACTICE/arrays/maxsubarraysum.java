@@ -3,24 +3,22 @@ package arrays;
 public class maxsubarraysum {
 
     public static void maxsubarray(int [] numbers){
-        int max = Integer.MIN_VALUE;
-        int currentsum = 0;
-        for(int i = 0;i< numbers.length;i++){
+        
+        int maxsum = Integer.MIN_VALUE;
+        for(int i = 0; i< numbers.length; i++){
             int start = i;
-            for(int j = 1;j< numbers.length;j++){
-                int end = j;
-                currentsum =0;
-                for(int k = i;k <= j ;k++){
-                   currentsum += numbers[k];
-                }
-                if(currentsum > max){
-                    max  = currentsum;
+            for(int j = i + 1; j < numbers.length; j++){
+                int  end = j;
+                int current = 0;
+                for(int k = start; k <= end; k++){
+                    current += numbers[k];
+                };
+                if(current > maxsum){
+                    maxsum =current;
                 }
             }
-
         }
-        System.out.println(max);
-
+        System.out.println("the max sum of the array :" + maxsum);
     }
 
     public static void main(String[] args) {
