@@ -10,7 +10,7 @@ public class largestelement {
             }
         }
         return largest;
-    }
+    };
     public static void main(String[] args) {
         int numbers [] = {3,2,1,6,2};
        int result =  findlargest(numbers);
