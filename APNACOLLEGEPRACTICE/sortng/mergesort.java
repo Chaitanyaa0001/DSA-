@@ -37,6 +37,7 @@ public class mergesort {
         // right array 
         divide(arr, mid+1, end);
         // merging the array 
+        
        conquer(arr, start, mid, end);
     } 
     public static void main(String[] args) {
