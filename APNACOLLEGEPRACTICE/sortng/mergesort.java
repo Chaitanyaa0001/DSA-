@@ -21,12 +21,10 @@ public class mergesort {
         while (ptr2 <= end) {
             temp[x++] = arr[ptr2++];
         }
-
         // now export elemts form temp to nums array 
         for(int i = 0,j=start; i < temp.length; i++,j++){
             arr[j] = temp[i];
         }
-
     }   
     public static  void divide(int arr[], int start , int end){
         if(start >= end) return;
@@ -37,7 +35,6 @@ public class mergesort {
         // right array 
         divide(arr, mid+1, end);
         // merging the array 
-        
        conquer(arr, start, mid, end);
     } 
     public static void main(String[] args) {

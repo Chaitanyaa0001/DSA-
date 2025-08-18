@@ -2,7 +2,7 @@ package sortng;
 
 public class countsort {
    public static void count(int nums []){
-        // find range  
+        // find range   frequency 
         int largest = Integer.MIN_VALUE;
         for(int i = 0; i < nums.length; i++){
             largest = Math.max(largest, nums[i]);
