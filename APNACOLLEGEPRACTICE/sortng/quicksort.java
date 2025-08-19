@@ -26,7 +26,6 @@ public class quicksort {
     //         QuickSort(arr, pivit+1,end );
     //     }
     // }
-
     public static int partitionfirst(int arr[],int start,int end){
         int pivit = arr[start];
         int index = start+1;
@@ -62,5 +61,4 @@ public class quicksort {
             System.out.print(arr[i] + " ");
         }
     }
-    
 }
