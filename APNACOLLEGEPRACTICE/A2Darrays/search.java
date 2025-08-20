@@ -3,6 +3,7 @@ package A2Darrays;
 import java.util.Scanner;
 
 public class search {
+    // searhcing in the matrix
 
     public static boolean search(int matrix[][], int key){
         for(int i = 0; i< matrix.length; i++ ){
