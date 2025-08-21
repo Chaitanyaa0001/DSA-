@@ -22,6 +22,7 @@ public class search {
         
         int m = matrix[0].length;
         int key = 6;
+        
   
         Scanner sc = new Scanner(System.in);
         for(int i = 0; i< n; i++ ){
