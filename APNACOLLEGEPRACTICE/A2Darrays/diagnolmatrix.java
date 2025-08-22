@@ -11,7 +11,7 @@ public class diagnolmatrix {
     //             if(i == j){
     //                 sum += matrix[i][j];
     //             }else if(i+j == matrix.length-1){
-    //                 sum += matrix[i][j];
+    //                 sum += matrix[i][j   ];
     //             }
     //         }
     //     }
@@ -28,7 +28,7 @@ public class diagnolmatrix {
             }
         }
         return sum;
-        
+
     }
     public static void main(String[] args) {
         int matrix [][] = {{1,2,3},{4,5,6},{7,8,9}};
