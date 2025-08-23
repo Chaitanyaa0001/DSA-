@@ -11,9 +11,9 @@ public class tranposematrix {
             for(int j = 0; j<m;j++){
                 transpose[j][i] = matrix[i][j];
             }
-        }
+        };
         return transpose;
-    }
+    }; 
     public static void main(String[] args) {
         int matrix [][] = {{11,12,13},{21,22,23}};
         int [][] result =  Tranpose(matrix);
