@@ -14,9 +14,7 @@ public class secondlargest {
             }else if( numbers[i] > secondlargest && numbers[i] !=  largest){
                 secondlargest =  numbers[i];
             }
-
         }
-        
         return secondlargest;
     }
     public static void main(String[] args) {
