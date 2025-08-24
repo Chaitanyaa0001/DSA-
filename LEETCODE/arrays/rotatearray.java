@@ -26,7 +26,6 @@ public class rotatearray {
         for (int num : nums) {
             System.out.print(num + " ");
         };
-
-
+        
     };
 };
