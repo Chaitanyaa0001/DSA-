@@ -2,7 +2,7 @@ package LEETCODE.arrays;
 
 import java.util.Scanner;
 
-public class rotatearray {
+public class L189rotatearray {
     public static void roatearray(int nums[], int k){
         int n = nums.length;
         k = k % n;
