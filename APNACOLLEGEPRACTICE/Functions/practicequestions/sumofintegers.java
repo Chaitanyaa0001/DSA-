@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class sumofintegers {
     public static  int  integer( int n ){
         int sum = 0;
-
         
         while (n>0) {
             int lastdigit = n%10;
