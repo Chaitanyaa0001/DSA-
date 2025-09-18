@@ -24,6 +24,8 @@ public class L485MaxConsicutiveOnes {
     public static int findmaxconsecutiveones(int nums[]) {
         int number = 0;
         return 0;
+
+        
     }
     public static void main(String[] args) {
         int nums [] = {1,1,0,1,1,1};
