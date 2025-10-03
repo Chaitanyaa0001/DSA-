@@ -15,7 +15,18 @@ public class frequency {
                 hm.put(nums[i], 1);
             };
         }
-    }
+
+        for(int i = 0; i < queries.length; i++){
+            int val = queries[i];
+            if(hm.containsKey(val) == true){
+                System.out.println();
+            }else{
+                System.out.println("0   ");
+            }
+        }
+    };
+
+    
 
 
     public static void main(String[] args) {

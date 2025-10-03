@@ -12,13 +12,13 @@ public class iteration {
         hm.put("America", 10);
 
         // set 
-        // entryset 
         Set<String> keys =hm.keySet();
         System.out.println(keys);
+        // entryset 
+        System.out.println(hm.entrySet());
 
         for(String k : keys){
             // System.out.println(k +" " + "Value:" + hm.get(k) );
-            System.out.println(hm.entrySet());
         }
     }
 }
