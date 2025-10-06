@@ -18,9 +18,6 @@ public class quicksort {
     //         arr[index+1] = arr[end];
     //         arr[end] = temp; 
     //     return index+1;
-
-
-    
     // }
     
     // public static void QuickSortLast(int arr[], int start, int end){
