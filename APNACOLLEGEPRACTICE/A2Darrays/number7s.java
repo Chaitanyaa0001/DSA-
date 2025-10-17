@@ -14,6 +14,7 @@ public class number7s {
             }
         }
         return num;
+        
     }
     public static void main(String[] args) {
         int[][] array = { {4,7,8},{8,8,7} };
