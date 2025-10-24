@@ -20,6 +20,7 @@ public class prefixsum {
                 if(currentsum > maxsum){
                     maxsum = currentsum;
                 }
+                
             }
             
         }
