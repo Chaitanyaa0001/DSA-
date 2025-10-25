@@ -22,7 +22,7 @@ public class prefixsum {
                 }
                 
             }
-            
+       
         }
         System.out.println("max sum :"+ maxsum);
     }
