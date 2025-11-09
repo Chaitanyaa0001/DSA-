@@ -13,9 +13,5 @@ public class halfpyramid {
             }
             System.out.println();
         }
-
-
     }
 }
-
-
