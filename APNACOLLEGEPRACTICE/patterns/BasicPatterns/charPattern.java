@@ -15,6 +15,8 @@ public class charPattern {
                 ch++;
             }
             System.out.println("");
+
+            
         }
 
 
