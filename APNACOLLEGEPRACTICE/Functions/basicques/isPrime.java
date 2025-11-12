@@ -22,10 +22,11 @@ public class isPrime{
         for (int i = 2 ;i<=n ;i++){
             if (ISPRIME(i)){
                 System.out.print(i);
-            }
+            };
             System.out.print(" ");
-        }
-    }
+        };
+    };
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number to check weather it is prime or not :");
