@@ -2,25 +2,29 @@ package Functions.Conversion;
 
 import java.util.Scanner;
 
+import A2Darrays.search;
+
 public class BinarytoDecimal {
-    public static void BinToDec(int n ){
+   
+    public static int bintodecimal(int n) {
         int pow = 0;
-        int decimalNumber = 0;
-        while (n>0) {
-            int lastDigit = n % 10;
-            decimalNumber = decimalNumber + (int)(lastDigit * Math.pow(2, pow));
+        int number = 0;
+        while(n > 0){
+            int lastdigit = n % 10;
+            number = number +   lastdigit * (int) Math.pow(2, pow);
+            n = n / 10;
             pow ++;
-            n /=10;
         }
-        System.out.println("The binary number"  +  n  +  "is ocnverted into decimal :" +  decimalNumber );
+        return number;
     }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of n:");
         int n = sc.nextInt();
-
-        BinToDec(n);
+        bintodecimal(n);
+        System.out.println(bintodecimal(n));
+        // BinToDec(n);
         
     }
     
