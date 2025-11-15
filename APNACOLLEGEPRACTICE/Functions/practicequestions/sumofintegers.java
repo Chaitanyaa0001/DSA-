@@ -14,14 +14,10 @@ public class sumofintegers {
         n = n/10;
         return sum ;
     };
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Enter the integer :");
         int n  =  sc.nextInt();
-
         int result  = integer(n);
         System.out.println("The sum of a integer is: " + result);
     };

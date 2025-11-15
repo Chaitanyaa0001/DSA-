@@ -7,7 +7,8 @@ public class palindrome9 {
         int  lastdigit = n%10;
         reversenum =  reversenum * 10 + lastdigit;
         return reversenum;
-    }
+    };
+    
     public static  Boolean checkPalindrome( int n){
         int reversednum  =  reverse(n);
         if (n == reversednum ){
