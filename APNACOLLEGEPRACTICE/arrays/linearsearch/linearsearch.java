@@ -3,12 +3,13 @@ package arrays.linearsearch;
 public class linearsearch {
 
     public static int linearsearch(int numbers[], int key ){
-        for (int i = 0;i<=numbers.length;i++){
+        int n = numbers.length;
+        for (int i = 0; i <= n-1; i++){
             if(key == numbers[i]){
                 return i;
             }
         }
-        return 1;
+        return -1;
     }
     public static void main(String[] args) {
 
