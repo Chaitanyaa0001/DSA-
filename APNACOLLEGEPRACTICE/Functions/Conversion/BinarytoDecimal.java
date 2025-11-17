@@ -6,14 +6,15 @@ import A2Darrays.search;
 
 public class BinarytoDecimal {
    
-    public static int bintodecimal(int n) {
-        int pow = 0;
+    public static int bintodecimal(int n ) {
         int number = 0;
+        int power = 0;
+
         while(n > 0){
             int lastdigit = n % 10;
-            number = number +   lastdigit * (int) Math.pow(2, pow);
-            n = n / 10;
-            pow ++;
+            number = number + lastdigit * (int) Math.pow(2, power);
+            power ++;
+            n = n/10;
         }
         return number;
     }
@@ -24,7 +25,6 @@ public class BinarytoDecimal {
         int n = sc.nextInt();
         bintodecimal(n);
         System.out.println(bintodecimal(n));
-        // BinToDec(n);
         
     }
     
