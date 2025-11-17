@@ -2,29 +2,31 @@ package arrays;
 
 public class maxsubarraysum {
 
-    public static void maxsubarray(int [] numbers){
-        
+    public static int maxsubarray(int [] numbers){
         int maxsum = Integer.MIN_VALUE;
-        for(int i = 0; i< numbers.length; i++){
+        
+        for(int i = 0; i <= numbers.length-1; i++){
             int start = i;
-            for(int j = i + 1; j < numbers.length; j++){
-                int  end = j;
-                int current = 0;
-                for(int k = start; k <= end; k++){
-                    current += numbers[k];
-                };
-                if(current > maxsum){
-                    maxsum =current;
+            for(int j = i; j <= numbers.length-1; j++){
+                int sum = 0;
+                int end = j;
+                for(int k = start ; k <= end ; k++){
+                    sum = sum + numbers[k];
+                }
+                if(sum > maxsum){
+                   maxsum = sum;
                 }
             }
+            
         }
-        System.out.println("the max sum of the array :" + maxsum);
+        return maxsum;
     }
 
     public static void main(String[] args) {
 
         int numbers [] = {1,2,3,4,5};
-        maxsubarray(numbers);
+       int result =  maxsubarray(numbers);
+       System.out.println(result);
         
     }
 }
