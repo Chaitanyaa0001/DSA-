@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class pairarray {
 
-    public  static  void checkpair(int [] numbers){
-        for(int i = 0; i < numbers.length ; i++){
-            int current = numbers[i];
-            for(int j = i+1; j < numbers.length; j++){
-                System.out.print("(" + current +"," + numbers[j] + ")" );
+    public static void checkpair(int numbers[]){
+        for(int i = 0; i <= numbers.length-1; i++){
+            int currentElement = numbers[i];
+            for(int j = i+1; j <= numbers.length-1; j++){
+                System.out.print("(" + currentElement + "," + numbers[j] + ")");
             }
+            System.out.println();
         }
-        System.out.println();
     }
 
     public static void main(String[] args) {
