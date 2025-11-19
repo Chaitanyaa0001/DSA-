@@ -4,7 +4,6 @@ public class maxsubarraysum {
 
     public static int maxsubarray(int [] numbers){
         int maxsum = Integer.MIN_VALUE;
-        
         for(int i = 0; i <= numbers.length-1; i++){
             int start = i;
             for(int j = i; j <= numbers.length-1; j++){
@@ -17,7 +16,6 @@ public class maxsubarraysum {
                    maxsum = sum;
                 }
             }
-            
         }
         return maxsum;
     }
