@@ -11,6 +11,7 @@ public class pairarray {
                 System.out.print("(" + currentElement + "," + numbers[j] + ")");
             }
             System.out.println();
+            
         }
     }
 
