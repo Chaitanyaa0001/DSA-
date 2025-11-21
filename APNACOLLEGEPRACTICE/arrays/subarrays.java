@@ -12,6 +12,8 @@ public class subarrays {
                 System.out.println(" ");
             }
         }
+        // todays push 
+
     }
     
     public static void main(String[] args) {
