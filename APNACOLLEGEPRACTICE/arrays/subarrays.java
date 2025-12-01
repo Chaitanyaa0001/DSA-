@@ -3,17 +3,13 @@ package arrays;
 public class subarrays {
     public static void findSubarrays(int numbers[]){
         for(int i = 0; i <= numbers.length-1; i++){
-            int start = i;
             for(int j = i; j<= numbers.length-1; j++){
-                int end = j;
-                for(int k = start ; k <= end ; k++){
+                for(int k = i ; k <= j ; k++){
                     System.out.print(numbers[k] + " ");
                 }
                 System.out.println(" ");
             }
         }
-        // todays push 
-
     }
     
     public static void main(String[] args) {
