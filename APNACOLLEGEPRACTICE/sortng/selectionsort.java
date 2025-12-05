@@ -16,6 +16,7 @@ public class selectionsort {
                
         }
     }
+    
 
     // sorted array 
     public static void sortedarrprint(int arr[]){
