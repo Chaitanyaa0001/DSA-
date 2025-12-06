@@ -2,23 +2,20 @@ package LEETCODE.patterns.BasicPatterns;
 
 import java.util.Scanner;
 
-public class charPattern {
+public class S15ques{
     public static void main(String[] args) {
         Scanner sc  =  new Scanner(System.in);
         int n = sc.nextInt();
 
-        char ch = 'A';
-
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j<= i; j++){
-                System.out.print(ch);
-                ch++;
+        
+        for(int i = 0; i <= n-1; i++){
+            char alphabet  = 'A';
+            for(int j = 0; j <= n-i-1; j++){
+                System.out.print(alphabet);    
+                alphabet++; 
             }
             System.out.println("");
-
-            
         }
-
 
     }   
 }
