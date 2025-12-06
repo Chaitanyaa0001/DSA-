@@ -1,4 +1,4 @@
-package patterns.NumberPatterns;
+package LEETCODE.patterns.NumberPatterns;
 
 import java.util.Scanner;
 

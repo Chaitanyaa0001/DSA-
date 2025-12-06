@@ -66,7 +66,7 @@
 
 package LEETCODE.sortings;
 
-import patterns.BasicPatterns.starPattern;
+import LEETCODE.patterns.BasicPatterns.starPattern;
 
 public class L75sortColors {
 

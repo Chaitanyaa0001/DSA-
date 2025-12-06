@@ -1,6 +1,6 @@
 package sortng;
 
-import patterns.BasicPatterns.starPattern;
+import LEETCODE.patterns.BasicPatterns.starPattern;
 
 public class bubblesort {
     public static void bubble(int [] arr){
