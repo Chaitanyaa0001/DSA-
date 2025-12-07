@@ -2,7 +2,7 @@ package LEETCODE.Basicmaths;
 
 import java.util.Scanner;
 
-public class armsstrongnumber {
+public class S4_ArmsstrongNumber {
     public static boolean isArmstriong(int n){
         int power = (int)Math.log10(n) + 1;
         int num = n;
