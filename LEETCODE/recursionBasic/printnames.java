@@ -3,11 +3,12 @@ package LEETCODE.recursionBasic;
 import java.util.Scanner;
 
 public class printnames {
-    public static void printNames(String str, int n) {
-        if (n == 0) return;
+    public static void printNames(String str, int n ){
+        if (n == 0){
+            return;
+        }
+        printNames(str, n-1);
 
-        System.out.println(str);
-        printNames(str, n - 1);
     }
 
     public static void main(String[] args) {
