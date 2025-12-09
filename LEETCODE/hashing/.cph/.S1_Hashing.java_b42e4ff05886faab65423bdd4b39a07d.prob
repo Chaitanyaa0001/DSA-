@@ -1,0 +1,1 @@
+{"name":"Local: S1_Hashing","url":"c:\\Users\\HP\\OneDrive\\Desktop\\DSA\\LEETCODE\\hashing\\S1_Hashing.java","tests":[{"id":1765313621198,"input":"7\n1 2 3 2 4 3 2\n2\n3\n1","output":"2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Desktop\\DSA\\LEETCODE\\hashing\\S1_Hashing.java","group":"local","local":true}
