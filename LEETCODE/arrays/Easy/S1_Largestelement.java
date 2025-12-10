@@ -16,7 +16,7 @@ public class S1_Largestelement {
     public static void main(String[] args) {
        int [] arr = ArrayInput.takeArrayInput();
        int result =  findlargest(arr);
-       System.out.println(result);
+       System.out.println("Output" + result);
     }
     
 }
