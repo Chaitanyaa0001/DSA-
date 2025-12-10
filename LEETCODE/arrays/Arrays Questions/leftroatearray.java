@@ -1,4 +1,3 @@
-package LEETCODE.arrays;
 
 public class leftroatearray {
     public static void leftRotate(int nums[]){

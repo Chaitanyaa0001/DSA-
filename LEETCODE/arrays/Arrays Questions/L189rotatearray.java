@@ -1,4 +1,3 @@
-package LEETCODE.arrays;
 
 import java.util.Scanner;
 

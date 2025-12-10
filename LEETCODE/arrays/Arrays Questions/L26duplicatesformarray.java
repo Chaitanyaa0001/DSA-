@@ -30,8 +30,8 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-package LEETCODE.arrays;
 // with 2 pointers approch 
+
 public class L26duplicatesformarray {
     public static int removeDuplicates(int nums[]){
         int n = nums.length;

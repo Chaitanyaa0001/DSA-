@@ -24,7 +24,6 @@
 // 1 <= nums.length <= 100
 // 1 <= nums[i] <= 100
 
-package LEETCODE.arrays;
 
 public class L1572sortedAndRotated {
     public static boolean rotateandsort(int nums[]){

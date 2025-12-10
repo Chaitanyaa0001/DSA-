@@ -1,4 +1,3 @@
-package LEETCODE.arrays;
 // apna college solution 
 
 public class Rainwatertrap {

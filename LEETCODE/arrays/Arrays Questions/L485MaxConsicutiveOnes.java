@@ -18,7 +18,6 @@
 // 1 <= nums.length <= 105
 // nums[i] is either 0 or 1.
 
-package LEETCODE.arrays;
 
 public class L485MaxConsicutiveOnes {
     public static int findmaxconsecutiveones(int nums[]) {

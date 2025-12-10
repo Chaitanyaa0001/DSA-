@@ -1,4 +1,3 @@
-package LEETCODE.arrays;
 
 public class profitloss {
     public static int maxprofit(int prices[]){

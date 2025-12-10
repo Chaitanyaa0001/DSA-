@@ -33,7 +33,6 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
-package LEETCODE.arrays;
 import java.util.Scanner;
 
 public class L27RemoveElement {

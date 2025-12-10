@@ -1,4 +1,3 @@
-package LEETCODE.arrays;
 
 public class L268findmissingnumberinrange {
     public static int functionnumber(int nums[]){

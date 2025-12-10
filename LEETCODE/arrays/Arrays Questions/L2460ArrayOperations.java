@@ -24,7 +24,6 @@
 // 2 <= nums.length <= 2000
 // 0 <= nums[i] <= 1000
 
-package LEETCODE.arrays;
 
 public class L2460ArrayOperations {
     public static int[] operationonarray(int nums[]){

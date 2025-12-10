@@ -11,7 +11,6 @@
 // 1 <= nums.length <= 104
 // -231 <= nums[i] <= 231 - 1
 
-package LEETCODE.arrays;
 public class L283RemoveZeros {
 
     public static void removezero(int nums[]){
