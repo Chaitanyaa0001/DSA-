@@ -21,6 +21,7 @@ public class S2_HashingChar {
             System.out.println(hashArr[x - 'a']);
         }
 
+        sc.close();
 
 
     }
