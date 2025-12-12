@@ -37,8 +37,6 @@ public class S3_L_1572_SortedAndRotated {
             if(count > 1){
                 return false;
             }
-
-            
         }
         return true;
     }
