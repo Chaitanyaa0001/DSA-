@@ -1,4 +1,3 @@
-
 public class leftroatearray {
     public static void leftRotate(int nums[]){
         int temp = nums[0];
@@ -11,8 +10,8 @@ public class leftroatearray {
             System.out.print(nums[i] + "");
         }
         System.out.println();
-
     }
+    
     public static void main(String[] args) {
         int nums[] = {1,2,3,4,5};
         leftRotate(nums);
