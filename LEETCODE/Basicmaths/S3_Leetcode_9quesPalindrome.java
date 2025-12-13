@@ -3,7 +3,6 @@ package LEETCODE.Basicmaths;
 import java.util.Scanner;
 
 public class S3_Leetcode_9quesPalindrome{
-
     public static boolean CheckIfaNumberIsPalindrome(int n){
         int checkNum = 0;
         while (n != 0) {
@@ -18,7 +17,7 @@ public class S3_Leetcode_9quesPalindrome{
         }
     }
     // we can also solve it optimal approch as by only chcking the half of the number  and compare 
-    // in odd middle eleent does not matter s we will remove it 
+    // in odd middle element does not matters we will remove it 
     public static boolean OptimalApproch(int n){
         if(n < 0 ){
             return false;

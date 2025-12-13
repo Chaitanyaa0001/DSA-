@@ -32,7 +32,7 @@
 
 // with 2 pointers approch 
 
-public class L26duplicatesformarray {
+public class S3_Leetcode_26Duplicatesformarray {
     public static int removeDuplicates(int nums[]){
         int n = nums.length;
         int index = 0;
