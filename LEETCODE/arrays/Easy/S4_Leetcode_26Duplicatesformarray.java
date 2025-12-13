@@ -32,7 +32,9 @@
 
 // with 2 pointers approch 
 
-public class S3_Leetcode_26Duplicatesformarray {
+import LEETCODE.arrays.ArrayInput;
+
+public class S4_Leetcode_26Duplicatesformarray {
     public static int removeDuplicates(int nums[]){
         int n = nums.length;
         int index = 0;
@@ -45,7 +47,7 @@ public class S3_Leetcode_26Duplicatesformarray {
         return index + 1;
     }
     public static void main(String[] args) {
-        int nums[] = {0,0,1,1,1,2,2,3,3,4};
+       int nums[] = ArrayInput.takeArrayInput();
        int result =  removeDuplicates(nums);
        System.out.println(result);
     }
