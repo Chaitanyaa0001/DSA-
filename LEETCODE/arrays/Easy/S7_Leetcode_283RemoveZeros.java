@@ -11,7 +11,7 @@
 // 1 <= nums.length <= 104
 // -231 <= nums[i] <= 231 - 1
 
-public class L283RemoveZeros {
+public class S7_Leetcode_283RemoveZeros {
 
     public static void removezero(int nums[]){
         int n = nums.length;
