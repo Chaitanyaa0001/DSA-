@@ -33,7 +33,6 @@
             int q = sc.nextInt();
             for(int i = 0; i < q; i++){
                 int x = sc.nextInt();
-
                 System.out.println( hasharr[x]);
             }
         }
