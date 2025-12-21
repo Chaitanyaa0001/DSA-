@@ -6,7 +6,7 @@ public class HashMapdemo {
     public static void main(String[] args) {
         // to create a has map 
        HashMap<String, Integer> hm = new HashMap<>();
-    //    to insert 
+       //  to insert 
         hm.put("India", 150);
         hm.put("china", 130);
 
