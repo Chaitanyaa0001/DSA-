@@ -14,12 +14,25 @@
 // 1 <= nums.length <= 105
 // nums[i] is either 0 or 1.
 
-public class L485MaxConsicutiveOnes {
+import LEETCODE.arrays.ArrayInput;
+
+public class S11_Leetcode_485MaxConsicutiveOnes {
     public static int findmaxconsecutiveones(int nums[]) {
         int number = 0;
-        return 0;
+        int count = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == 1){
+                count++;
+                number = Math.max(count, number);
+            }else{
+                count = 0;
+            }
+        }
+        return count;
     }
     public static void main(String[] args) {
-        int nums [] = {1,1,0,1,1,1};
+        int nums [] =  ArrayInput.takeArrayInput();
+       int result =  findmaxconsecutiveones(nums);
+       System.out.println(result);
     }
 }

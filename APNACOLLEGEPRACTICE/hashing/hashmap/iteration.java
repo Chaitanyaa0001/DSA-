@@ -20,7 +20,7 @@ public class iteration {
           
 
           HashSet<String> set = new HashSet<String>();
-          
+
           set.add("ram ");
           set.add("shyam");
           set.add("lakshman");
@@ -29,8 +29,12 @@ public class iteration {
           
           Iterator it = set.iterator();
 
-          while (it.hasNext()) {
-            System.out.println(it.next());
+          // while (it.hasNext()) {
+          //   System.out.println(it.next());
+          // }
+
+          for (String city : set) {
+            System.out.println(city);
           }
     }
-}
+} 
