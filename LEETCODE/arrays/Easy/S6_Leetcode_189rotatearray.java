@@ -32,13 +32,11 @@ public class S6_Leetcode_189rotatearray {
     public static void  roateArrayBydPlaces(int[] nums, int k){
         int n = nums.length;
         k = k % n;
-
         swaping(nums, 0, n);
         swaping(nums, 0, k-1);
         swaping(nums, k+1, n-1);
         
     }
-
     public static  void swaping(int[] nums, int start, int end){
         while (end>=start) {
             int temp = nums[start];
