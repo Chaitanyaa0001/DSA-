@@ -33,6 +33,8 @@ public class iteration {
           //   System.out.println(it.next());
           // }
 
+
+          
           for (String city : set) {
             System.out.println(city);
           }

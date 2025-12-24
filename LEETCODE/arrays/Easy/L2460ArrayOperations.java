@@ -24,6 +24,7 @@
 // 2 <= nums.length <= 2000
 // 0 <= nums[i] <= 1000
 
+import LEETCODE.arrays.ArrayInput;
 
 public class L2460ArrayOperations {
     public static int[] operationonarray(int nums[]){
@@ -46,7 +47,7 @@ public class L2460ArrayOperations {
         return nums;
     }
     public static void main(String[] args) {
-        int nums[] = {1,2,2,1,1,0};
+        int nums[] = ArrayInput.takeArrayInput();
 
     }
     
