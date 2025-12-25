@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class search {
     // searhcing in the matrix
 
-    public static boolean search(int matrix[][], int key){
+    public static boolean searchm(int matrix[][], int key){
         for(int i = 0; i< matrix.length; i++ ){
             for(int j = 0; j < matrix[0].length; j ++){
                 if(matrix[i][j] == key){
@@ -37,7 +37,7 @@ public class search {
             System.out.println();
         }
 
-        search(matrix, key);
+        searchm(matrix, key);
         
     }
 }
