@@ -1,4 +1,4 @@
-package blindQues;
+package LEETCODE.arrays.blindQues;
 
 import LEETCODE.arrays.ArrayInput;
 

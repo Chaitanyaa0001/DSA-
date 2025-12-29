@@ -15,15 +15,30 @@ import java.util.Scanner;
 
 import LEETCODE.arrays.ArrayInput;
 
-public class S13_LongestSubarraywithsumK {
+public class S13_Positive_LongestSubarraywithsumK {
     public static int  bruteforce(int nums[], int k){
-        return -1;
-
+        int n  =nums.length;
+        int maxlen = 0;
+        for(int i = 0; i < n ; i++){
+            for(int j = i; j < n; j++){
+                int sum = 0;
+                // subarray 
+                for(int m = i; m <= j; m++){
+                    sum = sum + nums[m];
+                }
+                if(k == sum){
+                    maxlen = Math.max(maxlen, j-i+1);
+                }
+            }
+        }
+        return maxlen;
     }
+
     public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
-        bruteforce(nums, k);
+        int result = bruteforce(nums, k);
+        System.out.println(result);
     }
 }
