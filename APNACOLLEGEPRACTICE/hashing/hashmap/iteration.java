@@ -13,6 +13,8 @@ public class iteration {
         // hm.put("China", 120);
         // hm.put("Pakisatan", 0);
         // hm.put("America", 10);
+        
+
         // iteration on hashmap 
           // for (Entry<String, Number> keys : hm.entrySet()) {
           //   System.out.println(keys.getKey() + "->" + keys.getValue());
