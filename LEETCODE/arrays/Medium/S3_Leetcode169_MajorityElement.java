@@ -4,6 +4,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S3_Leetcode169_MajorityElement {
     public static int bruteforce(int nums[]){
+        
         return 0;
     }
     public static int better(int nums[]){
