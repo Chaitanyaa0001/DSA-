@@ -21,6 +21,8 @@ public class S6_leetocde121_profitloss {
         return maxprofit;
     }
 
+
+    
     public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
