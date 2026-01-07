@@ -22,23 +22,42 @@ public class S3_Leetcode169_MajorityElement {
     }
     public static int better(int nums[]){
         HashMap <Integer,Integer> l = new HashMap<>();
+        int n = nums.length;
 
         for(int i = 0; i < nums.length;i++){
-            l.put(nums[i], l.getOrDefault(l,0)+1);
+            l.put(nums[i], l.getOrDefault(nums[i],0)+1);
         }
-        for(int num : nums){
-          int i =  l.get(num);
-        }
-        return 0;
+        
+        for(int num: l.keySet()){
+            int i = l.get(num);
+            if(i > n / 2){
+                return num;
+            }
+        } 
+        return -1;
     }
     public static int optimalApproch(int nums[]){
-        return 0;
+        int elemnt = 0; 
+        int count = 0; 
+        
+        for(int i = 0; i < nums.length; i++){
+            if(count == 0){
+                elemnt = nums[i];
+                count = 1;
+            }else if (nums[i] == elemnt){
+                count++;
+            }else{
+                count--;
+            }
+        }
+        return elemnt;
     }
 
     public static void main(String[] args) {
         int [] arr = ArrayInput.takeArrayInput();
         // nums = {2,2,1,1,1,2,2};
-        int result = bruteforce(arr);
+        // int result = better(arr);
+        int result = optimalApproch(arr);
         System.out.println(result);
     }
 }
