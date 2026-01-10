@@ -49,6 +49,7 @@ public class S3_Leetcode_4sum {
     }
     public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
-
+        System.out.println(bruteforce(nums, 0));;
+        System.out.println(betterapproch(nums, 0));
     }
 }
