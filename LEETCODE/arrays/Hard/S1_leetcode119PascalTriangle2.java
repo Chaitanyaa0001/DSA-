@@ -34,7 +34,7 @@ public class S1_leetcode119PascalTriangle2 {
             ArrayList<Integer> ar = new ArrayList<>();
 
             for(int i = 0; i < row; i++){
-                x
+                
             }
             return ar;
         }
