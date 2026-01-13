@@ -12,11 +12,15 @@ public class S10_findrepeatingAndMissingElement {
         int actualsum =  ((n + 1) * n) / 2;
         int sum = 0;
 
+        // o(n) 
         for(int i = 0 ; i < n; i++){
             sum =  sum + nums[i] ;
         }
+
+        //  o(n)
         for(int i = 0; i < n; i++){
             int count = 0;
+            // o(n)
             for(int j = 0; j < n; j++){
                 if(nums[i] == nums[j]){
                     count++;
