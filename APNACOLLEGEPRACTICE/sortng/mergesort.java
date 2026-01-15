@@ -39,6 +39,8 @@ public class mergesort {
     } 
     public static void main(String[] args) {
         int arr [] = {3,1,2,4,1,5,2,6,4};
+
+        
         int n = arr.length;
         divide(arr, 0, n-1);
 
