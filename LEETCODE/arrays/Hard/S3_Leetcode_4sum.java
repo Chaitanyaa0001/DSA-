@@ -90,8 +90,8 @@ public class S3_Leetcode_4sum {
         int [] nums = ArrayInput.takeArrayInput();
 
 
-        // System.out.println(bruteforce(nums, 0));;
-        // System.out.println(betterapproch(nums, 0));
+        System.out.println(bruteforce(nums, 0));;
+        System.out.println(betterapproch(nums, 0));
         System.out.println(optimalapproch(nums, 0));
 
     }
