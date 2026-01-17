@@ -30,7 +30,6 @@ public class S3_Leetcode_4sum {
     public static List<List<Integer>> betterapproch(int[] nums, int target){
         int n = nums.length;
         HashSet<List<Integer>> ans = new HashSet<>();
-
         for(int i = 0 ; i < n ;i++){
             for(int j = i+1; j < n; j++){
                 HashSet <Integer> temp = new HashSet<>();
@@ -48,10 +47,52 @@ public class S3_Leetcode_4sum {
         return new ArrayList<>(ans);
     }
 
-    
+
+    public static List<List<Integer>> optimalapproch(int[] nums, int target){
+        int n = nums.length;
+        HashSet<List<Integer>> ans = new HashSet<>();
+
+        Arrays.sort(nums);
+
+        for(int i = 0; i < n; i ++){
+            if(i > 0 && nums[i] == nums[i-1]) continue;
+            for(int j = i+1; j < n; j++){
+                if(j > i+1 && nums[j] == nums[j-1]) continue;
+
+                int start = j+1;
+                int end = n-1;
+                while (end > start) {
+                    int sum = nums[i] + nums[j] +  nums[start] + nums[end];
+                    if(sum < target){
+                        start++;
+                    }else if(sum > target){
+                        end--;
+                    }else{
+                        List<Integer> list =  Arrays.asList(nums[i],nums[j],nums[start],nums[end]);
+                        ans.add(list);
+                        start++;
+                        end--;
+                        while ( end > start && nums[start] == nums[start-1]) {
+                            start++;
+                        }
+                        while ( end > start && nums[end] == nums[end+1]) {
+                            end--;
+                        }
+                    }
+                }
+            }
+        }
+
+        return new ArrayList<>(ans);
+    }
+
     public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
-        System.out.println(bruteforce(nums, 0));;
-        System.out.println(betterapproch(nums, 0));
+
+
+        // System.out.println(bruteforce(nums, 0));;
+        // System.out.println(betterapproch(nums, 0));
+        System.out.println(optimalapproch(nums, 0));
+
     }
 }
