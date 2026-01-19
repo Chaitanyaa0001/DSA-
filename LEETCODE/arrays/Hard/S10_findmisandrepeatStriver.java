@@ -16,6 +16,7 @@ public class S10_findmisandrepeatStriver {
                     count++;
                 }
             }
+            
             if (count == 2){
                 repating = i;
             }
