@@ -46,17 +46,20 @@ public class S11_CountInversions {
 
         return count;
     }
-    public static void mergesort(int[] nums , int start, int end){
-        if(end >= start){
-            int mid = start + (end-start)/2;
-            mergesort(nums, start, mid);
-            mergesort(nums, mid+1, end);
-            optimal(nums, start, mid, end);
-        }
+    public static int  mergesort(int[] nums , int start, int end){
+        int count = 0;
+        if(end <= start) return 0;
+        int mid = start + (end-start)/2;
+        count += mergesort(nums, start, mid);
+        count += mergesort(nums, mid+1, end);
+        count += optimal(nums, start, mid, end);
+
+        return count;
     }
     public static void main(String[] args) {
         //  {5,3,2,4,1} count = 8 total number of 8 pairs in which nums[i] > nums[j] 
         int[] nums = ArrayInput.takeArrayInput();
-        System.out.println( "count :" + bruteforce(nums));
+        // System.out.println( "count :" + bruteforce(nums));
+        System.out.println(mergesort(nums, 0, nums.length-1));
     }
 }
