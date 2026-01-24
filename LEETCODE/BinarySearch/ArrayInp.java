@@ -15,7 +15,6 @@ public class ArrayInp {
             arr[i] = sc.nextInt();
         }
 
-        int target  = sc.nextInt();
 
         return arr;
     }

@@ -11,18 +11,18 @@ public class S4_FloorAndCeil {
         int floor = -1;
         int ceil = -1;
         while ( end >= start) {
-            int mid = start + (end - start) / 2;
-            if(nums[mid] == x ){
-                floor =  nums[mid];
-                ceil = nums[mid];
-                break;
-            }else if(nums[mid] <= x ){
-                floor = nums[mid];
-                start = mid + 1;
+           int mid = start + (end - start) / 2;
+           if( nums[mid] == x){
+            floor = nums[mid];
+            ceil = nums[mid];
+            break;
+           }else if(nums[mid] > x){
+               ceil = nums[mid];
+               end = mid -1;
             }else{
-                ceil = nums[mid];
-                end = mid -1;
-            }
+               floor = nums[mid];
+            start = mid + 1;
+           }
         }
         return new int[]{floor,ceil};
     }
@@ -34,9 +34,9 @@ public class S4_FloorAndCeil {
 
         int [] res = floorAndCeil(nums, x);
 
-        for(int i = 0; i < res.length; i++){
-            System.out.println(res[i]);
-        }
+        
+        System.out.println("Floor: " + res[0]);
+        System.out.println("Ceil: " + res[1]);
         
     }
 }
