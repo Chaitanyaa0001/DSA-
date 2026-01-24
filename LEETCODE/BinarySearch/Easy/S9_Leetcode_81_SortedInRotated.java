@@ -30,7 +30,8 @@ public class S9_Leetcode_81_SortedInRotated {
             if(nums[start] == nums[mid] && nums[mid] == nums[end]){
                 start++; end--;
                 continue;
-            }
+            };
+            
             if(nums[mid] == target){
                 return true;
             };
