@@ -13,7 +13,7 @@ public class S11_FindLengthofRotattion {
             if(nums[start] <= nums[mid]){
                 if(nums[start] < ans){
                     ans = nums[start];
-                    index = start;
+                    index S12= start;
                 }
                 start = mid + 1;
             }else{
