@@ -33,6 +33,10 @@ public class S12_Leetcode_162PeakElement {
             }else if(nums[mid] > nums[mid+1]){
                 end = mid -1;
             }
+
+
+
+            
         }
         return -1;
     }
