@@ -22,7 +22,6 @@ public class S3_Leetcode_KokoBanana {
                 maxelementinarray =  piles[i];
             }
         }
-
         
         for(int  i = 0; i <= maxelementinarray; i++ ){
             if(totalHours(piles, i) <= h){
