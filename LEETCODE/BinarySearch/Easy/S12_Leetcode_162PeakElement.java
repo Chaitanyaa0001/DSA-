@@ -34,9 +34,6 @@ public class S12_Leetcode_162PeakElement {
                 end = mid -1;
             }
 
-
-
-            
         }
         return -1;
     }
