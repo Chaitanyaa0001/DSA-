@@ -1,4 +1,4 @@
-package LEETCODE.BinarySearch.Medium;
+package LEETCODE.BinarySearch.BinaryOnAnswers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,10 +82,13 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
         if(n % 2 == 1){
             return element;
         }
+
+        return  -1;
     }
 
-    public static binary_Approch(int[] nums1, int[] nums2){
+    public static int  binary_Approch(int[] nums1, int[] nums2){
         
+        return -1;
     }
     public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();

@@ -1,4 +1,4 @@
-package LEETCODE.BinarySearch.Medium;
+package LEETCODE.BinarySearch.BinaryOnAnswers;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

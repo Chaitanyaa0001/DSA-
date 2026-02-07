@@ -1,4 +1,4 @@
-package LEETCODE.BinarySearch.Easy;
+package LEETCODE.BinarySearch.BinaryOn1DArray;
 
 import LEETCODE.BinarySearch.ArrayInp;
 

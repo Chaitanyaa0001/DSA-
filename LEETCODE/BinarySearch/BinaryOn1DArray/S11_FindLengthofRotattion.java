@@ -1,4 +1,4 @@
-package LEETCODE.BinarySearch.Easy;
+package LEETCODE.BinarySearch.BinaryOn1DArray;
 
 public class S11_FindLengthofRotattion {
     public static int findRotation(int nums[]){

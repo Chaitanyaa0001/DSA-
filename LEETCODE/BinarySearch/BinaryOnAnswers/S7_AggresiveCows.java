@@ -1,4 +1,4 @@
-package LEETCODE.BinarySearch.Medium;
+package LEETCODE.BinarySearch.BinaryOnAnswers;
 
 import java.util.Arrays;
 import java.util.Scanner;
