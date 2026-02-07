@@ -86,12 +86,6 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
 
     public static binary_Approch(int[] nums1, int[] nums2){
         
-
-
-
-
-
-        S
     }
     public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
