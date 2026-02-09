@@ -43,11 +43,6 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         return false;
     }
 
-    public static boolean optimalApproch(int[][] arr, int target){
-        
-    }
-
-
     public static boolean optimal(int[][] matrix, int target){
         int n = matrix.length;
         int m = matrix[0].length;
@@ -65,6 +60,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         return false;
     }
     public static void main(String[] args) {
-        
+        // row wise sorted and col wise sorted
+        int grid [][] = {{1,2,3,4,5,6},{2,2,23,4,4,},{3,3,4,6,7,}};
     }
 }
