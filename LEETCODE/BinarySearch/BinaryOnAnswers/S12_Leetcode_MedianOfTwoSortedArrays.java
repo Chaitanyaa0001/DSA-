@@ -90,6 +90,8 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
         
         return -1;
     }
+
+    
     public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         
