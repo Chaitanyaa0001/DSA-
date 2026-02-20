@@ -1,4 +1,4 @@
-package LEETCODE.strings;
+package LEETCODE.strings.easy;
 
 import java.util.Scanner;
 

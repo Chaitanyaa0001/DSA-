@@ -1,4 +1,4 @@
-package LEETCODE.strings;
+package LEETCODE.strings.easy;
 
 public class S3_Leetcode1903_LargestOddNumberInAstring {
 

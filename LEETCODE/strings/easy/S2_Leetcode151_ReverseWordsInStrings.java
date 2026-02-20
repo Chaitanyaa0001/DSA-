@@ -1,4 +1,4 @@
-package LEETCODE.strings;
+package LEETCODE.strings.easy;
 
 public class S2_Leetcode151_ReverseWordsInStrings {
     public static String fun(String s){
