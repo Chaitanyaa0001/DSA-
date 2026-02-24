@@ -66,12 +66,47 @@ public class Insertion {
         }
         return head;
     }
+    public static Node insertbeforeValue(Node head, int value, int ele){
+                                                    
+
+        if(head == null) return null;
+        if(head.data == value){
+            Node temp = new Node(ele, head);
+            return temp;
+        }
+        Node temp = head ;
+        // prev = null;
+        // while (temp != null) {
+        //     if(temp.data == value){
+        //         Node x = new Node(ele);
+        //         prev.next = x;
+        //         x.next = temp;
+        //         break;
+        //     }
+        //     prev = temp;
+        //     temp = temp.next;
+        // }
+        // return head;
+        while (temp.next != null) {
+            if(temp.next.data == value){
+                Node x = new Node(ele);
+                x.next = temp.next;
+                temp.next = x;
+                break;
+            }
+            temp = temp.next;
+        }
+        return head;
+
+    }
     public static void main(String[] args) {
         int arr[] = {3,1,5,8};
         Node head = ArrayIntoLinkedList(arr);   
         // head
-        Node heaad = insertathead(head, 10);
-        printfun(heaad);
+        // Node heaad = insertathead(head, 10);
+        // printfun(heaad);
         //  tail at the end of ll
+        Node insertvalueatbeforek = insertbeforeValue(head, 10, 100);
+        printfun(insertvalueatbeforek);
     }
 }
