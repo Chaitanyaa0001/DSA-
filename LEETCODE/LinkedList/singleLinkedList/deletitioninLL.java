@@ -1,4 +1,4 @@
-package LEETCODE.LinkedList;
+package LEETCODE.LinkedList.singleLinkedList;
 
 import A2Darrays.number7s;
 
@@ -127,6 +127,7 @@ public class deletitioninLL {
     public static void main(String[] args) {
         int arr[] = {12,5,8,7,5,8,8,8,7,8,8};
         Node head = ArrayIntoLinkedList(arr);
+        
         // from head 
         // Node deletenode =  deleteNode(head);
         // printfun(deletenode);

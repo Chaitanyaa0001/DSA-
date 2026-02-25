@@ -1,4 +1,4 @@
-package LEETCODE.LinkedList;
+package LEETCODE.LinkedList.singleLinkedList;
 
 public class SearchinLL {
     static class Node {
