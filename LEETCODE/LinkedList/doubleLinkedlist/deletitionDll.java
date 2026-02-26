@@ -62,17 +62,70 @@ public class deletitionDll {
     }
     // ----------------------------------------------------------------------------------------
     public static Node kelement(Node head, int k ){
-        
+        if(head == null){
+            return null;
+        }
+        if(  k == 1 ){
+            Node temp = head;
+            head = head.next;
+            temp.next = null;
+            head.back = null;
+            return head;
+        }
+        Node temp = head; int count = 0;
+        while (temp != null) {
+            count++;
+            if(count == k){
+                break;
+            }
+            temp = temp.next;
+        }
+        Node prev = temp.back;
+        Node front = temp.next;
+
+        if(prev == null && front == null){
+            return null;
+        }else if( front == null){
+            prev.next = null;
+            temp.back = null;
+        }else{
+            prev.next = front;
+            front.back = prev;
+            temp.next = null;
+            temp.back = null;
+        }
+
+        return head ;
+    }
+
+    public static Node delfromnode(Node temp){
+        // in this the given node is not head 
+       Node prev = temp.back;
+       Node front = temp.next;
+
+       if( front == null){
+        prev.next = null;
+        temp.back = null;
+        return temp;
+       }
+       prev.next = front;
+       front.back = prev;
+       temp.next = null;
+       temp.back = null;
+       return temp;
+
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,4,6,7,9};
+        int arr[] = {10,20,30,40};
         Node head = arrtodll(arr);
         // head 
         // Node headd = headofdll(head);
         // printall(headd);
-        Node Tail = tailofdll(head);
-        printall(Tail);
         // tail 
+        // Node Tail = tailofdll(head);
+        // printall(Tail);
+        Node Kele = kelement(head, 1);
+        printall(Kele);
 
     }
 }
