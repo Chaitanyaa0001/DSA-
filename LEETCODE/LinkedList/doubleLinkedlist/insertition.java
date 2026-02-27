@@ -73,7 +73,7 @@ public class insertition {
     }
     // ---------------------------------------------------------------
     public static Node kelement(Node head, int ele, int k){
-        // if my list is empty return null 
+        // if my list is empty ret  urn null 
         boolean flag = true;
         if(head == null){
             return null;
@@ -86,7 +86,7 @@ public class insertition {
             }else{
                 System.out.println("false");
             }
-        }
+        } 
         if(k == 1){
             Node newNode = new Node(ele,head,null);
             head.back = newNode;
@@ -100,7 +100,7 @@ public class insertition {
                 break;
             }
             temp = temp.next;
-        }
+        } 
         if(temp == null){
             System.out.println("position out of bound");
             return head;
