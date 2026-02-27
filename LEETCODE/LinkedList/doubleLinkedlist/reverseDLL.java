@@ -42,21 +42,41 @@ public class reverseDLL {
         if(head == null ){
             return null;
         }
-        Node temp = head;
+         Node temp = head;
         Stack<Integer> st = new Stack<>();
         while (temp != null) {
-         st.push(temp.data);
-         temp = temp.next;
+            st.push(temp.data);
+            temp = temp.next;
         }
         Node temp2 = head;
         while (temp2 != null) {
-         temp2.data = st.pop();
-         temp2 = temp2.next;
+            temp2.data = st.pop();
+            temp2 = temp2.next;
         }
        
-         return head ;
+        return head ;
+    }
+    // ----------------------------------------------------
+    public static Node optimal (Node head){
+        if(head == null){
+            return null;
+        }
+        Node current = head;
+        Node prev = null;
+        while (current != null) {
+            prev = current.back;
+            current.back = current.next;
+            current.next = prev;
+
+            current = current.back;
+        }
+        return prev.back;
     }
     public static void main(String[] args) {
+        int[] arr = {10,20,30,40};
+        Node head = arrtodll(arr);
         
+        Node rev = optimal(head);
+        printall(rev);
     }
 }
