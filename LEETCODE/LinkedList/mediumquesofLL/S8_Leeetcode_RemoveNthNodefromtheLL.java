@@ -48,6 +48,7 @@ public class S8_Leeetcode_RemoveNthNodefromtheLL {
         slow.next = slow.next.next;
         return head;
     }
+    
     public static void main(String[] args) {
         int arr [] = {1,23,4,5,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
