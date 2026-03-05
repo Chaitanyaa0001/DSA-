@@ -19,7 +19,6 @@ public class S10_Leetcode_SortLinkedList {
             temp.val = pq.poll();
             temp = temp.next;
         }
-
         return head;
     }
 
@@ -27,6 +26,6 @@ public class S10_Leetcode_SortLinkedList {
         int[] arr = {6,4,2,2,4,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);  
     }
-    
+
 
 }
