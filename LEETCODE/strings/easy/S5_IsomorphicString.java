@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class S5_IsomorphicString {
-    public static Boolean slightslowapproch(String s, String t){
+    private static Boolean slightslowapproch(String s, String t){
         // Paper 
         // title 
 
@@ -36,7 +36,7 @@ public class S5_IsomorphicString {
       return true;
     }
 
-    public static Boolean optimalApproch(String s, String t){
+    private static Boolean optimalApproch(String s, String t){
         int n = s.length();
         HashMap<Character,Character>  SmT = new HashMap<>();
         HashMap<Character,Character>  Tms  = new HashMap<>();
@@ -64,7 +64,7 @@ public class S5_IsomorphicString {
         }
         return true;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String t = sc.nextLine();

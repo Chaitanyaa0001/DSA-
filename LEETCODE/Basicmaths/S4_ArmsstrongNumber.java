@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class S4_ArmsstrongNumber {
-    public static boolean isArmstriong(int n){
+    private static boolean isArmstriong(int n){
         int number = 0;
         int pow = (int) Math.log10(n) +1;
         int original = n;
@@ -31,7 +31,7 @@ public class S4_ArmsstrongNumber {
             return false;
         }
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the value of n ");
         int n = sc.nextInt();

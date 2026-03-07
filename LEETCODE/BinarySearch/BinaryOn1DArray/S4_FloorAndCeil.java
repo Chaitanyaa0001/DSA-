@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S4_FloorAndCeil {
-    public static int[]  floorAndCeil(int[] nums, int x){
+    private static int[]  floorAndCeil(int[] nums, int x){
         int n = nums.length;
         int start = 0, end = n-1;
         int floor = -1;
@@ -27,7 +27,7 @@ public class S4_FloorAndCeil {
         return new int[]{floor,ceil};
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         int [] nums = ArrayInp.takeArrayInput();
         int x =  5;

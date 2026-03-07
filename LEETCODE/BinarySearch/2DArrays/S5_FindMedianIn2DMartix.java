@@ -4,7 +4,7 @@ import java.util.List;
 
 public class S5_FindMedianIn2DMartix {
 
-    public static int bruteforce(int matrix[][]){
+    private static int bruteforce(int matrix[][]){
         List<Integer> list = new ArrayList<>();
         int n  = matrix.length;
         int m = matrix[0].length;
@@ -16,7 +16,7 @@ public class S5_FindMedianIn2DMartix {
         Collections.sort(list);
         return  (n * m) / 2;
     }
-    public static int upperbound(int matrix[], int x){
+    private static int upperbound(int matrix[], int x){
         int low = 0; int high = matrix.length - 1;
         int ans = 0;
         while (low <= high) {
@@ -30,7 +30,7 @@ public class S5_FindMedianIn2DMartix {
         }
         return low;
     }
-    public static int helperCountnumbers(int matrix[][], int num){
+    private static int helperCountnumbers(int matrix[][], int num){
         int n =  matrix.length;
         int m = matrix[0].length;
         int count = 0;
@@ -39,7 +39,7 @@ public class S5_FindMedianIn2DMartix {
         }
         return count;
     }
-    public static int  optimalApproch(int matrix[][]){
+    private static int  optimalApproch(int matrix[][]){
         int n = matrix.length;
         int m = matrix[0].length;
         int max = Integer.MIN_VALUE;
@@ -68,7 +68,7 @@ public class S5_FindMedianIn2DMartix {
 
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [][] matrix = {{1,4,9},
                           {2,5,6},
                           {3,7,8}};

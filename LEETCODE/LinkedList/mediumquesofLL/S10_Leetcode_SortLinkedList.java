@@ -6,7 +6,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S10_Leetcode_SortLinkedList {
-    public static Node bruteforce(Node head){
+    private static Node bruteforce(Node head){
         if(head == null || head.next == null){
             return head;
         }
@@ -24,7 +24,7 @@ public class S10_Leetcode_SortLinkedList {
         return head;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] arr = {6,4,2,2,4,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);  
     }

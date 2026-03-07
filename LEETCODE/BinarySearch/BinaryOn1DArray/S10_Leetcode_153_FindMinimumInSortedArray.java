@@ -34,7 +34,7 @@ import LEETCODE.BinarySearch.ArrayInp;
 
 public class S10_Leetcode_153_FindMinimumInSortedArray {
 
-    public static int findMin(int[] nums){
+    private static int findMin(int[] nums){
         int n = nums.length;
         int start = 0; 
         int end = n - 1;
@@ -54,7 +54,7 @@ public class S10_Leetcode_153_FindMinimumInSortedArray {
         return ans;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         System.out.println(findMin(nums));
 

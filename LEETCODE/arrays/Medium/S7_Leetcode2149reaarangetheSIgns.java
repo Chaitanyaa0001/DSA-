@@ -4,7 +4,7 @@ import java.util.*;
 
 import LEETCODE.arrays.ArrayInput;
 public class S7_Leetcode2149reaarangetheSIgns {
-    public static int[]  brutesignArrays(int [] nums){
+    private static int[]  brutesignArrays(int [] nums){
         int n = nums.length;
         ArrayList <Integer> pos = new ArrayList<>(); 
         ArrayList <Integer> neg = new ArrayList<>(); 
@@ -23,7 +23,7 @@ public class S7_Leetcode2149reaarangetheSIgns {
         return nums ;
     }
 
-    public static int [] optimal(int[] nums){
+    private static int [] optimal(int[] nums){
         int n = nums.length;
         int [] ans =  new int[n];
         int x = 0;
@@ -40,7 +40,7 @@ public class S7_Leetcode2149reaarangetheSIgns {
         }
         return ans;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
         // int[] ans = brutesignArrays(nums);

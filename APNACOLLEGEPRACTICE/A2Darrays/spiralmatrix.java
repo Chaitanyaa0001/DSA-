@@ -1,7 +1,7 @@
 package A2Darrays;
 
 public class spiralmatrix {
-    public static int[] spiralOrder(int[][] matrix) {
+    private static int[] spiralOrder(int[][] matrix) {
         int result[] = new int[matrix.length * matrix[0].length];
         int j = 0;
         int startrow = 0, endrow = matrix.length - 1;
@@ -38,7 +38,7 @@ public class spiralmatrix {
         return result;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int matrix[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int ans[] = spiralOrder(matrix);
         for (int x : ans) {

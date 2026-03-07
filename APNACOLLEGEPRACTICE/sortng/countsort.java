@@ -1,7 +1,7 @@
 package sortng;
 
 public class countsort {
-   public static void count(int nums []){
+   private static void count(int nums []){
         // find range   frequency 
         int largest = Integer.MIN_VALUE;
         for(int i = 0; i < nums.length; i++){
@@ -21,12 +21,12 @@ public class countsort {
             }
         }
     }
-    public static void printval(int nums[]){
+    private static void printval(int nums[]){
         for(int i = 0; i< nums.length; i++){
             System.out.print(nums[i] + " ");
         }
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr [] = {2,0,2,1,1,0};
         count(arr);
         printval(arr);

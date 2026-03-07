@@ -1,7 +1,7 @@
 package sortng;
 
 public class mergesort {
-    public static void conquer(int arr[], int start, int mid, int end){
+    private static void conquer(int arr[], int start, int mid, int end){
         int ptr1 = start; 
         int ptr2 = mid+1;
         int temp [] = new int [end-start+1];
@@ -26,7 +26,7 @@ public class mergesort {
             arr[j] = temp[i];
         }
     }   
-    public static  void divide(int arr[], int start , int end){
+    private static  void divide(int arr[], int start , int end){
         if(start >= end) return;
         // mid 
         int mid = start + ( end - start)/2;
@@ -37,7 +37,7 @@ public class mergesort {
         // merging the array 
        conquer(arr, start, mid, end);
     } 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr [] = {3,1,2,4,1,5,2,6,4};
 
         

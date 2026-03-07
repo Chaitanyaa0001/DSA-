@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class S1quesCounts {
 
-    public static long returnNumberOfCounts(long n) {
+    private static long returnNumberOfCounts(long n) {
         long count = 0;
         if(n == 0){
             return 1;
@@ -19,12 +19,12 @@ public class S1quesCounts {
         return count;
     }
 
-    public static int returnNumberOfCountsByLog(int n){
+    private static int returnNumberOfCountsByLog(int n){
         int  digits = (int) Math.log10(n) +1;
         return  digits;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value");
         // long n = sc.nextLong();

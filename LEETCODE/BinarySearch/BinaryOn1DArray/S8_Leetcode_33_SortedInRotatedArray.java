@@ -22,7 +22,7 @@ package LEETCODE.BinarySearch.BinaryOn1DArray;
 
 import LEETCODE.BinarySearch.ArrayInp;
 public class S8_Leetcode_33_SortedInRotatedArray {
-    public static int seacth(int[] nums, int target){
+    private static int seacth(int[] nums, int target){
         int n = nums.length;
         int start = 0;
         int end = n - 1;
@@ -49,7 +49,7 @@ public class S8_Leetcode_33_SortedInRotatedArray {
         }
         return -1;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // nums = [4,5,6,7,0,1,2], target = 0 output = 4;
         //  nums = [4,5,6,7,0,1,2], target = 3 output -1;
         int [] nums = ArrayInp.takeArrayInput();

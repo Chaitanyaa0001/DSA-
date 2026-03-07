@@ -3,7 +3,7 @@ import java.util.*;
 
 import LEETCODE.BinarySearch.ArrayInp;
 public class S13_KthElementOf2Sortedarrays {
-    public static int binary_ApprochKhelement(int[] a, int[] b, int k){
+    private static int binary_ApprochKhelement(int[] a, int[] b, int k){
         int n1= a.length; int n2 = b.length;
         if(n1 > n2) return binary_ApprochKhelement(b, a, k);
         int n = n1 + n2;
@@ -29,7 +29,7 @@ public class S13_KthElementOf2Sortedarrays {
         }
         return -1;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
 
     }

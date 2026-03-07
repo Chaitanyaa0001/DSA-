@@ -6,7 +6,7 @@ import A2Darrays.search;
 
 public class BinarytoDecimal {
    
-    public static int bintodecimal(int n ) {
+    private static int bintodecimal(int n ) {
         int number = 0;
         int power = 0;
 
@@ -19,7 +19,7 @@ public class BinarytoDecimal {
         return number;
     }
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of n:");
         int n = sc.nextInt();

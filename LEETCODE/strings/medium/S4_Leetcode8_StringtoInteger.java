@@ -12,7 +12,7 @@ import java.util.Scanner;
 import A2Darrays.number7s;
 
 public class S4_Leetcode8_StringtoInteger {
-    public static int myAtoi(String s){
+    private static int myAtoi(String s){
         int n = s.length();
         int i = 0;
         int sign = 1;
@@ -41,7 +41,7 @@ public class S4_Leetcode8_StringtoInteger {
         return num * sign;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }

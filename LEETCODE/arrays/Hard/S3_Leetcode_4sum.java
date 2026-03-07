@@ -8,7 +8,7 @@ import java.util.*;
 import LEETCODE.arrays.ArrayInput;
 
 public class S3_Leetcode_4sum {
-    public static List<List<Integer>> bruteforce(int[] nums, int target){
+    private static List<List<Integer>> bruteforce(int[] nums, int target){
         HashSet<List<Integer>>  set =  new HashSet<>();
         int n = nums.length;
         for(int i = 0; i < n; i++){
@@ -27,7 +27,7 @@ public class S3_Leetcode_4sum {
         return new ArrayList<>(set);
     }
 
-    public static List<List<Integer>> betterapproch(int[] nums, int target){
+    private static List<List<Integer>> betterapproch(int[] nums, int target){
         int n = nums.length;
         HashSet<List<Integer>> ans = new HashSet<>();
         for(int i = 0 ; i < n ;i++){
@@ -48,7 +48,7 @@ public class S3_Leetcode_4sum {
     }
 
 
-    public static List<List<Integer>> optimalapproch(int[] nums, int target){
+    private static List<List<Integer>> optimalapproch(int[] nums, int target){
         int n = nums.length;
         HashSet<List<Integer>> ans = new HashSet<>();
 
@@ -86,7 +86,7 @@ public class S3_Leetcode_4sum {
         return new ArrayList<>(ans);
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
 
 

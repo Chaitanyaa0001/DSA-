@@ -26,7 +26,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class S3_L_1572_SortedAndRotated {
-    public static boolean rotateandsort(int nums[]){
+    private static boolean rotateandsort(int nums[]){
         int count = 0;
         int n = nums.length;
         for(int i = 0; i < n; i++){
@@ -40,7 +40,7 @@ public class S3_L_1572_SortedAndRotated {
         }
         return true;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[]  nums = ArrayInput.takeArrayInput();
         boolean result = rotateandsort(nums);
         System.out.println(result);

@@ -27,7 +27,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class L2460ArrayOperations {
-    public static int[] operationonarray(int nums[]){
+    private static int[] operationonarray(int nums[]){
         int index = 0;
         for(int i = 0; i < nums.length-1;i++){
             if(nums[i]  == nums[i+1]){
@@ -46,7 +46,7 @@ public class L2460ArrayOperations {
         
         return nums;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int nums[] = ArrayInput.takeArrayInput();
 
     }

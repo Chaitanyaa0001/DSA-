@@ -5,13 +5,13 @@ import java.util.Collections;
 
 public class inbuiltsort {
    
-    public static void sortedarr(Integer [] arr){
+    private static void sortedarr(Integer [] arr){
         for(int i =0; i< arr.length; i++ ){
             System.out.print(    arr[i]  );
         }
         System.out.println();
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Integer arr [] = {4,2,6,1,5,3};
 
         // in ascending order 

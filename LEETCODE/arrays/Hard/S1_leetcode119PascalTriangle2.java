@@ -11,7 +11,7 @@ public class S1_leetcode119PascalTriangle2 {
         // jitna n ki value hai utne hi elements print krne hai 
 
 
-        public static int helperfunction(int row,int col){
+        private static int helperfunction(int row,int col){
                 int ans = 1;
             for(int i = 0; i < col; i++ ){
                 ans = ans * (row-i) ;
@@ -19,7 +19,7 @@ public class S1_leetcode119PascalTriangle2 {
             }
             return ans;
         }
-        public static List<Integer> getrow(int row){
+        private static List<Integer> getrow(int row){
             ArrayList<Integer> list = new ArrayList<>();
 
             int res = 1;
@@ -30,7 +30,7 @@ public class S1_leetcode119PascalTriangle2 {
             return list;
         }
 
-        public static List<Integer> optimalapproch(int row){
+        private static List<Integer> optimalapproch(int row){
             ArrayList<Integer> ar = new ArrayList<>();
 
             for(int i = 0; i < row; i++){
@@ -38,7 +38,7 @@ public class S1_leetcode119PascalTriangle2 {
             }
             return ar;
         }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
         int row = sc.nextInt();

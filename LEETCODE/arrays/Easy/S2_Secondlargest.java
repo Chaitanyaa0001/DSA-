@@ -1,7 +1,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class S2_Secondlargest {
-    public static  int secondlargest(int[] numbers){
+    private static  int secondlargest(int[] numbers){
         int n = numbers.length;
         int secondlargest = Integer.MIN_VALUE;
         int largest = Integer.MIN_VALUE;
@@ -16,7 +16,7 @@ public class S2_Secondlargest {
         }
         return secondlargest;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] numbers = ArrayInput.takeArrayInput();
         int result =secondlargest(numbers);
          System.out.println(result);

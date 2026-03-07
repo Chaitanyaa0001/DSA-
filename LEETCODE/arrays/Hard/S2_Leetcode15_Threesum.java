@@ -28,7 +28,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S2_Leetcode15_Threesum {
 
-    public static List<List<Integer>> bruteforce(int[] nums){
+    private static List<List<Integer>> bruteforce(int[] nums){
         HashSet<List<Integer>> set = new HashSet<>();
 
         int n = nums.length;
@@ -46,7 +46,7 @@ public class S2_Leetcode15_Threesum {
         return new ArrayList<>(set);
     }
 
-    public static List<List<Integer>> betterapproch(int[] nums){
+    private static List<List<Integer>> betterapproch(int[] nums){
         int n = nums.length;
         HashSet <List<Integer>> ans = new HashSet<>();
         for(int i = 0; i < n; i++){
@@ -66,7 +66,7 @@ public class S2_Leetcode15_Threesum {
         return new ArrayList<>(ans);
     }
 
-    public static List<List<Integer>> optimalpproch(int[] nums){
+    private static List<List<Integer>> optimalpproch(int[] nums){
         int n = nums.length;
         Arrays.sort(nums);
         HashSet<List<Integer>> set = new HashSet<>();
@@ -97,7 +97,7 @@ public class S2_Leetcode15_Threesum {
         }
         return new ArrayList<>(set);
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
       //  Input: nums = [-1,0,1,2,-1,-4]
         int[] nums = ArrayInput.takeArrayInput();
         // System.out.println(bruteforce(nums));

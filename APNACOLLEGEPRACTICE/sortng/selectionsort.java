@@ -1,7 +1,7 @@
 package sortng;
 
 public class selectionsort {
-    public static void selectionSort( int  [] arr ){
+    private static void selectionSort( int  [] arr ){
         int n = arr.length;
         for(int i = 0; i < n; i++ ){
             int smallest = i;
@@ -19,13 +19,13 @@ public class selectionsort {
     
 
     // sorted array 
-    public static void sortedarrprint(int arr[]){
+    private static void sortedarrprint(int arr[]){
         for(int i = 0; i< arr.length; i++){
             System.out.print(arr[i] + " ");
         }
         System.out.println(" ");
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr [] = {5,4,7,8,4,5,2,1};
         System.out.println("selection sort algo");
         selectionSort(arr);

@@ -3,7 +3,7 @@ package LEETCODE.arrays.blindQues;
 import LEETCODE.arrays.ArrayInput;
 
 public class Leetcode_1920_Buildarrayfrompermutation {
-    public static int[] functionnntocalculatearray(int nums[]){
+    private static int[] functionnntocalculatearray(int nums[]){
         // brute force 
         int n = nums.length;
         int[] temp = new int[n];
@@ -15,7 +15,7 @@ public class Leetcode_1920_Buildarrayfrompermutation {
     }
 
     // optimal solution 
-    public static int[] optimalarrproch(int [] nums){
+    private static int[] optimalarrproch(int [] nums){
         int n = nums.length;
         for(int i = 0; i < n; i++){
             nums[i] = nums[i] + (nums[nums[i]] % n) * n;
@@ -26,7 +26,7 @@ public class Leetcode_1920_Buildarrayfrompermutation {
         return nums;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int nums[]  = ArrayInput.takeArrayInput();
 
         int [] result = functionnntocalculatearray(nums); 

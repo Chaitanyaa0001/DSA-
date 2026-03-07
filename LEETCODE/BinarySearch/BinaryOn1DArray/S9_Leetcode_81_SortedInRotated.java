@@ -20,7 +20,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S9_Leetcode_81_SortedInRotated {
 
-    public static boolean searchRange(int [] nums, int target ){
+    private static boolean searchRange(int [] nums, int target ){
         int n = nums.length;
         int start = 0;
         int end = n - 1;
@@ -52,7 +52,7 @@ public class S9_Leetcode_81_SortedInRotated {
         return false;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         int [] nums = ArrayInput.takeArrayInput();
         System.out.println(searchRange(nums, 0));

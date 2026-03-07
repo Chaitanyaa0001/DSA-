@@ -25,7 +25,7 @@ import LEETCODE.arrays.ArrayInput;
 public class S2_Leetcode75_SortColors {
     // by ducks national flag algotithm 
 
-    public static int[] brute(int[] nums){
+    private static int[] brute(int[] nums){
         int n = nums.length;
         int count = 0, count1 = 0, count2 = 0;
         for(int i = 0; i < n; i++){
@@ -52,12 +52,12 @@ public class S2_Leetcode75_SortColors {
         return nums;
     }
 
-    public static void swap(int nums[], int i, int j){
+    private static void swap(int nums[], int i, int j){
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
     }
-    public static void optimal(int [] nums){
+    private static void optimal(int [] nums){
         
         int n = nums.length;
         int low = 0, mid = 0, high = n-1;
@@ -76,7 +76,7 @@ public class S2_Leetcode75_SortColors {
     }
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // nums = [2,0,2,1,1,0]
         int[] nums = ArrayInput.takeArrayInput();
         // brute(nums);

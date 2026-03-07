@@ -2,7 +2,7 @@ import hashing.hashmap.iteration;
 
 public class S1_countMaxNumberOf1s {
 
-    public static int helperLowerBound(int[] arr, int x){
+    private static int helperLowerBound(int[] arr, int x){
         int low = 0; 
         int high =  arr.length - 1;
         while (low <= high) {
@@ -15,7 +15,7 @@ public class S1_countMaxNumberOf1s {
         }
         return low;
     }
-    public static int bruteforce(int[][] mat){
+    private static int bruteforce(int[][] mat){
         // row 
         int n = mat.length;
         // col 
@@ -39,7 +39,7 @@ public class S1_countMaxNumberOf1s {
         return max;
     }
 
-    public static int betterApproch(int[][] matrix){
+    private static int betterApproch(int[][] matrix){
         // tc  n * logm
         int n = matrix.length;
         int m = matrix[0].length;
@@ -55,7 +55,7 @@ public class S1_countMaxNumberOf1s {
         return index;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // Given a non-empty grid mat consisting of only 0s and 1s, where all the rows are sorted in ascending order, find the index of the row with the maximum number of ones.
         // If two rows have the same number of ones, consider the one with a smaller index. If no 1 exists in the matrix, return -1.
         int[][] grid = {{0,0,1,1,1},

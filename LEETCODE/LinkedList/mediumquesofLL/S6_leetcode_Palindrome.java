@@ -5,7 +5,7 @@ import java.util.Stack;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S6_leetcode_Palindrome {
-    public static Boolean brute(Node head){
+    private static Boolean brute(Node head){
         Stack<Integer> st = new Stack<>();
         Node temp = head;
         while (temp != null) {
@@ -22,7 +22,7 @@ public class S6_leetcode_Palindrome {
 
     }
 
-    public static Node helperToReverse(Node slow){
+    private static Node helperToReverse(Node slow){
         Node prev = null; Node temp  = slow;
         while (temp != null) {
             Node front = temp.next;
@@ -32,7 +32,7 @@ public class S6_leetcode_Palindrome {
         }
         return prev;
     }
-    public static Boolean optimalsol(Node head){
+    private static Boolean optimalsol(Node head){
         // findmiddle 
         Node slow  = head;
         Node fast = head;
@@ -59,7 +59,7 @@ public class S6_leetcode_Palindrome {
 
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         
     }
 }

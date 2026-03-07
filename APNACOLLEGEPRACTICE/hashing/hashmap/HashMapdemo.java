@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 
 public class HashMapdemo {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // to create a has map 
        HashMap<String, Integer> hm = new HashMap<>();
        //  to insert 

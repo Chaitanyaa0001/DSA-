@@ -6,7 +6,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S4_StartingPointInLL {
-    public static Node brutueforce(Node head){
+    private static Node brutueforce(Node head){
         HashMap<Node,Integer> map = new HashMap<>();
         Node temp = head;
          while(temp != null){
@@ -18,7 +18,7 @@ public class S4_StartingPointInLL {
         }
         return null;
     }
-    public static Node optimal(Node head){
+    private static Node optimal(Node head){
         Node slow = head;
         Node fast = head;
         while(fast != null && fast.next != null){
@@ -35,7 +35,7 @@ public class S4_StartingPointInLL {
         }
         return null;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {1,2,3,4,5,6,7,8,9};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

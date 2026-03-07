@@ -6,7 +6,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S7_Leetcode_SeggregateODDandEVENindexs {
-    public static Node Bruteforce(Node head){
+    private static Node Bruteforce(Node head){
         // first we will calculate and store the odd daat into the list 
         if(head == null || head.next == null){
             return head;
@@ -40,7 +40,7 @@ public class S7_Leetcode_SeggregateODDandEVENindexs {
         // total TC : O(2N) and Sc: O(n);
     }
 
-    public static Node optimal(Node head){
+    private static Node optimal(Node head){
         Node even = head.next; Node odd = head; Node evenHead = even;
         while (even != null && even.next != null) {
             odd.next = odd.next.next;
@@ -51,7 +51,7 @@ public class S7_Leetcode_SeggregateODDandEVENindexs {
         odd.next = evenHead;
         return head;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {1,2,4,5,6,8,};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

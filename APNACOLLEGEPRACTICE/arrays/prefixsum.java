@@ -3,7 +3,7 @@ package arrays;
 public class prefixsum {
 
     // to use prifix sum we need to follow some steps and to make a prefix array and then calculate this 
-    public static void maxsubarrayPrifix(int [] numbers){
+    private static void maxsubarrayPrifix(int [] numbers){
         int currentsum = 0;
         int [] prefixsum = new int[numbers.length];
         prefixsum[0] = numbers[0];
@@ -23,7 +23,7 @@ public class prefixsum {
         System.out.println("maxsum:" + maxsum);
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] numbers = {1,-2,6,-1,3};
         
         maxsubarrayPrifix(numbers);

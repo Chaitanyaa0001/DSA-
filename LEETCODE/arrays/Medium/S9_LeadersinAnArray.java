@@ -8,7 +8,7 @@ import java.util.*;
 import LEETCODE.arrays.ArrayInput;
 
 public class S9_LeadersinAnArray {
-    public static List<Integer> leaders(int[] nums){
+    private static List<Integer> leaders(int[] nums){
         ArrayList <Integer> list = new ArrayList<>();
         int n = nums.length;
         int elem= nums[n-1];
@@ -24,7 +24,7 @@ public class S9_LeadersinAnArray {
         return list;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums= ArrayInput.takeArrayInput();
         List<Integer> hm = leaders(nums);
          System.out.println(hm);

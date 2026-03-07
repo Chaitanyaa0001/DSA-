@@ -15,7 +15,7 @@ public class S1_Leetcode_CountFreqofCharAndArrangeInDesOrder {
             this.freq = freq;
         }
     }
-    public static String countfreq(String s){
+    private static String countfreq(String s){
         HashMap <Character,Integer> map = new HashMap<>();
         int n = s.length();
         for(int i = 0; i <  n ;i++){
@@ -37,7 +37,7 @@ public class S1_Leetcode_CountFreqofCharAndArrangeInDesOrder {
 
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }

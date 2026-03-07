@@ -3,7 +3,7 @@ package conditionalStatements.switchproblems;
 import java.util.Scanner;
 
 public class weakdays {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         
     Scanner sc = new Scanner(System.in);
 

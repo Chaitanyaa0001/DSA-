@@ -33,7 +33,7 @@ public class S2_Leetcode61_RotateALL {
         return head;
         // O(2n) time
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
         rotateLL(head, 0);

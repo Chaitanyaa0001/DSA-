@@ -21,21 +21,21 @@ package LEETCODE.arrays.Medium;
 
 public class S10_Leetcode73_2DMatrixSetTozero {
     // brute force 
-    public static void  row(int matrix[][], int row){
+    private static void  row(int matrix[][], int row){
         for(int i = 0; i < matrix.length; i++){
             if(matrix[row][i] != 0){
                 matrix[row][i] = -1;
             };
         }
     }
-    public  static void  col(int matrix[][], int col){
+    private static void  col(int matrix[][], int col){
         for(int i = 0; i < matrix.length; i++){
             if(matrix[i][col] != 0){
                 matrix[i][col] = -1;
             };
         }
     }
-    public static void bruteforce(int matrix[][]){
+    private static void bruteforce(int matrix[][]){
         int n = matrix.length;
         int m = matrix[0].length;
         for(int i = 0; i < n ;i++){
@@ -56,7 +56,7 @@ public class S10_Leetcode73_2DMatrixSetTozero {
         
     }
     // now better  solution 
-    public static void  betterapproch(int  matrix[][]){
+    private static void  betterapproch(int  matrix[][]){
         int n = matrix.length;
         int m = matrix[0].length;
         int[] Row  = new int[n];
@@ -79,7 +79,7 @@ public class S10_Leetcode73_2DMatrixSetTozero {
     }
     // best approch 
 
-    public static void bestapproch(int matrix[][]){
+    private static void bestapproch(int matrix[][]){
         int n = matrix.length;
         int m = matrix[0].length;
         int col0 = 1;
@@ -118,7 +118,7 @@ public class S10_Leetcode73_2DMatrixSetTozero {
         }
     }
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int matrix[][] = {{1,1,1},{1,0,1},{1,1,1}};
         
     }

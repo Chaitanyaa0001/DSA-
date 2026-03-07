@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class binarysearch {
 
-    public static int Binarysearch(int numbers [], int Key){
+    private static int Binarysearch(int numbers [], int Key){
 
         int start = 0;
         int end = numbers.length - 1;
@@ -20,7 +20,7 @@ public class binarysearch {
         }
         return -1;
     }
-        public static void main(String[] args) {
+        private static void main(String[] args) {
 
         int numbers [] = {2,3,4,5,7,8,9};
         Scanner sc = new Scanner(System.in);        

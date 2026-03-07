@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S5_leetcode_1011_CapacityToShipPacakages {
-    public static int checkdays(int[] arr, int capacity){
+    private static int checkdays(int[] arr, int capacity){
         int n = arr.length;
         int load = 0;
         int d = 1;
@@ -19,7 +19,7 @@ public class S5_leetcode_1011_CapacityToShipPacakages {
         }
         return d;
     }
-    public static int Binary_Approch(int[] weights , int days){
+    private static int Binary_Approch(int[] weights , int days){
         int n = weights.length;
         int max = Integer.MIN_VALUE;
         int totalCapacity = 0;
@@ -41,7 +41,7 @@ public class S5_leetcode_1011_CapacityToShipPacakages {
         }
         return start;
     }
-    public static int brute_force(int[] weights, int days){
+    private static int brute_force(int[] weights, int days){
 
         int n = weights.length;
         int max = Integer.MIN_VALUE;
@@ -63,7 +63,7 @@ public class S5_leetcode_1011_CapacityToShipPacakages {
 
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int weights[] = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int days = sc.nextInt();

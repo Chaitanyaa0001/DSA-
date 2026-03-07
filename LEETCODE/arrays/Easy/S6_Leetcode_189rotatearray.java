@@ -31,7 +31,7 @@ import java.util.Scanner;
 import LEETCODE.arrays.ArrayInput;
 
 public class S6_Leetcode_189rotatearray {
-    public static void  roateArrayBydPlaces(int[] nums, int k){
+    private static void  roateArrayBydPlaces(int[] nums, int k){
         int n = nums.length;
         k = k % n;
         swaping(nums, 0, n);
@@ -39,7 +39,7 @@ public class S6_Leetcode_189rotatearray {
         swaping(nums, k+1, n-1);
         
     }
-    public static  void swaping(int[] nums, int start, int end){
+    private static  void swaping(int[] nums, int start, int end){
         while (end>=start) {
             int temp = nums[start];
             nums[start] = nums[end];
@@ -49,7 +49,7 @@ public class S6_Leetcode_189rotatearray {
         }
     }
    
-    public static void main(String[] args) {           
+    private static void main(String[] args) {           
         int[] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

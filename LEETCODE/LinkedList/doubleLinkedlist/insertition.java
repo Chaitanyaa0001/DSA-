@@ -17,7 +17,7 @@ public class insertition {
         }
     }
 
-    public static Node arrtodll(int[]arr){
+    private static Node arrtodll(int[]arr){
         int n = arr.length;
         Node head = new Node(arr[0]);
         Node prev = head;
@@ -28,7 +28,7 @@ public class insertition {
         }
         return head;
     }
-    public static void printall(Node head){
+    private static void printall(Node head){
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
@@ -36,13 +36,13 @@ public class insertition {
         }
     }
     // ---------------------------------------------------------------------
-    public static Node headinseet(Node head, int val){
+    private static Node headinseet(Node head, int val){
         Node temp  = new Node(val,head,null);
         head.back = temp;
         return temp;
     }
     // ----------------------------------------------------------------------
-    public static Node tailinsert(Node head, int ele){
+    private static Node tailinsert(Node head, int ele){
         if(head == null) return null;
         Node temp = head;
         while (temp.next != null) {
@@ -53,7 +53,7 @@ public class insertition {
         return head;
     }
     // -----------------------------------------------------------------
-    public static Node beforetail(Node head, int ele){
+    private static Node beforetail(Node head, int ele){
         if(head == null){
             return head;
         }
@@ -72,7 +72,7 @@ public class insertition {
         return head ;
     }
     // ---------------------------------------------------------------
-    public static Node kelement(Node head, int ele, int k){
+    private static Node kelement(Node head, int ele, int k){
         // if my list is empty ret  urn null 
         boolean flag = true;
         if(head == null){
@@ -113,7 +113,7 @@ public class insertition {
     }
     // ------------------------------------------------------------------------
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {10,20,30,40};
         Node head = arrtodll(arr);
 

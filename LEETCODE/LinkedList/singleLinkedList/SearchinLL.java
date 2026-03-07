@@ -13,7 +13,7 @@ public class SearchinLL {
             this.next = null;
         }
     }
-    public  static Node LinkedList(int [] arr){
+    private static Node LinkedList(int [] arr){
         Node head = new Node(arr[0]);
         Node mover  = head;
 
@@ -25,7 +25,7 @@ public class SearchinLL {
         return head;
     } 
 
-    public static Boolean Searching (Node head, int val){
+    private static Boolean Searching (Node head, int val){
         // tc -> O(n)
         Node temp = head;
         while (temp != null) {
@@ -38,7 +38,7 @@ public class SearchinLL {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] arr = {2,3,4,5,6};
         Node head = LinkedList(arr);
 

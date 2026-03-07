@@ -2,7 +2,7 @@ package arrays;
 
 public class maxsubarraysum {
 
-    public static int maxsubarray(int [] numbers){
+    private static int maxsubarray(int [] numbers){
         int maxsum = Integer.MIN_VALUE;
         for(int i = 0; i <= numbers.length-1; i++){
             int start = i;
@@ -20,7 +20,7 @@ public class maxsubarraysum {
         return maxsum;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         int numbers [] = {1,2,3,4,5};
        int result =  maxsubarray(numbers);

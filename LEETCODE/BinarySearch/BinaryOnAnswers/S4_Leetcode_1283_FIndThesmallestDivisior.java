@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S4_Leetcode_1283_FIndThesmallestDivisior {
-    public static int isDivisor(int [] arr, int divisor){
+    private static int isDivisor(int [] arr, int divisor){
         int n = arr.length;
         int totalDivSum = 0;
         for(int i = 0; i < n; i++){
@@ -33,7 +33,7 @@ public class S4_Leetcode_1283_FIndThesmallestDivisior {
         }
         return start;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int threshold = sc.nextInt();

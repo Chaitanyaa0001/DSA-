@@ -6,7 +6,7 @@ import LEETCODE.BinarySearch.ArrayInp;
 
 public class S2_UpperBound {
 
-    public static int upper_bound(int[]  nums, int x){
+    private static int upper_bound(int[]  nums, int x){
         int n = nums.length;
         int start = 0;
         int ans = nums.length;
@@ -25,7 +25,7 @@ public class S2_UpperBound {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc =  new Scanner(System.in);
         int [] nums = ArrayInp.takeArrayInput();
         int x = sc.nextInt();

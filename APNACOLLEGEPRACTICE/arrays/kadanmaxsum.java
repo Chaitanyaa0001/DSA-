@@ -2,7 +2,7 @@ package arrays;
 
 public class kadanmaxsum {
 
-    public static void maxsumKadan(int[] numbers){
+    private static void maxsumKadan(int[] numbers){
         int currentsum = 0;
         int maxsum = Integer.MIN_VALUE;
         for(int i = 0; i < numbers.length; i++){
@@ -14,7 +14,7 @@ public class kadanmaxsum {
         }
         System.out.println(maxsum);
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] numbers = {-2, 10, -1, 2};
         maxsumKadan(numbers);
     }

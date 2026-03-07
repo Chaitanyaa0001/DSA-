@@ -1,7 +1,7 @@
 package LEETCODE.BinarySearch.BinaryOn1DArray;
 
 public class S11_FindLengthofRotattion {
-    public static int findRotation(int nums[]){
+    private static int findRotation(int nums[]){
         int n = nums.length;
         int start = 0; 
         int end = n - 1;
@@ -27,7 +27,7 @@ public class S11_FindLengthofRotattion {
         return index;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         
     }
 }

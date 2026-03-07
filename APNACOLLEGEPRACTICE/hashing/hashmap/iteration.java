@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 public class iteration {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // HashMap<String,Number> hm = new HashMap<>();
         // hm.put("India", 150);
         // hm.put("China", 120);

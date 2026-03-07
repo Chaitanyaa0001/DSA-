@@ -3,7 +3,7 @@ package LEETCODE.BinarySearch.BinaryOn1DArray;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S12_Leetcode_162PeakElement {
-    public static int  brute(int [] nums){
+    private static int  brute(int [] nums){
         int n = nums.length;
         if(n == 1) return 0;
         if(nums[0] > nums[1]) return 0;
@@ -15,7 +15,7 @@ public class S12_Leetcode_162PeakElement {
         }
         return -1;
     }
-    public static int optimal_Binary(int [] nums){
+    private static int optimal_Binary(int [] nums){
         int n = nums.length;
         int start = 1;
         int end = n-2;
@@ -38,7 +38,7 @@ public class S12_Leetcode_162PeakElement {
         return -1;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         System.out.println(brute(nums));
     }

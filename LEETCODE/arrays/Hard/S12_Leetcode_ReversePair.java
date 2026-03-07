@@ -39,7 +39,7 @@ public class S12_Leetcode_ReversePair {
     }
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
     }

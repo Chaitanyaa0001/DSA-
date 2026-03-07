@@ -5,7 +5,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
 
-    public static int btuteforce(int[] nums, int k){
+    private static int btuteforce(int[] nums, int k){
         int n = nums.length;
         int maxlen = 0;
         for(int i = 0; i < n; i++){
@@ -23,7 +23,7 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
         return maxlen;
     }
 
-    public static int optimal(int[] nums, int k ){
+    private static int optimal(int[] nums, int k ){
         int n = nums.length;
         HashMap <Integer,Integer> map = new HashMap<>();
         int sum = 0;
@@ -40,7 +40,7 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

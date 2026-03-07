@@ -17,7 +17,7 @@ public class S2_Leetcode_7quesReverseNumber {
    
 
   
-    public static int reverse(int x) {
+    private static int reverse(int x) {
         int rev = 0;
         while(x != 0){
           int digit = x % 10;
@@ -34,7 +34,7 @@ public class S2_Leetcode_7quesReverseNumber {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
         int x  = sc.nextInt();
 

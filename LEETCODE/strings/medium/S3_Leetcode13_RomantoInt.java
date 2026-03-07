@@ -12,7 +12,7 @@ public class S3_Leetcode13_RomantoInt {
         // C             100
         // D             500
         // M             1000
-    public static int conversion(String s){
+    private static int conversion(String s){
         HashMap<Character,Integer> map = new HashMap<>();
         map.put('I', 1);
         map.put('V', 5);
@@ -33,7 +33,7 @@ public class S3_Leetcode13_RomantoInt {
         }
         return sum;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }

@@ -6,7 +6,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S2_Leetcode_ReverseSingleLL {
-    public static Node bruteStack(Node head){
+    private static Node bruteStack(Node head){
         // tc : o(2N) sc : o(n)
         Stack<Integer>  stk = new Stack<>();
         Node temp = head;
@@ -21,7 +21,7 @@ public class S2_Leetcode_ReverseSingleLL {
         }
         return head;
     }
-    public static Node optimalsol(Node head){
+    private static Node optimalsol(Node head){
             Node prev = null;
           Node temp = head;
         while(temp != null){
@@ -32,7 +32,7 @@ public class S2_Leetcode_ReverseSingleLL {
         }
         return prev;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {1,2,4,5,6,8,9};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
     }

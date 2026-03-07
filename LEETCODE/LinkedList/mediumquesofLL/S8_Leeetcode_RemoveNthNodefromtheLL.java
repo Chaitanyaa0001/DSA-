@@ -4,7 +4,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S8_Leeetcode_RemoveNthNodefromtheLL {
-    public static Node bruteForce(Node head, int n){
+    private static Node bruteForce(Node head, int n){
             if(head == null){
             return head;
         }
@@ -34,7 +34,7 @@ public class S8_Leeetcode_RemoveNthNodefromtheLL {
         }
         return head;
     }
-    public static Node optinal(Node head, int n){
+    private static Node optinal(Node head, int n){
         Node temp = head;
         Node fast  = head;
         for(int i = 0; i < n ; i++){
@@ -49,7 +49,7 @@ public class S8_Leeetcode_RemoveNthNodefromtheLL {
         return head;
     }
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr [] = {1,23,4,5,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

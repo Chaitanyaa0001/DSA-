@@ -3,7 +3,7 @@ package LEETCODE.recursionBasic;
 import java.util.Scanner;
 
 public class numberNtoOne {
-    public static void NtoOne(int n  , int i ){
+    private static void NtoOne(int n  , int i ){
         if(i == n){
             return;
         }
@@ -11,7 +11,7 @@ public class numberNtoOne {
         NtoOne(n-1, i);
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value of n:");
         int n  = sc.nextInt();

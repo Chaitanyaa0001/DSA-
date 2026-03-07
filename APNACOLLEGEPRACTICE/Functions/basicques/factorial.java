@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class factorial {
 
-    public static int factorial(int n ){
+    private static int factorial(int n ){
 
         int f = 1;
         for(int i=1;i <=n; i++){
@@ -15,7 +15,7 @@ public class factorial {
     }
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the value of n:");

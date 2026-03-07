@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S3_LowerBound {
-    public static  int  lower_Bound(int[] nums, int x){
+    private static  int  lower_Bound(int[] nums, int x){
         int ans = nums.length;
         int start = 0, end = nums.length -1;
         while (end >= start) {
@@ -19,7 +19,7 @@ public class S3_LowerBound {
         }
         return  ans;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
         int[] nums = ArrayInp.takeArrayInput();
         int x = sc.nextInt();

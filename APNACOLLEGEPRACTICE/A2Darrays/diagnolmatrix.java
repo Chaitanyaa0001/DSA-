@@ -18,7 +18,7 @@ public class diagnolmatrix {
     //     return sum;
     // }
 
-    public static int optimalcode(int matrix [][]){
+    private static int optimalcode(int matrix [][]){
         int sum = 0;
         for(int i = 0; i< matrix.length;i++){
             // pd
@@ -30,7 +30,7 @@ public class diagnolmatrix {
         return sum;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int matrix [][] = {{1,2,3},{4,5,6},{7,8,9}};
         //    int result = diagnolmatrixsum(matrix);
         int result = optimalcode(matrix);

@@ -6,7 +6,7 @@ import java.util.Scanner;
 // in pascal triangle when we inter the correct row and col then it will print the exat number or element whihc is present at that index 
 public class S1PascalTriangle {
     // n factorial 
-    public static int factorial(int n){
+    private static int factorial(int n){
         int factorial = 1;
         for(int i = 0; i < n; i++){
             factorial *= n-i;
@@ -15,7 +15,7 @@ public class S1PascalTriangle {
     }
     
 
-    public static int  enterrowandcolnumbertoidentifynumber(int row,int col){
+    private static int  enterrowandcolnumbertoidentifynumber(int row,int col){
         // bruteforce
         // find factorial 
 
@@ -25,7 +25,7 @@ public class S1PascalTriangle {
         return n / (r *(nMr));
     }
 
-    public static int optimalapproch(int row,int col){
+    private static int optimalapproch(int row,int col){
         int ans = 1;
         for(int i = 0; i < col; i++ ){
             ans = ans * (row-i) ;
@@ -33,7 +33,7 @@ public class S1PascalTriangle {
         }
         return ans;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int row = sc.nextInt();
         int col = sc.nextInt();

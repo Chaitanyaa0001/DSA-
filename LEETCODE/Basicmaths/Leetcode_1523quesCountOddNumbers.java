@@ -18,11 +18,11 @@ import java.util.Scanner;
 
 
 public class Leetcode_1523quesCountOddNumbers {
-    public static  int countNumber(int low, int high){
+    private static  int countNumber(int low, int high){
         int check = (high - low) / 2 + ((high % 2 !=0 || low % 2!= 0)?1:0);
         return  check;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int low = sc.nextInt();
         int high = sc.nextInt();

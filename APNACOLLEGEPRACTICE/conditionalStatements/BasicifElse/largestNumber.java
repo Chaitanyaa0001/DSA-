@@ -3,7 +3,7 @@ package conditionalStatements.BasicifElse;
 import java.util.*;
 
 public class largestNumber {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("enter the number A:");

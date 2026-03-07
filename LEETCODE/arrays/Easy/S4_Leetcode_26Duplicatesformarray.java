@@ -35,7 +35,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class S4_Leetcode_26Duplicatesformarray {
-    public static int removeDuplicates(int nums[]){
+    private static int removeDuplicates(int nums[]){
         int n = nums.length;
         int index = 0;
         for(int i = 1; i < n; i++){
@@ -46,7 +46,7 @@ public class S4_Leetcode_26Duplicatesformarray {
         }   
         return index + 1;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
        int nums[] = ArrayInput.takeArrayInput();
        int result =  removeDuplicates(nums);
        System.out.println(result);

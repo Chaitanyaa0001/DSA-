@@ -13,7 +13,7 @@ public class Insertion {
             this.next = null;
         }
     }
-    public static Node ArrayIntoLinkedList(int[] arr){
+    private static Node ArrayIntoLinkedList(int[] arr){
         int n = arr.length; 
         Node head = new Node(arr[0]);
         Node mover = head;
@@ -24,7 +24,7 @@ public class Insertion {
         }
         return head;
     }
-    public static void  printfun(Node head){
+    private static void  printfun(Node head){
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -32,11 +32,11 @@ public class Insertion {
         }
     }
 
-    public static Node insertathead(Node head, int val){
+    private static Node insertathead(Node head, int val){
         Node temp = new Node(val,head);
         return temp;
     }
-    public static Node InsterAtTail(Node head, int val){
+    private static Node InsterAtTail(Node head, int val){
         Node temp = head;
         while (temp.next != null) {
             temp = temp.next;
@@ -46,7 +46,7 @@ public class Insertion {
         return head;
     }
 
-    public static Node Insertatk(Node head, int k, int val){
+    private static Node Insertatk(Node head, int k, int val){
         if(head == null) return new Node(val);
         // k == 1
         if(k == 1){
@@ -66,7 +66,7 @@ public class Insertion {
         }
         return head;
     }
-    public static Node insertbeforeValue(Node head, int value, int ele){
+    private static Node insertbeforeValue(Node head, int value, int ele){
                                                     
 
         if(head == null) return null;
@@ -99,7 +99,7 @@ public class Insertion {
         return head;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {3,1,5,8};
         Node head = ArrayIntoLinkedList(arr);   
         // head

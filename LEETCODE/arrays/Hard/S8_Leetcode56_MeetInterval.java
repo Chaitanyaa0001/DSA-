@@ -4,7 +4,7 @@ import LEETCODE.arrays.ArrayInput;
 
 import java.util.*;
 public class S8_Leetcode56_MeetInterval {
-    public static int[][] brute(int[][] interval){
+    private static int[][] brute(int[][] interval){
 
         List<int[]> ans = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class S8_Leetcode56_MeetInterval {
     }
 
 
-    public static int[][] optimalapproch(int[][] interval){
+    private static int[][] optimalapproch(int[][] interval){
         int n =interval.length;
         Arrays.sort(interval,(a,b) -> a[0] - b[0]);
         List<int[]> ans =  new ArrayList<>();
@@ -46,7 +46,7 @@ public class S8_Leetcode56_MeetInterval {
 
         return ans.toArray(new int[ans.size()][]);
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] interval  = ArrayInput.takeArrayInput();  
 
         System.out.println(brute(null));

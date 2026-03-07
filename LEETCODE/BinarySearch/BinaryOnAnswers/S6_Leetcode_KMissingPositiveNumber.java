@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S6_Leetcode_KMissingPositiveNumber {
-    public static int brute_force(int arr[], int k){
+    private static int brute_force(int arr[], int k){
         int n  = arr.length;
         for(int i = 0; i < n; i++){
             if(arr[i] < k){
@@ -16,7 +16,7 @@ public class S6_Leetcode_KMissingPositiveNumber {
         }
         return k;
     }
-    public static int Binary_Approch(int arr[], int k){
+    private static int Binary_Approch(int arr[], int k){
         int n = arr.length;
         int start = 0; 
         int end = n -1;
@@ -33,7 +33,7 @@ public class S6_Leetcode_KMissingPositiveNumber {
         return end - k + 1;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] arr = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

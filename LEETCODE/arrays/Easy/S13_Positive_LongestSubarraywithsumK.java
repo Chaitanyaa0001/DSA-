@@ -16,7 +16,7 @@ import java.util.Scanner;
 import LEETCODE.arrays.ArrayInput;
 
 public class S13_Positive_LongestSubarraywithsumK {
-    public static int  bruteforce(int nums[], int k){
+    private static int  bruteforce(int nums[], int k){
         int n  =nums.length;
         int maxlen = 0;
         for(int i = 0; i < n ; i++){
@@ -34,7 +34,7 @@ public class S13_Positive_LongestSubarraywithsumK {
         return maxlen;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

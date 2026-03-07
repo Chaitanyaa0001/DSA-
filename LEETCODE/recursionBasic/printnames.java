@@ -3,7 +3,7 @@ package LEETCODE.recursionBasic;
 import java.util.Scanner;
 
 public class printnames {
-    public static void printNames(String str, int n ){
+    private static void printNames(String str, int n ){
         if (n == 0){
             return;
         }
@@ -11,7 +11,7 @@ public class printnames {
 
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the number how many times you need to print the name:");

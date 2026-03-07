@@ -6,7 +6,7 @@ import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S5_LengthoftheLoop {
-    public static int brute(Node head){
+    private static int brute(Node head){
         HashMap<Node,Integer> map = new HashMap<>();
         Node temp = head; int count = 0;
         while (temp != null) {
@@ -20,7 +20,7 @@ public class S5_LengthoftheLoop {
         }
         return count;
     }
-    public static int optimal(Node head){
+    private static int optimal(Node head){
         Node temp  = head;
         Node slow  = head;
         Node fast = head;
@@ -43,7 +43,7 @@ public class S5_LengthoftheLoop {
         }
         return count;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] arr = {1,2,3,4,5,6,7,8,9};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

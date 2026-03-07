@@ -1,7 +1,7 @@
 package conditionalStatements.BasicifElse;
 
 public class fever {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         double temp = 103.5;
 
         if (temp >100){

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class S2_Leetcode_SearchIn2Dmatrix {
-    public static  boolean binaryhelper(int arr[], int target){
+    private static  boolean binaryhelper(int arr[], int target){
         int start = 0; 
         int end = arr.length - 1;
         while (start <= end) {
@@ -16,7 +16,7 @@ public class S2_Leetcode_SearchIn2Dmatrix {
         }
         return false;
     }
-    public static boolean bruteforce(int[][] array, int target){
+    private static boolean bruteforce(int[][] array, int target){
         int n = array.length;
         int m = array[0].length;
 
@@ -29,7 +29,7 @@ public class S2_Leetcode_SearchIn2Dmatrix {
         }
         return false;
     }
-    public static boolean betterApproch(int[][] arr, int target){
+    private static boolean betterApproch(int[][] arr, int target){
         int n = arr.length;
         int m = arr[0].length;
        int start = 0; 
@@ -42,7 +42,7 @@ public class S2_Leetcode_SearchIn2Dmatrix {
         return false;
     }
 
-    public static boolean optimal(int arr[][], int target ){
+    private static boolean optimal(int arr[][], int target ){
         int n = arr.length, m = arr[0].length;
         int low = 0, high =  n * m -1;
         while (low <= high) {
@@ -61,7 +61,7 @@ public class S2_Leetcode_SearchIn2Dmatrix {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
          int [][] matrix  = {{3,4,7,9},{12,13,16,18},{20,21,23,29}};
     Scanner sc = new Scanner(System.in);
     int target = sc.nextInt();

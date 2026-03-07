@@ -3,7 +3,7 @@ package LEETCODE.strings.medium;
 import java.util.Scanner;
 
 public class S4_LongestPalindromeSubstring {
-    public static Boolean checkPalindromeHelper(String sub){
+    private static Boolean checkPalindromeHelper(String sub){
         int n = sub.length();
         int i = 0;
         int j = n -1;
@@ -18,7 +18,7 @@ public class S4_LongestPalindromeSubstring {
         return true;
     }
     // brute 
-    public static String bruteforce(String s){
+    private static String bruteforce(String s){
         int n = s.length();
         String ans = "";
         for(int i = 0; i < n; i++){
@@ -33,7 +33,7 @@ public class S4_LongestPalindromeSubstring {
     }
     // better 
     // expand through centre 
-    public static String betterApproch(String s){
+    private static String betterApproch(String s){
         int n = s.length();
         int max = 1;
         int start  = 0, end  = 0; 
@@ -50,13 +50,13 @@ public class S4_LongestPalindromeSubstring {
         }
         return s.substring(start, end+1);
     }
-    public static int calculatelen(String s,int i, int j){
+    private static int calculatelen(String s,int i, int j){
             while ((i >= 0 && j < s.length()) &&  s.charAt(i) == s.charAt(j)) {
                 i--; j++;
             }
         return  j - i - 1;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }   

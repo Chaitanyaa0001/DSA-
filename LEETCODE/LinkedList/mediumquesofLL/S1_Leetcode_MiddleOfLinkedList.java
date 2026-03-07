@@ -7,7 +7,7 @@ import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S1_Leetcode_MiddleOfLinkedList {
 
-    public static  Node BruteForce(Node head){
+    private static  Node BruteForce(Node head){
         Node temp = head;
         int count = 0;
         while (temp != null) {
@@ -25,7 +25,7 @@ public class S1_Leetcode_MiddleOfLinkedList {
         }
         return temp;
     }
-    public static Node TortoiseHareAlgorithm(Node head){
+    private static Node TortoiseHareAlgorithm(Node head){
         Node slow = head;
         Node fast = head;
 
@@ -35,11 +35,8 @@ public class S1_Leetcode_MiddleOfLinkedList {
         }
         return slow;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] arr = {1,2,3,4,5};
-        Node head = LinkedListUtil.arrayToLinkedList(arr);
-
-        Node mid = BruteForce(head);
-        LinkedListUtil.print(mid);
+        
     }
 }

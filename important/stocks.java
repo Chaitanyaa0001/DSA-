@@ -1,7 +1,7 @@
 package important;
 
 public class stocks {
-    public static int profit(int [] prices){
+    private static int profit(int [] prices){
         int buyprice = Integer.MAX_VALUE;
         int maxprofit = 0;
         for (int i = 0;i<prices.length;i++){
@@ -16,7 +16,7 @@ public class stocks {
 
         return maxprofit;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         int prices [] = {7,1,5,3,6,4};
 

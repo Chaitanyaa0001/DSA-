@@ -5,7 +5,7 @@ import java.util.HashMap;
 import LEETCODE.arrays.ArrayInput;
 
 public class S3_Leetcode169_MajorityElement {
-    public static int bruteforce(int nums[]){
+    private static int bruteforce(int nums[]){
         int n = nums.length;
         for(int i = 0; i < n; i++){
             int count =0;
@@ -20,7 +20,7 @@ public class S3_Leetcode169_MajorityElement {
         }
         return 0;
     }
-    public static int better(int nums[]){
+    private static int better(int nums[]){
         HashMap <Integer,Integer> l = new HashMap<>();
         int n = nums.length;
 
@@ -36,7 +36,7 @@ public class S3_Leetcode169_MajorityElement {
         } 
         return -1;
     }
-    public static int optimalApproch(int nums[]){
+    private static int optimalApproch(int nums[]){
         int elemnt = 0; 
         int count = 0; 
         
@@ -61,7 +61,7 @@ public class S3_Leetcode169_MajorityElement {
 
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] arr = ArrayInput.takeArrayInput();
         // nums = {2,2,1,1,1,2,2};
         // int result = better(arr);

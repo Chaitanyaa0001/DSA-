@@ -12,7 +12,7 @@ import java.util.Scanner;
 // then optimse by root n 
 public class S6_AllDivisors {
 
-    public static List<Integer> PrintAllTheDevsiors(int n ){
+    private static List<Integer> PrintAllTheDevsiors(int n ){
         // array list creation 
         List <Integer> small = new ArrayList<>();
         List <Integer> large = new ArrayList<>();
@@ -33,7 +33,7 @@ public class S6_AllDivisors {
         small.addAll(large);
         return small;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number");
         int n = sc.nextInt();

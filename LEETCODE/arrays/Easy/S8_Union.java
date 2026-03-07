@@ -11,7 +11,7 @@ public class S8_Union {
 
     // O(n + m + k log k)
 
-    public static int[] findUnionfromarrays(int[] num1, int[] num2){
+    private static int[] findUnionfromarrays(int[] num1, int[] num2){
         HashSet<Integer> union = new HashSet<>();
         for(int i = 0; i < num1.length; i++){
             union.add(num1[i]);
@@ -24,7 +24,7 @@ public class S8_Union {
 
     }
 
-    public static int[]  optimalApproch(int[] nums1, int [] nums2){
+    private static int[]  optimalApproch(int[] nums1, int [] nums2){
         int i = 0;
         int j = 0;
         // ArrayList<Integer> list = new ArrayList<>();
@@ -50,7 +50,7 @@ public class S8_Union {
         }
         return temp;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // num {1,2,8,3,4,5} 
         // num2 {1,2,7}
         int[] num1 = ArrayInput.takeArrayInput();

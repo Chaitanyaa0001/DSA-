@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class isEvencheck {
 
-    public static boolean isEven(int n){
+    private static boolean isEven(int n){
         if (n % 2== 0){
             return true;
         }
@@ -12,7 +12,7 @@ public class isEvencheck {
         return false;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the value of N");

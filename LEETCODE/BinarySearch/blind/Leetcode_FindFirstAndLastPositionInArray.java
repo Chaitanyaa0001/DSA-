@@ -3,7 +3,7 @@ package LEETCODE.BinarySearch.blind;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class Leetcode_FindFirstAndLastPositionInArray {
-    public static int lower(int[] nums, int target) {
+    private static int lower(int[] nums, int target) {
         int start = 0, end = nums.length - 1;
         int ans = nums.length;
 
@@ -18,7 +18,7 @@ public class Leetcode_FindFirstAndLastPositionInArray {
         }
         return ans;
     }
-    public  static int upper(int[] nums, int target) {
+    private static int upper(int[] nums, int target) {
         int start = 0, end = nums.length - 1;
         int ans = nums.length;
 
@@ -34,7 +34,7 @@ public class Leetcode_FindFirstAndLastPositionInArray {
         return ans;
     }
 
-    public static int[] searchRange(int[] nums, int target) {
+    private static int[] searchRange(int[] nums, int target) {
         int first = lower(nums, target);
         if (first == nums.length || nums[first] != target) {
             return new int[]{-1, -1};
@@ -43,7 +43,7 @@ public class Leetcode_FindFirstAndLastPositionInArray {
         return new int[]{first, last};
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums =  ArrayInp.takeArrayInput();
         int taget = 8;
 

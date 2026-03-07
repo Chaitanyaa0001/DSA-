@@ -6,7 +6,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S7_AggresiveCows {
-    public static boolean checkcowsHelper(int [] nums, int distance, int cows){
+    private static boolean checkcowsHelper(int [] nums, int distance, int cows){
         int n  = nums.length;
         int countcows = 1;
         int last = nums[0];
@@ -23,7 +23,7 @@ public class S7_AggresiveCows {
 
         return true;
     }
-    public static int brute_force(int[] arr, int cows){
+    private static int brute_force(int[] arr, int cows){
         Arrays.sort(arr);
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
@@ -46,7 +46,7 @@ public class S7_AggresiveCows {
         return end;  
         
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] coordinates = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int cows = sc.nextInt();

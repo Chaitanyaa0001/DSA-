@@ -6,7 +6,7 @@ import java.util.List;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S12_Leetcode_MedianOfTwoSortedArrays {
-    public static int brute_force(int[] nums1, int[] nums2){
+    private static int brute_force(int[] nums1, int[] nums2){
         int N = nums1.length;
         int M = nums2.length;
         int n = N + M;
@@ -39,7 +39,7 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
         return -1;
     }
 
-    public static int betterApproch(int[] nums1, int[] nums2){
+    private static int betterApproch(int[] nums1, int[] nums2){
         int p = nums1.length;
         int q  = nums2.length;
         int n = p + q;
@@ -88,7 +88,7 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
         return  -1;
     }
 
-    public static int  binary_Approch(int[] nums1, int[] nums2){
+    private static int  binary_Approch(int[] nums1, int[] nums2){
         int n1 = nums1.length;
         int n2 = nums2.length;
         // we have to take the short array so that we can reduce the time complexity 
@@ -131,7 +131,7 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         
     }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class S7_PrimeNumber {
 
-    public static Boolean isprime(int n){
+    private static Boolean isprime(int n){
         int cnt = 0;
         if(n == 2){
             return true;
@@ -23,7 +23,7 @@ public class S7_PrimeNumber {
         return cnt == 2;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("enter the value of n");

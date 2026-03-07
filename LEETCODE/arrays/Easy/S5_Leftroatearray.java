@@ -1,7 +1,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class S5_Leftroatearray {
-    public static void leftrotatebyone(int[] arr){
+    private static void leftrotatebyone(int[] arr){
         int n = arr.length;
         int temp  = arr[0];
         for(int i = 1; i < n; i++ ){
@@ -12,7 +12,7 @@ public class S5_Leftroatearray {
     }
     
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] arr = ArrayInput.takeArrayInput();
         leftrotatebyone(arr);
 

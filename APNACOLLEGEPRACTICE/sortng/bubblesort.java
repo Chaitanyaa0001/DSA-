@@ -3,7 +3,7 @@ package sortng;
 import LEETCODE.patterns.BasicPatterns.starPattern;
 
 public class bubblesort {
-    public static void bubble(int [] arr){
+    private static void bubble(int [] arr){
         int n = arr.length;
         for(int i = 0; i < n-1; i++){
             for(int j = 0; j < n-i-1; j++){
@@ -18,14 +18,14 @@ public class bubblesort {
 
 
     
-    public static void sortedarr(int  [] arr){
+    private static void sortedarr(int  [] arr){
         for(int i =0; i< arr.length; i++ ){
             System.out.print( "" + arr[i]  );
         }
         System.out.println();
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         int arr [] = {8,5,4,3,5,6,7};
         bubble(arr);

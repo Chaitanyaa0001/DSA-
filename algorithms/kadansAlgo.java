@@ -2,7 +2,7 @@ package algorithms;
 
 public class kadansAlgo {
     
-    public static void kadanalosum(int numbers []){
+    private static void kadanalosum(int numbers []){
         int cs = 0 ;
         int maxsum = Integer.MIN_VALUE;
         for (int i = 0; i < numbers.length; i++){
@@ -14,7 +14,7 @@ public class kadansAlgo {
         System.out.println(maxsum);
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int numbers [] ={-2,-3,4,-1,-2,1,5,-3};
         kadanalosum(numbers);
         

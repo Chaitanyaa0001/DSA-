@@ -6,7 +6,7 @@ import java.util.HashMap;
 import LEETCODE.arrays.ArrayInput;
 
 public class S10_findrepeatingAndMissingElement {
-    public static int[] bruteforce(int[] nums){
+    private static int[] bruteforce(int[] nums){
         int[] ans = new int[2];
         int n = nums.length;
         int actualsum =  ((n + 1) * n) / 2;
@@ -38,7 +38,7 @@ public class S10_findrepeatingAndMissingElement {
     }
 
 
-    public static int[] better(int nums[]){
+    private static int[] better(int nums[]){
         int[] ans = new int[2];
         int n = nums.length;
         int actualsum =  ((n + 1) * n) / 2;
@@ -63,7 +63,7 @@ public class S10_findrepeatingAndMissingElement {
        
         return ans;   
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
        
         int [] result = bruteforce(nums);

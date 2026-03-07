@@ -3,7 +3,7 @@ package conditionalStatements.TernaryOperator;
 import java.util.Scanner;
 
 public class PassorFail {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter The Marks Of A Student ");

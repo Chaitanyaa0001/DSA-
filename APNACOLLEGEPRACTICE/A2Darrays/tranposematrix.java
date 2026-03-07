@@ -3,7 +3,7 @@ package A2Darrays;
 import java.util.Arrays;
 
 public class tranposematrix {
-    public static int[][] Tranpose(int matrix[][]){
+    private static int[][] Tranpose(int matrix[][]){
         int n = matrix.length;
         int m = matrix[0].length;
         int transpose[][] =  new int[m][n];
@@ -14,7 +14,7 @@ public class tranposematrix {
         };
         return transpose;
     }; 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int matrix [][] = {{11,12,13},{21,22,23}};
         int [][] result =  Tranpose(matrix);
         System.out.println(Arrays.deepToString(result));

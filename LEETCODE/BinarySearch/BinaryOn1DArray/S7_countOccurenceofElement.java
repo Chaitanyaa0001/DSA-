@@ -3,7 +3,7 @@ package LEETCODE.BinarySearch.BinaryOn1DArray;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S7_countOccurenceofElement {
-    public static int lower(int[] nums, int target){
+    private static int lower(int[] nums, int target){
         int ans = nums.length;
         int n = nums.length;
         int start = 0; 
@@ -19,7 +19,7 @@ public class S7_countOccurenceofElement {
         }
         return ans;
     } 
-    public static int upper(int[] nums, int target){
+    private static int upper(int[] nums, int target){
         int ans = nums.length;
         int n = nums.length;
         int start = 0; 
@@ -36,7 +36,7 @@ public class S7_countOccurenceofElement {
         return ans;
     }
 
-    public static int[] maincall(int nums[] , int target){
+    private static int[] maincall(int nums[] , int target){
         int first = lower(nums, target);
         if(first == nums.length || nums[first] != target){
             return new int[]{-1,-1};
@@ -46,14 +46,14 @@ public class S7_countOccurenceofElement {
         return new int[]{first,second};
     }
 
-    public static int occurence(int[] nums, int target){
+    private static int occurence(int[] nums, int target){
         int arr[] = maincall(nums, target);
         if(arr[0] == -1)return 0;
 
         return arr[1] - arr[0] + 1;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
 
         // int[] res = maincall(null, 0);

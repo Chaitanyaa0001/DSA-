@@ -7,7 +7,7 @@ import javax.sound.sampled.SourceDataLine;
 public class isPrime{
 
 // to check prime 
-    public static boolean ISPRIME( int n){
+    private static boolean ISPRIME( int n){
 
         if(n == 2 ){return true;}
         for (int i = 2 ;i <= Math.sqrt(n);i++){
@@ -18,7 +18,7 @@ public class isPrime{
         }
         return true;
     }
-     public static void rangeprime(int n ){
+     private static void rangeprime(int n ){
         for (int i = 2 ;i<=n ;i++){
             if (ISPRIME(i)){
                 System.out.print(i);
@@ -27,7 +27,7 @@ public class isPrime{
         };
     };
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number to check weather it is prime or not :");
         int n = sc.nextInt();

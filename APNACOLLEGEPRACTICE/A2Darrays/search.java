@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class search {
     // searhcing in the matrix
 
-    public static boolean searchm(int matrix[][], int key){
+    private static boolean searchm(int matrix[][], int key){
         for(int i = 0; i< matrix.length; i++ ){
             for(int j = 0; j < matrix[0].length; j ++){
                 if(matrix[i][j] == key){
@@ -16,7 +16,7 @@ public class search {
         }
         return false;
     }
-        public static void main(String[] args) {
+        private static void main(String[] args) {
         int matrix[][] = new int[3][3];
         int n = matrix.length;
         int m = matrix[0].length;

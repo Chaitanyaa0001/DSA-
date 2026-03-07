@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class swapping {
 
-    public static void swapthenumber(int a ,int b){
+    private static void swapthenumber(int a ,int b){
         int temp = b;
         b = a;
         a = temp;
@@ -18,7 +18,7 @@ public class swapping {
 
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 

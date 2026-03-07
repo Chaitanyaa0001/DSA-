@@ -6,7 +6,7 @@ import LEETCODE.BinarySearch.ArrayInp;
 
 public class S8_BookAllocation {
     
-    public static long allocateBooks(long[] books, int N, int M) {
+    private static long allocateBooks(long[] books, int N, int M) {
         if (N < M) return -1;
         long max = Long.MIN_VALUE;
         long sum = 0;
@@ -27,7 +27,7 @@ public class S8_BookAllocation {
         return start;
     }
 
-    public static int checkStudents(long[] nums, long pages) {
+    private static int checkStudents(long[] nums, long pages) {
         int students = 1;
         long pageT = 0;
 
@@ -43,7 +43,7 @@ public class S8_BookAllocation {
         }
         return students;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
     
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc  = new Scanner(System.in);

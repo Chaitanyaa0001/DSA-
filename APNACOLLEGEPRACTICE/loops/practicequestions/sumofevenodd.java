@@ -3,7 +3,7 @@ package loops.practicequestions;
 import java.math.*;;
 public class sumofevenodd {
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int counter = 0;
         int number ;
         int oddsum = 0;

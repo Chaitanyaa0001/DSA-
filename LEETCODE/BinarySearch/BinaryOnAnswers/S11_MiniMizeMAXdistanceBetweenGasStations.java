@@ -7,7 +7,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S11_MiniMizeMAXdistanceBetweenGasStations {
-    public static double gasstation(int[] nums, int k) {
+    private static double gasstation(int[] nums, int k) {
         int n = nums.length;
         int[] added = new int[n - 1]; // stations added in each gap
 
@@ -48,7 +48,7 @@ public class S11_MiniMizeMAXdistanceBetweenGasStations {
             this.segments = segments;
         }
     }
-    public static double priority(int [] nums, int k){
+    private static double priority(int [] nums, int k){
         int n = nums.length;
         Queue<Pair> pq = new PriorityQueue<>((a,b) -> Double.compare(b.dist, a.dist));
         for(int i = 0; i < n -1; i++){
@@ -64,7 +64,7 @@ public class S11_MiniMizeMAXdistanceBetweenGasStations {
         return pq.peek().dist;
     }
     // optimal ans biary approch 
-    public static int countgasstations(int[]nums, long distance){
+    private static int countgasstations(int[]nums, long distance){
         int n = nums.length;
         int count = 0;
         for(int i = 0; i < n-1; i++){
@@ -75,7 +75,7 @@ public class S11_MiniMizeMAXdistanceBetweenGasStations {
         }
         return count;
     }
-    public static double binary_Approch(int[] nums, int k){
+    private static double binary_Approch(int[] nums, int k){
         int n = nums.length;
         long start = 0;
         long end = 0;
@@ -97,7 +97,7 @@ public class S11_MiniMizeMAXdistanceBetweenGasStations {
 
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

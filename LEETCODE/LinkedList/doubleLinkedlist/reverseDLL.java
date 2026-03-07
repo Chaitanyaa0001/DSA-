@@ -19,7 +19,7 @@ public class reverseDLL {
         }
     }
 
-    public static Node arrtodll(int[]arr){
+    private static Node arrtodll(int[]arr){
         int n = arr.length;
         Node head = new Node(arr[0]);
         Node prev = head;
@@ -30,7 +30,7 @@ public class reverseDLL {
         }
         return head;
     }
-    public static void printall(Node head){
+    private static void printall(Node head){
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
@@ -38,7 +38,7 @@ public class reverseDLL {
         }
     }
     // ------------------------------------------------------------------------------------- Brute force 
-    public static Node RevserseaLinkedList(Node head){
+    private static Node RevserseaLinkedList(Node head){
         if(head == null ){
             return null;
         }
@@ -57,7 +57,7 @@ public class reverseDLL {
         return head ;
     }
     // ----------------------------------------------------
-    public static Node optimal (Node head){
+    private static Node optimal (Node head){
         if(head == null){
             return null;
         }
@@ -72,7 +72,7 @@ public class reverseDLL {
         }
         return prev.back;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] arr = {10,20,30,40};
         Node head = arrtodll(arr);
         

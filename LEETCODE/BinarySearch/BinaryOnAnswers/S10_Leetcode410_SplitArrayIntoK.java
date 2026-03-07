@@ -6,7 +6,7 @@ import LEETCODE.BinarySearch.ArrayInp;
 
 public class S10_Leetcode410_SplitArrayIntoK {
     
-    public static int checkfork(int[] arr, int m){
+    private static int checkfork(int[] arr, int m){
         int n = arr.length;
         int count = 1;
         int sum = 0;
@@ -21,7 +21,7 @@ public class S10_Leetcode410_SplitArrayIntoK {
         return count;
     }
     
-    public  static int splitArray(int[] nums, int k) {
+    private static int splitArray(int[] nums, int k) {
         int max = Integer.MIN_VALUE;
         int sum = 0;
         for(int i : nums){
@@ -42,7 +42,7 @@ public class S10_Leetcode410_SplitArrayIntoK {
     }
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

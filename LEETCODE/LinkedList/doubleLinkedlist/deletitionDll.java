@@ -17,7 +17,7 @@ public class deletitionDll {
         }
     }
 
-    public static Node arrtodll(int[]arr){
+    private static Node arrtodll(int[]arr){
         int n = arr.length;
         Node head = new Node(arr[0]);
         Node prev = head;
@@ -28,7 +28,7 @@ public class deletitionDll {
         }
         return head;
     }
-    public static void printall(Node head){
+    private static void printall(Node head){
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
@@ -36,7 +36,7 @@ public class deletitionDll {
         }
     }
     // ---------------------------------------------------------------------------------
-    public static Node headofdll(Node head){
+    private static Node headofdll(Node head){
 
         if(head == null ||  head.next == null){
             return null;
@@ -49,7 +49,7 @@ public class deletitionDll {
         return head;
     }
     // ----------------------------------------------------------------------------------
-    public static Node tailofdll(Node head){
+    private static Node tailofdll(Node head){
         Node temp = head;
 
         while (temp.next != null) {
@@ -61,7 +61,7 @@ public class deletitionDll {
         return head;
     }
     // ----------------------------------------------------------------------------------------
-    public static Node kelement(Node head, int k ){
+    private static Node kelement(Node head, int k ){
         if(head == null){
             return null;
         }
@@ -98,7 +98,7 @@ public class deletitionDll {
         return head ;
     }
 
-    public static Node delfromnode(Node temp){
+    private static Node delfromnode(Node temp){
         // in this the given node is not head 
        Node prev = temp.back;
        Node front = temp.next;
@@ -115,7 +115,7 @@ public class deletitionDll {
        return temp;
 
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {10,20,30,40};
         Node head = arrtodll(arr);
         // head 

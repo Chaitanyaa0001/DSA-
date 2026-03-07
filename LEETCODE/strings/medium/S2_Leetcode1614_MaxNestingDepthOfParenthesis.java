@@ -3,7 +3,7 @@ package LEETCODE.strings.medium;
 import java.util.Scanner;
 
 public class S2_Leetcode1614_MaxNestingDepthOfParenthesis {
-    public static int nestingmax(String s){
+    private static int nestingmax(String s){
         int n = s.length();
         int balance = 0;
         int max = 0;
@@ -21,7 +21,7 @@ public class S2_Leetcode1614_MaxNestingDepthOfParenthesis {
         return max;
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }

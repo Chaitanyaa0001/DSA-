@@ -15,7 +15,7 @@ public class deletitioninLL {
             this.next = null;
         }
     }
-    public static Node ArrayIntoLinkedList(int[] arr){
+    private static Node ArrayIntoLinkedList(int[] arr){
         int n = arr.length; 
         Node head = new Node(arr[0]);
         Node mover = head;
@@ -26,7 +26,7 @@ public class deletitioninLL {
         }
         return head;
     }
-    public static void  printfun(Node head){
+    private static void  printfun(Node head){
         Node temp = head;
         while (temp != null) {
             System.out.println(temp.data);
@@ -34,7 +34,7 @@ public class deletitioninLL {
         }
     }
     // delete form head 
-    public static Node deleteNode(Node head){
+    private static Node deleteNode(Node head){
         //  h
         // 12   ->  5  ->  8  ->  7
         // temp
@@ -42,7 +42,7 @@ public class deletitioninLL {
         head = head.next;
         return head;
     }
-    public static Node deleteformtail(Node head){
+    private static Node deleteformtail(Node head){
         Node temp = head;
 
         if(head == null || head.next == null){
@@ -55,7 +55,7 @@ public class deletitioninLL {
         temp.next = null;
         return head;
     }
-    public static Node deletefromKposition(Node head, int node){
+    private static Node deletefromKposition(Node head, int node){
         if(head == null){
             return head;
         }
@@ -87,7 +87,7 @@ public class deletitioninLL {
         //     previous.next = temp.next;
         // }
     }
-    public static Node valueapproch(Node head, int ele){
+    private static Node valueapproch(Node head, int ele){
         if(head == null) return head ;
 
         if(head.data == ele){
@@ -106,7 +106,7 @@ public class deletitioninLL {
     }
 
     // for multiple  occurance 
-     public static Node valueapprochalloccurence(Node head, int ele){
+     private static Node valueapprochalloccurence(Node head, int ele){
         if(head == null) return head ;
         
         if(head.data == ele){
@@ -124,7 +124,7 @@ public class deletitioninLL {
         return head;
     }
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = {12,5,8,7,5,8,8,8,7,8,8};
         Node head = ArrayIntoLinkedList(arr);
         

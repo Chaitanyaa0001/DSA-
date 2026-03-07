@@ -4,7 +4,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S10_findmisandrepeatStriver {
 
-    public static int[] bruteforce(int nums[]){
+    private static int[] bruteforce(int nums[]){
         int n = nums.length;
         int missing = -1;
         int repating = -1;
@@ -32,7 +32,7 @@ public class S10_findmisandrepeatStriver {
     }
 
 
-    public static int [] betterapproch(int[] nums){
+    private static int [] betterapproch(int[] nums){
         int n = nums.length;
         int hash[] = new int[n];
         int missing = -1;
@@ -57,7 +57,7 @@ public class S10_findmisandrepeatStriver {
         
     }
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
     }

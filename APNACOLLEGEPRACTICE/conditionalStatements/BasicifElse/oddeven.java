@@ -3,7 +3,7 @@ package conditionalStatements.BasicifElse;
 import java.util.Scanner;
 
 public class oddeven {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
 

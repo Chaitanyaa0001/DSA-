@@ -3,7 +3,7 @@ package LEETCODE.hashing;
 import java.util.Scanner;
 
 public class S2_HashingChar {
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         String str = sc.nextLine();

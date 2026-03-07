@@ -8,7 +8,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S1_Leetcode1_TwoSum {
     // brute force 
-    public static int[] bruteforce(int nums[], int target){
+    private static int[] bruteforce(int nums[], int target){
         int n = nums.length;
         for(int i = 0; i < n; i++ ){
             for(int j = 0; j < n; j++){
@@ -21,7 +21,7 @@ public class S1_Leetcode1_TwoSum {
     }
     
     // optiml 
-    public static int[] optimalApproch(int nums[], int target){
+    private static int[] optimalApproch(int nums[], int target){
         int n = nums.length;
         HashMap<Integer,Integer> hm =  new HashMap<>();
         for(int i = 0 ; i < n; i ++){
@@ -34,7 +34,7 @@ public class S1_Leetcode1_TwoSum {
     }
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int arr[] = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int target  = sc.nextInt();

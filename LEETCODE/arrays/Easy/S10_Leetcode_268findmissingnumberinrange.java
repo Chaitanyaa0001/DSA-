@@ -1,7 +1,7 @@
 import LEETCODE.arrays.ArrayInput;
 
 public class S10_Leetcode_268findmissingnumberinrange {
-    public static int functionnumber(int nums[]){
+    private static int functionnumber(int nums[]){
         int n = nums.length;
         int actualsum = n * (n+1) /2;
         int sum = 0;
@@ -11,7 +11,7 @@ public class S10_Leetcode_268findmissingnumberinrange {
 
         return actualsum - sum;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int nums[] = ArrayInput.takeArrayInput();
         functionnumber(nums);
 

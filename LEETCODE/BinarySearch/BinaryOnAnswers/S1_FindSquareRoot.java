@@ -3,7 +3,7 @@ package LEETCODE.BinarySearch.BinaryOnAnswers;
 import java.util.Scanner;
 
 public class S1_FindSquareRoot {
-    public static void linear(int n){
+    private static void linear(int n){
         for(int i = 1; i <= n; i++){
             if(i * i <= n){
                 System.out.println(i);
@@ -14,7 +14,7 @@ public class S1_FindSquareRoot {
     }
 
     //  PATTERN: RANGE, MIN or MAX Integers x
-    public static int biary_approch(int n){
+    private static int biary_approch(int n){
         int start = 1; 
         int end = n;
         int ans = 0;
@@ -30,7 +30,7 @@ public class S1_FindSquareRoot {
         }
         return ans;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 

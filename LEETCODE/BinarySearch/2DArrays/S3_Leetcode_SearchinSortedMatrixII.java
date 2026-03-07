@@ -1,6 +1,6 @@
 public class S3_Leetcode_SearchinSortedMatrixII {
 
-      public static  boolean binaryhelper(int arr[], int target){
+      private static  boolean binaryhelper(int arr[], int target){
         int start = 0; 
         int end = arr.length - 1;
         while (start <= end) {
@@ -16,7 +16,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         return false;
     }
 
-    public static boolean bruteforce(int[][] array, int target){
+    private static boolean bruteforce(int[][] array, int target){
         int n = array.length;
         int m = array[0].length;
 
@@ -30,7 +30,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         return false;
     }
 
-    public static boolean betterApproch(int[][] arr, int target){
+    private static boolean betterApproch(int[][] arr, int target){
         int n = arr.length;
         int m = arr[0].length;
        int start = 0; 
@@ -43,7 +43,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         return false;
     }
 
-    public static boolean optimal(int[][] matrix, int target){
+    private static boolean optimal(int[][] matrix, int target){
         int n = matrix.length;
         int m = matrix[0].length;
         int row = 0; 
@@ -59,7 +59,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         }
         return false;
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // row wise sorted and col wise sorted
         int grid [][] = {{1,2,3,4,5,6},{2,2,23,4,4,},{3,3,4,6,7,}};
     }

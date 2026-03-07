@@ -4,7 +4,7 @@ import LEETCODE.arrays.ArrayInput;
 
 public class S6_leetocde121_profitloss {
 
-    public static int profitlossques(int[] nums){
+    private static int profitlossques(int[] nums){
         int maxprofit = 0;;
         int buyprice = Integer.MAX_VALUE;
         int n = nums.length;
@@ -23,7 +23,7 @@ public class S6_leetocde121_profitloss {
 
 
     
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
     }

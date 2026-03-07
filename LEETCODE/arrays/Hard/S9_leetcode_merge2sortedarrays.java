@@ -6,7 +6,7 @@ import java.util.Scanner;
 import LEETCODE.arrays.ArrayInput;
 
 public class S9_leetcode_merge2sortedarrays {
-    public static void  optimal(int[] nums1, int m, int[] nums2, int n){
+    private static void  optimal(int[] nums1, int m, int[] nums2, int n){
         int i = m-1;
         int j = n-1;
         int k = m+n-1;
@@ -22,7 +22,7 @@ public class S9_leetcode_merge2sortedarrays {
             nums1[k--] = nums2[j--];
         }
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums1 = ArrayInput.takeArrayInput();
         int  m = sc.nextInt();

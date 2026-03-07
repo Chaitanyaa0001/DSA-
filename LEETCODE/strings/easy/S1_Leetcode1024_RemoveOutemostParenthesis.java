@@ -3,7 +3,7 @@ package LEETCODE.strings.easy;
 import java.util.Scanner;
 
 public class S1_Leetcode1024_RemoveOutemostParenthesis {
-    public static String removeOuterParenthesis(String s){
+    private static String removeOuterParenthesis(String s){
         StringBuilder ans = new StringBuilder();
         int balance = 0; 
         int n = s.length();
@@ -23,7 +23,7 @@ public class S1_Leetcode1024_RemoveOutemostParenthesis {
         }
         return ans.toString();
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         //         A valid parentheses string is either empty "", "(" + A + ")", or A + B, where A and B are valid parentheses strings, and + represents string concatenation.
         // For example, "", "()", "(())()", and "(()(()))" are all valid parentheses strings.
         // A valid parentheses string s is primitive if it is nonempty, and there does not exist a way to split it into s = A + B, with A and B nonempty valid parentheses strings.

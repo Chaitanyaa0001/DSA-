@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class S4_Leetcode14_LongestCommonPredix {
-    public static String  bruteforce( String[] strs){
+    private static String  bruteforce( String[] strs){
         int n = strs.length;
 
         String first  = strs[0];
@@ -23,7 +23,7 @@ public class S4_Leetcode14_LongestCommonPredix {
         return first;
     }
 
-    public static String optimal(String[] strs){
+    private static String optimal(String[] strs){
         int n = strs.length;
         Arrays.sort(strs);
         // flower 
@@ -40,7 +40,7 @@ public class S4_Leetcode14_LongestCommonPredix {
         }
         return first.substring(0, i);
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         Scanner SC  = new Scanner(System.in);
         String strs[] = {"flower","flow","flight"};
     }

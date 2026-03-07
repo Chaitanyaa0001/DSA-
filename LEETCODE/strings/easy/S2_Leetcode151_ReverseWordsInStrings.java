@@ -1,7 +1,7 @@
 package LEETCODE.strings.easy;
 
 public class S2_Leetcode151_ReverseWordsInStrings {
-    public static String fun(String s){
+    private static String fun(String s){
         StringBuilder ans = new StringBuilder();
         int i = s.length() - 1;
         while (i >= 0) {
@@ -16,7 +16,7 @@ public class S2_Leetcode151_ReverseWordsInStrings {
         }
         return ans.toString().trim();
     }
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         // Given an input string s, reverse the order of the words.
         // A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
         // Return a string of the words in reverse order concatenated by a single space.

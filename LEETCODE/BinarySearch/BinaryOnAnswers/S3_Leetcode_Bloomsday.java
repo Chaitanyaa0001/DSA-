@@ -5,7 +5,7 @@ import java.util.Scanner;
 import LEETCODE.BinarySearch.ArrayInp;
 
 public class S3_Leetcode_Bloomsday {
-    public static int possible(int[] arr,int day ,int m, int k){
+    private static int possible(int[] arr,int day ,int m, int k){
         int n = arr.length;
         int count = 0;
         int boque = 0;
@@ -24,7 +24,7 @@ public class S3_Leetcode_Bloomsday {
     }
 
 
-    public static int Binary_Approch(int[] arr, int m, int k){
+    private static int Binary_Approch(int[] arr, int m, int k){
         int n = arr.length;
         if(m * k > n){
             return -1;
@@ -49,7 +49,7 @@ public class S3_Leetcode_Bloomsday {
         return start;
     }
 
-    public static int brute_force(int[] bloomsDay, int m, int k){
+    private static int brute_force(int[] bloomsDay, int m, int k){
         int n = bloomsDay.length;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
@@ -71,7 +71,7 @@ public class S3_Leetcode_Bloomsday {
 
 
 
-    public static void main(String[] args) {
+    private static void main(String[] args) {
         int [] BloomsDay = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int m  = sc.nextInt();
