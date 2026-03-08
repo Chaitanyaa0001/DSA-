@@ -54,6 +54,21 @@ public class S12_Leetcode_InterSectionOFLinkedList {
             return helpercollisonPoint(headB, headA,  n1 - n2);
         }
     }
+    private static Node optimalApproch(Node heada, Node headb){
+        Node t1 = heada, t2 = headb;
+        while (t1 != t2) {
+            t1 = t1.next;
+            t2 = t2.next;
+            if(t1 == t2){
+                return t1;
+            }
+            if(t1 == null){
+                t1 = headb;
+            
+            }
+        }
+        return t1;
+    }
 
 
     public static void main(String[] args) {
