@@ -1,11 +1,13 @@
 package LEETCODE.LinkedList.mediumquesofLL;
 
+import java.util.PriorityQueue;
+
 import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S11_Merge2SortedLinkedlist {
     private static Node bruteforce(Node head){
-
+        PriorityQueue<Integer> pq =  new PriorityQueue<>((a,b) -> a - b);
         return head;
     }
     private static void main(String[] args) {
