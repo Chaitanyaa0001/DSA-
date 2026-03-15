@@ -19,6 +19,27 @@ public class S15_IntersectionofArrays {
         }
         return list.stream().sorted().mapToInt(i -> i).toArray();
     }
+
+    private static int [] optimalApproch(int[] nums1, int[] nums2){
+        int i = 0; 
+        int j = 0;
+        int n = nums1.length, m = nums2.length;
+        ArrayList<Integer> list = new ArrayList<>();
+        while (i < n && i < m) {
+            if(nums1[i] == nums2[j]){
+                if(list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
+                    list.add(nums1[i]);
+                }
+                i++;
+                j++;
+            }else if(nums1[i] < nums2[j]){
+                i++;
+            }else{
+                j++;
+            }
+        }
+        return list.stream().sorted().mapToInt( k -> k).toArray();
+    }
     public static void main(String[] args) {
 
     }
