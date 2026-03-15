@@ -13,42 +13,66 @@ public class S8_Union {
 
     private static int[] findUnionfromarrays(int[] num1, int[] num2){
         HashSet<Integer> union = new HashSet<>();
+        // O(n) 
         for(int i = 0; i < num1.length; i++){
             union.add(num1[i]);
         }
+        // o(n) 
         for(int i = 0; i < num2.length; i++){
             union.add(num2[i]);
         }
-
-        return union.stream().sorted().mapToInt(i -> i).toArray();
+        int result [] = new int[union.size()];
+        int i = 0;
+        // O(n+m) 
+        for(int num : union){
+            result[i++] = num;
+        }
+        // return union.stream().sorted().mapToInt(i -> i).toArray();
+        return result;
 
     }
 
     private static int[]  optimalApproch(int[] nums1, int [] nums2){
         int i = 0;
         int j = 0;
-        // ArrayList<Integer> list = new ArrayList<>();
-        int temp[] = new int[nums1.length + nums2.length];
-        int x  = 0;
-        while (i < nums1.length && j < nums2.length) {
-            // if( nums1[i] == list.contains(nums1[i]))
-            if(nums1[i] <= nums2[j] ){
-                // list.add(nums1[i++]);
-                if(nums1[i] != temp[x]){
-                    temp[x]  = nums1[i];
+        ArrayList<Integer> list = new ArrayList<>();
+        int n = nums1.length, m =  nums2.length;
+        while (i < n && j < m) {
+            if(nums1[i] <nums2[j]){
+                if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
+
+                    list.add(nums1[i])
                 }
                 i++;
-                x++;
-            }else if(nums1[i] >= nums2[j]){
-                // list.add(nums2[j++]);
-                if(nums2[j] != temp[x]){
-                    temp[x]  = nums2[j];
+            }else{
+                if(list.size() == 0 || list.get(list.size() - 1) != nums2[j]){
+                    list.add(nums2[j]);
                 }
                 j++;
-                j++;
+
             }
         }
-        return temp;
+        
+        while (i < n) {
+            if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
+
+                    list.add(nums1[i]);
+                }
+                i++;
+        }
+        while (j < m) {
+            if(list.size() == 0 || list.get(list.size() - 1) != nums2[j]){
+                    list.add(nums2[j]);
+                }
+                j++;
+            
+        }
+        int[] ans = new int[list.size()];
+        for (int k = 0; k < list.size(); k++) {
+            ans[k] = list.get(k);
+        }
+
+        return ans;
     }
     private static void main(String[] args) {
         // num {1,2,8,3,4,5} 
