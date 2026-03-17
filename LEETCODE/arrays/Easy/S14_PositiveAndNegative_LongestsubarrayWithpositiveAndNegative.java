@@ -31,7 +31,7 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
         for(int i = 0; i < n; i++){
             sum += nums[i];
             if(map.containsKey(sum -k)){
-                int j = map.get(sum-k);
+                int j = map.get(sum-k); 
                 int length = i - j +1;
                 maxlen = Math.max(maxlen, length);
             }
