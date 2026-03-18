@@ -7,11 +7,9 @@ public class fibonachii {
         }
         return fibo(n - 1) + fibo(n - 2);
     }
+
     public static void main(String[] args) {
         fibo(5);
-
-
-
-        
     }
 }
+
