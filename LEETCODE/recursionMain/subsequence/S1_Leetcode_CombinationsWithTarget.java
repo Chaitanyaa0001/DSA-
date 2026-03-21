@@ -1,7 +1,7 @@
 package LEETCODE.recursionMain.subsequence;
 
 import java.util.*;;
-public class S_Leetcode_CombinationsWithTarget {
+public class S1_Leetcode_CombinationsWithTarget {
     private  static  void helper(int i, int target,int arr[] ,List<Integer> list, List<List<Integer>> result){
         if(i  ==  arr.length){
             if(target == 0){
