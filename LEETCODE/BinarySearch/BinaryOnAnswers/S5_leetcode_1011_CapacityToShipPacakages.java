@@ -63,7 +63,7 @@ public class S5_leetcode_1011_CapacityToShipPacakages {
 
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int weights[] = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int days = sc.nextInt();

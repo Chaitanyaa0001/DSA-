@@ -10,7 +10,7 @@ public class S6_RotateString {
         String ans = s + s;
         return ans.contains(goal);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
         String s = sc.nextLine();
         String goal = sc.nextLine();

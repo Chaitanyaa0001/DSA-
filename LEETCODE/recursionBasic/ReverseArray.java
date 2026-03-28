@@ -12,7 +12,7 @@ public class ReverseArray {
         ReverseUsingRecurrsion(arr, left+1, right-1);
 
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = {5,4,3,2,1};
 
         ReverseUsingRecurrsion(arr, 0, arr.length-1);

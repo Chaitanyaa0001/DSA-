@@ -53,7 +53,7 @@ public class S7_countOccurenceofElement {
         return arr[1] - arr[0] + 1;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
 
         // int[] res = maincall(null, 0);

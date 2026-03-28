@@ -52,7 +52,7 @@ public class S9_Leetcode_81_SortedInRotated {
         return false;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
 
         int [] nums = ArrayInput.takeArrayInput();
         System.out.println(searchRange(nums, 0));

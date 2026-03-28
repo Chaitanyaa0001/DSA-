@@ -75,7 +75,7 @@ public class L75sortColors {
             System.out.print(nums[i] + " ");
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums [] = {2,0,2,1,1,0};
         printval(nums);
     }

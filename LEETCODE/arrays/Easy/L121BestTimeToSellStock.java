@@ -33,7 +33,7 @@ public class L121BestTimeToSellStock {
         }
         return totalprofit;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
     
         int prices[] = {7,1,5,3,6,4};
         int result = maxprofit(prices);

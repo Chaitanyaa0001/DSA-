@@ -24,7 +24,7 @@ public class S10_Leetcode_SortLinkedList {
         return head;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = {6,4,2,2,4,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);  
     }

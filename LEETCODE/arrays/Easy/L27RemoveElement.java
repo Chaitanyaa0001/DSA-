@@ -50,7 +50,7 @@ public class L27RemoveElement {
         return count;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums [] = {0,1,2,2,3,0,4,2};
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the value whihc you want to remove form an array ");

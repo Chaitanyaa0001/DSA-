@@ -42,7 +42,7 @@ public class S10_Leetcode410_SplitArrayIntoK {
     }
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

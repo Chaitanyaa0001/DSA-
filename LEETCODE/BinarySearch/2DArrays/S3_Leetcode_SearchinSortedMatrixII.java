@@ -59,7 +59,7 @@ public class S3_Leetcode_SearchinSortedMatrixII {
         }
         return false;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         // row wise sorted and col wise sorted
         int grid [][] = {{1,2,3,4,5,6},{2,2,23,4,4,},{3,3,4,6,7,}};
     }

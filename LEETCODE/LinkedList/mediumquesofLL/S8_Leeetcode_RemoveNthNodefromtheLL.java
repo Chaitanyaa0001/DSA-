@@ -49,7 +49,7 @@ public class S8_Leeetcode_RemoveNthNodefromtheLL {
         return head;
     }
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {1,23,4,5,6};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

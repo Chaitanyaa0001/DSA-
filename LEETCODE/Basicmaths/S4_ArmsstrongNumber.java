@@ -31,7 +31,7 @@ public class S4_ArmsstrongNumber {
             return false;
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the value of n ");
         int n = sc.nextInt();

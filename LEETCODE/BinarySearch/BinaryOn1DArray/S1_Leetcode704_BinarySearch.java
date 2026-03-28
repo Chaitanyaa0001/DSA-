@@ -22,7 +22,7 @@ public class S1_Leetcode704_BinarySearch {
         return -1;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int [] nums = ArrayInp.takeArrayInput();
         int target =  sc.nextInt();

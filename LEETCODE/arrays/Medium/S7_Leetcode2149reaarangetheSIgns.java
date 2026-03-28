@@ -40,7 +40,7 @@ public class S7_Leetcode2149reaarangetheSIgns {
         }
         return ans;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
         // int[] ans = brutesignArrays(nums);

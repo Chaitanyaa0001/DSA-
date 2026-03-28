@@ -56,7 +56,7 @@ public class S11_CountInversions {
 
         return count;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         //  {5,3,2,4,1} count = 8 total number of 8 pairs in which nums[i] > nums[j] 
         int[] nums = ArrayInput.takeArrayInput();
         // System.out.println( "count :" + bruteforce(nums));

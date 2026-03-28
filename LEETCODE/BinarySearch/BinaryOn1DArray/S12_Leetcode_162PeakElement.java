@@ -38,7 +38,7 @@ public class S12_Leetcode_162PeakElement {
         return -1;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         System.out.println(brute(nums));
     }

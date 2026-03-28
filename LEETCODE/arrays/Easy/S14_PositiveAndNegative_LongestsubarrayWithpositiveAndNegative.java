@@ -40,7 +40,7 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
     }
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

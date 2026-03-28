@@ -97,7 +97,7 @@ public class S2_Leetcode15_Threesum {
         }
         return new ArrayList<>(set);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
       //  Input: nums = [-1,0,1,2,-1,-4]
         int[] nums = ArrayInput.takeArrayInput();
         // System.out.println(bruteforce(nums));

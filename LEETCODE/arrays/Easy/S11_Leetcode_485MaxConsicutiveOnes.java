@@ -30,7 +30,7 @@ public class S11_Leetcode_485MaxConsicutiveOnes {
         }
         return count;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums [] =  ArrayInput.takeArrayInput();
        int result =  findmaxconsecutiveones(nums);
        System.out.println(result);

@@ -99,7 +99,7 @@ public class Insertion {
         return head;
 
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr[] = {3,1,5,8};
         Node head = ArrayIntoLinkedList(arr);   
         // head

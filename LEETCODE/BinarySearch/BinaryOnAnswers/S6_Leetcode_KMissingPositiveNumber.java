@@ -33,7 +33,7 @@ public class S6_Leetcode_KMissingPositiveNumber {
         return end - k + 1;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] arr = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

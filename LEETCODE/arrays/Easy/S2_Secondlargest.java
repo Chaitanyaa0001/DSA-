@@ -19,7 +19,7 @@ public class S2_Secondlargest {
         }
         return secondlargest;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] numbers = ArrayInput.takeArrayInput();
         int result =secondlargest(numbers);
          System.out.println(result);

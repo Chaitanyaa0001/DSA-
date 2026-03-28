@@ -29,7 +29,7 @@ public class frequency {
     
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums []  = {2,6,3,8,2,8,2,3,8,10,6};
         int queries [] = {2,8,3,5};
         

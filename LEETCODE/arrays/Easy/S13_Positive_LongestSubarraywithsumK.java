@@ -34,7 +34,7 @@ public class S13_Positive_LongestSubarraywithsumK {
         return maxlen;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

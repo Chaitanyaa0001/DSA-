@@ -33,7 +33,7 @@ public class S4_Leetcode_1283_FIndThesmallestDivisior {
         }
         return start;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int threshold = sc.nextInt();

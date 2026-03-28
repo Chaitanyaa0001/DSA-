@@ -46,7 +46,7 @@ public class S7_AggresiveCows {
         return end;  
         
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] coordinates = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int cows = sc.nextInt();

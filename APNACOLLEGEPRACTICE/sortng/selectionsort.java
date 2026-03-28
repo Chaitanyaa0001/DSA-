@@ -25,7 +25,7 @@ public class selectionsort {
         }
         System.out.println(" ");
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {5,4,7,8,4,5,2,1};
         System.out.println("selection sort algo");
         selectionSort(arr);

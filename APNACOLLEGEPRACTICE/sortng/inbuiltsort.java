@@ -11,7 +11,7 @@ public class inbuiltsort {
         }
         System.out.println();
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Integer arr [] = {4,2,6,1,5,3};
 
         // in ascending order 

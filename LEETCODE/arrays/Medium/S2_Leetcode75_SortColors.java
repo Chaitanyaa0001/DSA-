@@ -76,7 +76,7 @@ public class S2_Leetcode75_SortColors {
     }
 
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         // nums = [2,0,2,1,1,0]
         int[] nums = ArrayInput.takeArrayInput();
         // brute(nums);

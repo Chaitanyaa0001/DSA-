@@ -56,7 +56,7 @@ public class S4_LongestPalindromeSubstring {
             }
         return  j - i - 1;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
     }   

@@ -40,7 +40,7 @@ public class mergesort {
         // merging the array 
        conquer(arr, start, mid, end);
     } 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {3,1,2,4,1,5,2,6,4};
 
         

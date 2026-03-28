@@ -27,7 +27,7 @@ public class S4_FloorAndCeil {
         return new int[]{floor,ceil};
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
 
         int [] nums = ArrayInp.takeArrayInput();
         int x =  5;

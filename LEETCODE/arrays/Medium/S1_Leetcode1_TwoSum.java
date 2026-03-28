@@ -34,7 +34,7 @@ public class S1_Leetcode1_TwoSum {
     }
 
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr[] = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int target  = sc.nextInt();

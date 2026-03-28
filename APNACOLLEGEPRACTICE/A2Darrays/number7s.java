@@ -16,7 +16,7 @@ public class number7s {
         return num;
         
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[][] array = { {4,7,8},{8,8,7} };
          int result = printnumber(array, 7);
          System.out.println(result);

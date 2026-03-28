@@ -3,7 +3,7 @@ package LEETCODE.patterns.NumberPatterns;
 import java.util.Scanner;
 
 public class InverseNumber {
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 1;i <=n;i++){

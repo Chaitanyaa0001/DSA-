@@ -22,7 +22,7 @@ public class S9_leetcode_merge2sortedarrays {
             nums1[k--] = nums2[j--];
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] nums1 = ArrayInput.takeArrayInput();
         int  m = sc.nextInt();

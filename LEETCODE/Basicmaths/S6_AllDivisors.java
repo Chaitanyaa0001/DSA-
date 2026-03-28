@@ -33,7 +33,7 @@ public class S6_AllDivisors {
         small.addAll(large);
         return small;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number");
         int n = sc.nextInt();

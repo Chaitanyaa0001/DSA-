@@ -15,7 +15,7 @@ public class palindrome9 {
             return true;
         }return false;
 }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number to check the palindrome :");
         int n = sc.nextInt();

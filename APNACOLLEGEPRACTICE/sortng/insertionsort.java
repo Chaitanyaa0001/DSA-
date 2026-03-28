@@ -21,7 +21,7 @@ public class insertionsort {
         }
         System.out.println();
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {4,2,6,1,5,3};
         // {2,4,6,1,5,3} i=1; prev = 0
         // {2,4,6,1,5,3 } prev =1 i = 2

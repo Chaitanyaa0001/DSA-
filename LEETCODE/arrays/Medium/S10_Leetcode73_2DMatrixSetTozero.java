@@ -118,7 +118,7 @@ public class S10_Leetcode73_2DMatrixSetTozero {
         }
     }
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int matrix[][] = {{1,1,1},{1,0,1},{1,1,1}};
         
     }

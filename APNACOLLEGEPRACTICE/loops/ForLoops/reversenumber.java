@@ -3,7 +3,7 @@ package loops.ForLoops;
 import java.util.Scanner;
 
 public class reversenumber {
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number you want to reverse ");
         int number = sc.nextInt();

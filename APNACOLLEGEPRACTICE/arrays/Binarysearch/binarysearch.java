@@ -20,7 +20,7 @@ public class binarysearch {
         }
         return -1;
     }
-        private static void main(String[] args) {
+        public static void main(String[] args) {
 
         int numbers [] = {2,3,4,5,7,8,9};
         Scanner sc = new Scanner(System.in);        

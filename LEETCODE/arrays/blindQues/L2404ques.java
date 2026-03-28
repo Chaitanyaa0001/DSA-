@@ -7,7 +7,7 @@ public class L2404ques {
        return 0;
 
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums[]  = ArrayInput.takeArrayInput();
     }
 }

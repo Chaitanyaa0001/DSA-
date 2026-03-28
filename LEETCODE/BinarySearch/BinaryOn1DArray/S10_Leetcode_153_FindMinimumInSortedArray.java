@@ -54,7 +54,7 @@ public class S10_Leetcode_153_FindMinimumInSortedArray {
         return ans;
 
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         System.out.println(findMin(nums));
 

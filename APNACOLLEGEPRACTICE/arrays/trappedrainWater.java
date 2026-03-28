@@ -47,7 +47,7 @@ public class trappedrainWater {
 //     }
 // }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] heights = {4,2,0,6,3,2,5};
 
         areaWater(heights);

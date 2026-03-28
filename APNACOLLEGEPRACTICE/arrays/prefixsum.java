@@ -23,7 +23,7 @@ public class prefixsum {
         System.out.println("maxsum:" + maxsum);
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] numbers = {1,-2,6,-1,3};
         
         maxsubarrayPrifix(numbers);

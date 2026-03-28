@@ -55,7 +55,7 @@ public class S1_countMaxNumberOf1s {
         return index;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         // Given a non-empty grid mat consisting of only 0s and 1s, where all the rows are sorted in ascending order, find the index of the row with the maximum number of ones.
         // If two rows have the same number of ones, consider the one with a smaller index. If no 1 exists in the matrix, return -1.
         int[][] grid = {{0,0,1,1,1},

@@ -29,7 +29,7 @@ public class S13_KthElementOf2Sortedarrays {
         }
         return -1;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
 
     }

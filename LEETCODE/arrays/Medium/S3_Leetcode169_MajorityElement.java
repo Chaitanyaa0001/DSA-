@@ -61,7 +61,7 @@ public class S3_Leetcode169_MajorityElement {
 
 
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] arr = ArrayInput.takeArrayInput();
         // nums = {2,2,1,1,1,2,2};
         // int result = better(arr);

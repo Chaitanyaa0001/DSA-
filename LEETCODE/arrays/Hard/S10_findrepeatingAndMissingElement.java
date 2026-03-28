@@ -63,7 +63,7 @@ public class S10_findrepeatingAndMissingElement {
        
         return ans;   
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
        
         int [] result = bruteforce(nums);

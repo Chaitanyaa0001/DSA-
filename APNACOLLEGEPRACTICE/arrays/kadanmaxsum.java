@@ -14,7 +14,7 @@ public class kadanmaxsum {
         }
         System.out.println(maxsum);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] numbers = {-2, 10, -1, 2};
         maxsumKadan(numbers);
     }

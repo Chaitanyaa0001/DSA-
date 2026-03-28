@@ -131,7 +131,7 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
     }
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         
     }

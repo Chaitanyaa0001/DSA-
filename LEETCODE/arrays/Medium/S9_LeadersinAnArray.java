@@ -24,7 +24,7 @@ public class S9_LeadersinAnArray {
         return list;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums= ArrayInput.takeArrayInput();
         List<Integer> hm = leaders(nums);
          System.out.println(hm);

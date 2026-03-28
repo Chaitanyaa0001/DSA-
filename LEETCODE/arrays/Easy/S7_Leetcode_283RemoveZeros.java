@@ -29,7 +29,7 @@ public class S7_Leetcode_283RemoveZeros {
             System.out.print(nn + " ");
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums[] = {0,1,0,3,12};
         removezero(nums);
         

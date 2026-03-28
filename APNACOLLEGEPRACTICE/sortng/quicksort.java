@@ -53,7 +53,7 @@ public class quicksort {
         }
     }
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {3,4,1,6,4,2,7,9,2,3,};
         int n = arr.length;
         // QuickSortLast(arr, 0, n-1);

@@ -14,7 +14,7 @@ public class Leetcode_1295_NumberOfEvenDigits {
         return count;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         System.out.println(FindNumberofEvendigits(nums));
     }

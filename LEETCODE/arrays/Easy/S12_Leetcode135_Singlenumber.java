@@ -43,7 +43,7 @@ public class S12_Leetcode135_Singlenumber {
         return result;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         bruteforce(nums);
     }

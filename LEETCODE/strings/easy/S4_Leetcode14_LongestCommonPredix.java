@@ -40,7 +40,7 @@ public class S4_Leetcode14_LongestCommonPredix {
         }
         return first.substring(0, i);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner SC  = new Scanner(System.in);
         String strs[] = {"flower","flow","flight"};
     }

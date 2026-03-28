@@ -43,7 +43,7 @@ public class S8_BookAllocation {
         }
         return students;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
     
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc  = new Scanner(System.in);

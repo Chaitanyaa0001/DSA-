@@ -46,7 +46,7 @@ public class S8_Leetcode56_MeetInterval {
 
         return ans.toArray(new int[ans.size()][]);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] interval  = ArrayInput.takeArrayInput();  
 
         System.out.println(brute(null));

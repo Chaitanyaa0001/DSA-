@@ -15,7 +15,7 @@ public class pairarray {
         }
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int numbers [] = {2,3,4,5,6,7,8,9};
 
         checkpair(numbers);

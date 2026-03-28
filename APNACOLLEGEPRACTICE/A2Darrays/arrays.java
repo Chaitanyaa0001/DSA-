@@ -3,7 +3,7 @@ package A2Darrays;
 import java.util.Scanner;
 
 public class arrays {
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int matrix[][] = new int[3][3];
         // number of rows 
         int n = matrix.length;

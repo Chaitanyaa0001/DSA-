@@ -124,7 +124,7 @@ public class deletitioninLL {
         return head;
     }
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr[] = {12,5,8,7,5,8,8,8,7,8,8};
         Node head = ArrayIntoLinkedList(arr);
         

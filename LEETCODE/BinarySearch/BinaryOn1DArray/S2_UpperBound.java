@@ -25,7 +25,7 @@ public class S2_UpperBound {
     }
 
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc =  new Scanner(System.in);
         int [] nums = ArrayInp.takeArrayInput();
         int x = sc.nextInt();

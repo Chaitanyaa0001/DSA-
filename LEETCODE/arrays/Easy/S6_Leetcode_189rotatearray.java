@@ -49,7 +49,7 @@ public class S6_Leetcode_189rotatearray {
         }
     }
    
-    private static void main(String[] args) {           
+    public static void main(String[] args) {           
         int[] nums = ArrayInput.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();

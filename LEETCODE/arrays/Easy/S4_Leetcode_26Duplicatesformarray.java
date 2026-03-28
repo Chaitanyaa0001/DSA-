@@ -46,7 +46,7 @@ public class S4_Leetcode_26Duplicatesformarray {
         }   
         return index + 1;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
        int nums[] = ArrayInput.takeArrayInput();
        int result =  removeDuplicates(nums);
        System.out.println(result);

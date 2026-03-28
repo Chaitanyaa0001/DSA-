@@ -74,7 +74,7 @@ public class S8_Union {
 
         return ans;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         // num {1,2,8,3,4,5} 
         // num2 {1,2,7}
         int[] num1 = ArrayInput.takeArrayInput();

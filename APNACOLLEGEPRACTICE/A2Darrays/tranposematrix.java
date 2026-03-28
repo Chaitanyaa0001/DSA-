@@ -14,7 +14,7 @@ public class tranposematrix {
         };
         return transpose;
     }; 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int matrix [][] = {{11,12,13},{21,22,23}};
         int [][] result =  Tranpose(matrix);
         System.out.println(Arrays.deepToString(result));

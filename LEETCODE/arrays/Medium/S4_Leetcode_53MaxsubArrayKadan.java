@@ -17,7 +17,7 @@ public class S4_Leetcode_53MaxsubArrayKadan {
         return maxsum;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
         kadansAlgo(nums);
     }

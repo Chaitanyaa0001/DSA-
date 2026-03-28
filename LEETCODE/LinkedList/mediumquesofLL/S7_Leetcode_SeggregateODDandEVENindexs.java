@@ -51,7 +51,7 @@ public class S7_Leetcode_SeggregateODDandEVENindexs {
         odd.next = evenHead;
         return head;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr[] = {1,2,4,5,6,8,};
         Node head = LinkedListUtil.arrayToLinkedList(arr);
 

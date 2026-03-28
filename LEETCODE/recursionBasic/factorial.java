@@ -10,7 +10,7 @@ public class factorial {
         }
         return n * factoriall(n-1);
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the vale of factorial");
         int n = sc.nextInt();

@@ -22,7 +22,7 @@ public class Leetcode_1523quesCountOddNumbers {
         int check = (high - low) / 2 + ((high % 2 !=0 || low % 2!= 0)?1:0);
         return  check;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int low = sc.nextInt();
         int high = sc.nextInt();

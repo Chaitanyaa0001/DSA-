@@ -12,7 +12,7 @@ public class S5_Leftroatearray {
     }
     
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr = ArrayInput.takeArrayInput();
         leftrotatebyone(arr);
 

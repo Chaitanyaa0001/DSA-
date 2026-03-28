@@ -36,7 +36,7 @@ public class S3_Leetcode_KokoBanana {
         return-1;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] piles = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

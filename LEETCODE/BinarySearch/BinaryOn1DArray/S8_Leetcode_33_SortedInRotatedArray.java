@@ -49,7 +49,7 @@ public class S8_Leetcode_33_SortedInRotatedArray {
         }
         return -1;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         // nums = [4,5,6,7,0,1,2], target = 0 output = 4;
         //  nums = [4,5,6,7,0,1,2], target = 3 output -1;
         int [] nums = ArrayInp.takeArrayInput();

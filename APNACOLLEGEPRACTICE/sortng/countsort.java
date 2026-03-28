@@ -26,7 +26,7 @@ public class countsort {
             System.out.print(nums[i] + " ");
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int arr [] = {2,0,2,1,1,0};
         count(arr);
         printval(arr);

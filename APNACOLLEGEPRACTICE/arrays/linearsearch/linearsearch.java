@@ -11,7 +11,7 @@ public class linearsearch {
         }
         return -1;
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
 
         int numbers [] = {2,45,32,12,34,45,56,12};
         int key = 12;

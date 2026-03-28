@@ -61,7 +61,7 @@ public class S6_Leetcode43_FindStartAndEndOccurence {
         int last = upper(nums, target) - 1;
         return new int[]{first, last};
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int [] nums = ArrayInp.takeArrayInput();
         int target = sc.nextInt();

@@ -40,7 +40,7 @@ public class S9_Leetcode410_painterPartition {
         return start;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
         Scanner sc = new Scanner(System.in);
         int K = sc.nextInt(); 

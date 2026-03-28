@@ -26,7 +26,7 @@ public class Leetcode_1920_Buildarrayfrompermutation {
         return nums;
     }
 
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int nums[]  = ArrayInput.takeArrayInput();
 
         int [] result = functionnntocalculatearray(nums); 

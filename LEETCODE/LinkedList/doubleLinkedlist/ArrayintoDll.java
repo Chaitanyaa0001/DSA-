@@ -36,7 +36,7 @@ public class ArrayintoDll {
             temp = temp.next;
         }
     }
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] arr ={2,3,4,5,6};
 
         Node head = arraytodll(arr);
