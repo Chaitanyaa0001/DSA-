@@ -27,11 +27,13 @@ public class S9_longestConsecutiveInanArray {
 
             }
         }
+        return 0; 
     }
 
     public static void main(String[] args) {
         int [] nums = ArrayInput.takeArrayInput();
         int result = longestConsecutive(nums);
         System.out.println(result);
+        betterappproch(nums);
     }
 }
