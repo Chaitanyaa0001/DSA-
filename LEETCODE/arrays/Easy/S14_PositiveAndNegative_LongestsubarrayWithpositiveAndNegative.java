@@ -47,5 +47,6 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
 
         int brute =  btuteforce(nums, k);
         System.out.println(brute);
+        optimal(nums, k);
     }
 }

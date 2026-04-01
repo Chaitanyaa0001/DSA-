@@ -48,6 +48,7 @@ public class L2460ArrayOperations {
     }
     public static void main(String[] args) {
         int nums[] = ArrayInput.takeArrayInput();
+        operationonarray(nums);
 
     }
     

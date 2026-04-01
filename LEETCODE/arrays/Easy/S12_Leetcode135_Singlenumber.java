@@ -46,5 +46,7 @@ public class S12_Leetcode135_Singlenumber {
     public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
         bruteforce(nums);
+        better(nums);
+        optimal(nums);
     }
 }

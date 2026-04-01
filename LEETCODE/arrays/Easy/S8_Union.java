@@ -41,7 +41,7 @@ public class S8_Union {
             if(nums1[i] <nums2[j]){
                 if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
 
-                    list.add(nums1[i])
+                    list.add(nums1[i]);
                 }
                 i++;
             }else{
@@ -80,6 +80,7 @@ public class S8_Union {
         int[] num1 = ArrayInput.takeArrayInput();
         int[] num2 = ArrayInput.takeArrayInput();
          int[] result = findUnionfromarrays(num1, num2);
+         optimalApproch(num1, num2);
         for (int i : result) {
             System.out.println(i+ " ");
         }

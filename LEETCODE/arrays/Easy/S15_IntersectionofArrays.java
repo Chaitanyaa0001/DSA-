@@ -41,6 +41,8 @@ public class S15_IntersectionofArrays {
         return list.stream().sorted().mapToInt( k -> k).toArray();
     }
     public static void main(String[] args) {
+        intersectionofarrays(null, null);
+        optimalApproch(null, null);
 
     }
 }
