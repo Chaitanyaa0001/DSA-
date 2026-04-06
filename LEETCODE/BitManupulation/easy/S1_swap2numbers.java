@@ -2,7 +2,7 @@ package LEETCODE.BitManupulation.easy;
 
 import java.util.Scanner;
 
-public class swap2numbers {
+public class S1_swap2numbers {
     private static void swap(int a, int b){
         // to swap 2 numebrs 
         a = a ^ b;

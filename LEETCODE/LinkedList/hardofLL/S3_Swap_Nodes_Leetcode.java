@@ -35,7 +35,7 @@ public class S3_Swap_Nodes_Leetcode {
             }else{
                 prev.next = t2;
             }
-            
+
             prev = t1;
             t1 = nextNode;
         }
