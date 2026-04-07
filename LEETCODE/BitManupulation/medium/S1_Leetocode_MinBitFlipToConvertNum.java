@@ -17,7 +17,6 @@ public class S1_Leetocode_MinBitFlipToConvertNum {
         Scanner sc  = new Scanner(System.in);
         int start  = sc.nextInt();
         int goal = sc.nextInt();
-
         minbitflip(start, goal);
     }
 }
