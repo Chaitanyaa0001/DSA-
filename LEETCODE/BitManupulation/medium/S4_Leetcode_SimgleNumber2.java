@@ -21,12 +21,6 @@ public class S4_Leetcode_SimgleNumber2 {
         // sc : O(1)
     }
     // now concepts ot buckets 
-
-
-
-    
-    
-
     public static void main(String[] args) {
         int[] nums = {4,4,4,2,5,5,5};
         singleNumber(nums);
