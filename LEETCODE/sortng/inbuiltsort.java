@@ -1,4 +1,4 @@
-package sortng;
+package LEETCODE.sortng;
 
 import java.util.Arrays;
 import java.util.Collections;

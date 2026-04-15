@@ -1,4 +1,4 @@
-package sortng;
+package LEETCODE.sortng;
 
 public class selectionsort {
     private static void selectionSort( int  [] arr ){

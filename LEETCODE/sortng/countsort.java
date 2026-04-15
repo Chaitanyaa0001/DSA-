@@ -1,4 +1,4 @@
-package sortng;
+package LEETCODE.sortng;
 
 public class countsort {
    private static void count(int nums []){

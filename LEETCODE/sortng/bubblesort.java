@@ -1,4 +1,4 @@
-package sortng;
+package LEETCODE.sortng;
 
 import LEETCODE.patterns.BasicPatterns.starPattern;
 

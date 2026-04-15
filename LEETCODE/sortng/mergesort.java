@@ -1,4 +1,4 @@
-package sortng;
+package LEETCODE.sortng;
 
 public class mergesort {
     private static void conquer(int arr[], int start, int mid, int end){

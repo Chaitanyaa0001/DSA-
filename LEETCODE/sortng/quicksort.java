@@ -1,37 +1,38 @@
-package sortng;
+package LEETCODE.sortng;
 
 public class quicksort {
-    // public static int partitionlast(int arr[],int start,int end){
-    //     int index = start-1;
-    //     int pivit = arr[end];
-    //     for(int j = start; j< end;j++){
-    //         if(arr[j] < pivit){
-    //             index++;
-    //             // swaping 
-    //             int temp = arr[j];
-    //             arr[j] = arr[index];
-    //             arr[index] = temp;
-    //         }
-    //     }
-    //      // placement of pivit at correct position
-    //         int temp = arr[index+1];
-    //         arr[index+1] = arr[end];
-    //         arr[end] = temp; 
-    //     return index+1;
-    // }
+    public static int partitionlast(int arr[],int start,int end){
+        int index = start-1;
+        int pivit = arr[end];
+        for(int j = start; j< end;j++){
+            if(arr[j] < pivit){
+                index++;
+                // swaping 
+                int temp = arr[j];
+                arr[j] = arr[index];
+                arr[index] = temp;
+            }
+        }
+         // placement of pivit at correct position
+            int temp = arr[index+1];
+            arr[index+1] = arr[end];
+            arr[end] = temp; 
+        return index+1;
+    }
     
-    // public static void QuickSortLast(int arr[], int start, int end){
-    //     if(start < end){
-    //         int pivit = partition(arr, start, end);
-    //         QuickSort(arr, start, pivit-1);
-    //         QuickSort(arr, pivit+1,end );
-    //     }
-    // }
+    public static void QuickSortLast(int arr[], int start, int end){
+        if(start < end){
+            int pivit = partitionlast(arr, start, end);
+            QuickSortLast(arr, start, pivit-1);
+            QuickSortLast(arr, pivit+1,end );
+        }
+    }
+    // for first element ------------------------------------------------------------------ 
     private static int partitionfirst(int arr[],int start,int end){
         int pivit = arr[start];
         int index = start+1;
         for(int j = start+1; j<= end;j++){
-            if(arr[j] < pivit){
+            if(arr[j]   < pivit){
                 // swaping 
                 int temp = arr[j];
                 arr[j] = arr[index];
