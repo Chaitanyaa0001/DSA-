@@ -19,8 +19,6 @@ public class S7_AggresiveCows {
                 return false;
             }
         }
-        
-
         return true;
     }
     private static int brute_force(int[] arr, int cows){

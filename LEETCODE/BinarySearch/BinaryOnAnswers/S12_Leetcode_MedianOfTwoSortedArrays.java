@@ -14,6 +14,8 @@ public class S12_Leetcode_MedianOfTwoSortedArrays {
         int i = 0;
         int  j = 0;
 
+
+        
         while ( N > i && M > j) {
             if(nums1[i] < nums2[j]){
                 list.add(nums1[i]++);
