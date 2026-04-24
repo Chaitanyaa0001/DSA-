@@ -38,7 +38,6 @@ public class trappingRainwater {
         int leftmax = 0;
         int rightmax = 0;
         int water  = 0;
-
         while (left <= right) {
             if(nums[left]  <= nums[right]){
                 if(nums[left] >= leftmax){
