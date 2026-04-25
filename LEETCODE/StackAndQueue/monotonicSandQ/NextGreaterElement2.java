@@ -6,7 +6,7 @@ public class NextGreaterElement2 {
         // {2,10,12,1,11}
 
         for(int i = 0; i < nums.length; i++){
-            for(int j = i+1; j < )
+
         }
     }
 

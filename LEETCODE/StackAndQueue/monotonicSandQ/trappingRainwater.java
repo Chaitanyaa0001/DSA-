@@ -57,13 +57,6 @@ public class trappingRainwater {
         }
         return water;
     }
-
-    // stack implementation 
-    private static int stackimplemenmtation(int[] nums){
-        Stack<Integer> stack = new Stack<>();
-
-
-    }
     public static void main(String[] args) {
         int[] nums = {4,3,2,4,2,7,4,3,8};
         TwoPointer(nums);
