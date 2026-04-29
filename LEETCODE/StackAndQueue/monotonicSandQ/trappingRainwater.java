@@ -50,7 +50,7 @@ public class trappingRainwater {
                 if(nums[right] >= rightmax){
                     rightmax = nums[right];
                 }else{
-                    water += rightmax - nums[right]
+                    water += rightmax - nums[right];
                 }
                 right--;
             }
@@ -60,7 +60,5 @@ public class trappingRainwater {
     public static void main(String[] args) {
         int[] nums = {4,3,2,4,2,7,4,3,8};
         TwoPointer(nums);
-
-
     }
 }

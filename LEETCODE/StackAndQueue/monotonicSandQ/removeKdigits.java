@@ -31,7 +31,7 @@ public class removeKdigits {
             i++;
         }
        String ans = sb.substring(i);
-       return ans.length() == 0 ? "0" : ans;
+       return ans.length() == 0 ? "0" : ans;  
     }
     
     public static void main(String[] args) {
