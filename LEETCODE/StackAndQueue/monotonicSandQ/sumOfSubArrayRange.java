@@ -139,6 +139,5 @@ public class sumOfSubArrayRange {
     }
     bruteforce(a);
     OPTIMALsubArrayRanges(a);
-
- }   
+}   
 }
