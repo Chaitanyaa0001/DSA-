@@ -58,23 +58,9 @@ public class S1_OnlineStockSpan {
         return span;
     }
 }
-// we will use a stack 
 
 
-
-
-
-
-    static class optimal {
-        Stack<Integer> stack;
-
-        public stockSpannerr(){
-            stack = new Stack<>();
-        }
-        public int next(int price){
-
-        }
-    }
+    
     public static void main(String[] args) {
         
     }
