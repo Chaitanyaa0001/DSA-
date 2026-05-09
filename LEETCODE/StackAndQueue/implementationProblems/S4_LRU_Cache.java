@@ -1,15 +1,50 @@
 package LEETCODE.StackAndQueue.implementationProblems;
 
+import java.util.HashMap;
+
 public class S4_LRU_Cache {
 
+    static class Node {
+        // data of array 
+        int key;
+        int value;
+        // pointers 
+        Node next;
+        Node prev;
+        Node(int key, int value){
+            this.key = key;
+            this.value = value;
+        }
+    }
     class LRUCache {
 
-        public LRUCache(int capacity) {
+        int capacity;
+        HashMap<Integer, Node> map;
+        Node head = new Node(-1,-1); 
+        Node tail = new Node(-1,-1); 
+
+        void insert(Node temp){
 
         }
 
+        void delete(Node temp){
+
+        }
+
+        public LRUCache(int capacity) {
+            this.capacity = capacity;
+            head.next = tail;
+            tail.prev = head;
+        }
+
         public int get(int key) {
-        
+            if(!map.containsKey(key)){
+                return -1;
+            }
+            Node node = map.get(key);
+            delete(node);
+            insert(node);
+            return node.value;
         }
 
         public void put(int key, int value) {
