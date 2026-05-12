@@ -24,13 +24,14 @@ public class S2_LongestSubstringWithDuplicateChar {
     private static int optimal(String s){
         int n = s.length();
         int hash[] = new int[256];
+        int maxlen = 0;
 
         // int l = 0; int r = 0; int len = 0; int maxlen = 0;
 
         // while (r < n) {
 
         // }
-        // return maxlen;
+        return maxlen;
     }
 
     public static void main(String[] args) {
