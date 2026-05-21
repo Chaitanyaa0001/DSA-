@@ -22,7 +22,7 @@ public class S14_PositiveAndNegative_LongestsubarrayWithpositiveAndNegative {
 
         return maxlen;
     }
-
+    
     private static int optimal(int[] nums, int k ){
         int n = nums.length;
         HashMap <Integer,Integer> map = new HashMap<>();

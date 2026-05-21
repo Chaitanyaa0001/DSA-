@@ -18,7 +18,12 @@ public class S9_BinaryArray {
         return count;
     }
 
-    private static int 
+    private static int  betterapprcoh(int a[]){
+        int count = 0;
+        HashMap<Integer> map = new HashMap<>();
+        
+        return count;
+    } 
 
     public static void main(String[] args) {
         int[] a = {2,4,5,2,4,6};
