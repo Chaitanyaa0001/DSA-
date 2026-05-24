@@ -1,5 +1,7 @@
 package LEETCODE.SlidingWindow;
 
+import java.util.HashMap;
+
 public class S9_BinaryArray {
     private static int bruteforce(int[] a){
         int maxlen = 0;
@@ -20,7 +22,8 @@ public class S9_BinaryArray {
 
     private static int  betterapprcoh(int a[]){
         int count = 0;
-        HashMap<Integer> map = new HashMap<>();
+        HashMap<Integer,Integer> map = new HashMap<>();
+        
         
         return count;
     } 
