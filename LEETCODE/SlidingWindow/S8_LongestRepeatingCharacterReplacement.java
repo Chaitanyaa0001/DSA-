@@ -17,9 +17,6 @@ public class S8_LongestRepeatingCharacterReplacement {
                 if(changes <= k){
                     maxlen = Math.max(maxlen,(j-i+1));
                 }
-
-
-                
             }
         }
         return maxlen;
