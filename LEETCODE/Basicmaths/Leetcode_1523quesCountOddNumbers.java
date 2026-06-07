@@ -26,7 +26,6 @@ public class Leetcode_1523quesCountOddNumbers {
         Scanner sc = new Scanner(System.in);
         int low = sc.nextInt();
         int high = sc.nextInt();
-
         System.out.println(countNumber(low, high));
     }
 }

@@ -1,7 +1,7 @@
 package LEETCODE.Basicmaths;
 
 // to calculate the digits of  a number  which the user inputs
-import java.nio.channels.DatagramChannel;
+// import java.nio.channels.DatagramChannel;
 import java.util.Scanner;
 
 public class S1quesCounts {
@@ -13,8 +13,8 @@ public class S1quesCounts {
         }
         while(n > 0){
             long lastdigit = n % 10;
-            n = n/10;
             count ++;
+            n = n/10;
         }
         return count;
     }
@@ -30,10 +30,11 @@ public class S1quesCounts {
         // long n = sc.nextLong();
         int n = sc.nextInt();
 
-        // long result = returnNumberOfCounts(n);
-        // System.out.println(result);
-        int result =returnNumberOfCountsByLog(n);
+        long result = returnNumberOfCounts(n);
         System.out.println(result);
+        int result2 = returnNumberOfCountsByLog(n);
+        System.out.println(result2);
+        sc.close();
     }
     
 }

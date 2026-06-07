@@ -39,5 +39,6 @@ public class S6_AllDivisors {
         int n = sc.nextInt();
 
         System.out.println(PrintAllTheDevsiors(n));
+        sc.close();
     }
 }

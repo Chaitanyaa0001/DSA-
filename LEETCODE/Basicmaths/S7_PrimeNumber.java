@@ -30,6 +30,7 @@ public class S7_PrimeNumber {
         int n = sc.nextInt();
 
         boolean result = isprime(n);
+        sc.close();
 
          System.out.println(result);
         

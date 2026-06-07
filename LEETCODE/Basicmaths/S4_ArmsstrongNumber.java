@@ -19,6 +19,7 @@ public class S4_ArmsstrongNumber {
         if(n == 0){
             return true;
         }
+        
         // to check weather number is armstrong or not 
         while (n > 0) {
             int digit = n %10;
@@ -37,6 +38,7 @@ public class S4_ArmsstrongNumber {
         int n = sc.nextInt();
         boolean result = isArmstriong(n);
         System.out.println(result);
+        sc.close();
     }
 }
 

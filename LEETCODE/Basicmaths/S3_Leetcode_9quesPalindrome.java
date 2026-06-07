@@ -39,8 +39,9 @@ public class S3_Leetcode_9quesPalindrome{
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        // System.out.println(CheckIfaNumberIsPalindrome(n));
+        System.out.println(CheckIfaNumberIsPalindrome(n));
         System.out.println(OptimalApproch(n));
+        sc.close();
     }
 
     
