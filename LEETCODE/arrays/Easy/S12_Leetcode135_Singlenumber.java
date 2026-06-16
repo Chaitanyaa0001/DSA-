@@ -1,4 +1,4 @@
-import java.security.KeyStore.Entry;
+// import java.security.KeyStore.Entry;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class S12_Leetcode135_Singlenumber {
             map.put(num, map.getOrDefault(num, 0)+1);
         }
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1) {
+            if (entry.getValue() == 1) { 
                 return entry.getKey();
             }
         }

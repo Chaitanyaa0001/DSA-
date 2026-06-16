@@ -11,7 +11,7 @@ public class S1_Leetcode1_TwoSum {
     private static int[] bruteforce(int nums[], int target){
         int n = nums.length;
         for(int i = 0; i < n; i++ ){
-            for(int j = 0; j < n; j++){
+            for(int j = i + 1; j < n; j++){
                 if(nums[i] + nums[j] == target){
                     return new  int[] {i,j};
                 }
@@ -19,9 +19,8 @@ public class S1_Leetcode1_TwoSum {
         }
         return new int [] {};
     }
-    
     // optiml 
-    private static int[] optimalApproch(int nums[], int target){
+    private static int[] betterApproch(int nums[], int target){
         int n = nums.length;
         HashMap<Integer,Integer> hm =  new HashMap<>();
         for(int i = 0 ; i < n; i ++){
@@ -32,6 +31,25 @@ public class S1_Leetcode1_TwoSum {
         }
         return new int [] {};
     }
+
+    private static int[] optimalApproch(int [] nums, int target){
+        int n = nums.length;
+        Arrays.sort(nums);
+        int sum = 0;
+        int i = 0; int j = n-1;
+        while(i <= j){
+            sum = nums[i] + nums[j];
+            if(sum > target){
+                j--;
+            }else if( sum < target){
+                i++;
+            }else{
+                return new int[]{i,j};
+            }
+        }
+        return new int[]{-1,-1};
+    }
+
 
     
     public static void main(String[] args) {
@@ -44,5 +62,8 @@ public class S1_Leetcode1_TwoSum {
         
         int[] optimal = optimalApproch(arr, target);
         System.out.println(Arrays.toString(optimal));
+
+        betterApproch(optimal, target);
+        sc.close();
     }
 }

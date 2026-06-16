@@ -37,25 +37,27 @@ public class S8_Union {
         int j = 0;
         ArrayList<Integer> list = new ArrayList<>();
         int n = nums1.length, m =  nums2.length;
+
         while (i < n && j < m) {
             if(nums1[i] <nums2[j]){
                 if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
-
                     list.add(nums1[i]);
                 }
                 i++;
-            }else{
+            }else if( nums1[i] >  nums2[j]){
                 if(list.size() == 0 || list.get(list.size() - 1) != nums2[j]){
                     list.add(nums2[j]);
                 }
                 j++;
-
+            }else{
+                // agar dono same hai to 
+                if(list.size() == 0 || list.get(list.size() - 1) != nums1[i] ){
+                    list.add(nums1[i]);
+                }
             }
         }
-        
         while (i < n) {
             if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
-
                     list.add(nums1[i]);
                 }
                 i++;

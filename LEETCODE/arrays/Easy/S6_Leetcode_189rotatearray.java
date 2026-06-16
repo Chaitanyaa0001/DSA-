@@ -43,7 +43,7 @@ public class S6_Leetcode_189rotatearray {
         while (end>=start) {
             int temp = nums[start];
             nums[start] = nums[end];
-            nums[end] = start;
+            nums[end] = temp;
             start++;
             end--;
         }
@@ -54,6 +54,7 @@ public class S6_Leetcode_189rotatearray {
         Scanner sc = new Scanner(System.in);
         int k = sc.nextInt();
         roateArrayBydPlaces(nums, k);
+        sc.close();
 
     };
 };
