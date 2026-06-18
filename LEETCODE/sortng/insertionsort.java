@@ -5,11 +5,12 @@ public class insertionsort {
     private static void insertionSort(int[] arr){
         int n = arr.length;
         for(int i = 1; i< n; i++){
-            while (i > 0 && arr[i-1] > arr[i] ) {
-                    int temp = arr[i-1];
-                    arr[i-1] = arr[i];
-                    arr[i] = temp;
-                    i--;
+            int j = i;
+            while (j > 0 && arr[j-1] > arr[j] ) {
+                    int temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                    j--;
             }
         }
     }

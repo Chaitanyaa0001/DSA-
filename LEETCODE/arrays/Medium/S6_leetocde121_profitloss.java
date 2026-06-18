@@ -25,6 +25,7 @@ public class S6_leetocde121_profitloss {
     
     public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
+        profitlossques(nums);
 
     }
 }

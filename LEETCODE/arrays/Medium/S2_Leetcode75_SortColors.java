@@ -14,17 +14,10 @@
 // // 1 <= n <= 300
 // // nums[i] is either 0, 1, or 2.
 // // Follow up: Could you come up with a one-pass algorithm using only constant extra space?
-
-
-
-
 package LEETCODE.arrays.Medium;
-
 import LEETCODE.arrays.ArrayInput;
-
 public class S2_Leetcode75_SortColors {
     // by ducks national flag algotithm 
-
     private static int[] brute(int[] nums){
         int n = nums.length;
         int count = 0, count1 = 0, count2 = 0;
@@ -37,9 +30,7 @@ public class S2_Leetcode75_SortColors {
                 count2 ++;
             }
         }
-
         int index = 0;
-
         for(int i = 0; i < count; i++){
             nums[index]  = 0;
         }
@@ -57,6 +48,7 @@ public class S2_Leetcode75_SortColors {
         nums[i] = nums[j];
         nums[j] = temp;
     }
+    
     private static void optimal(int [] nums){
         
         int n = nums.length;

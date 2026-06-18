@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 import LEETCODE.arrays.ArrayInput;
 public class S1_Largestelement {
 

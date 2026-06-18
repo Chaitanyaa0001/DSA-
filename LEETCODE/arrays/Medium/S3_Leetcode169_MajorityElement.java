@@ -23,7 +23,6 @@ public class S3_Leetcode169_MajorityElement {
     private static int better(int nums[]){
         HashMap <Integer,Integer> l = new HashMap<>();
         int n = nums.length;
-
         for(int i = 0; i < nums.length;i++){
             l.put(nums[i], l.getOrDefault(nums[i],0)+1);
         }
@@ -52,14 +51,6 @@ public class S3_Leetcode169_MajorityElement {
         }
         return elemnt;
     }
-
-
-
-
-
-
-
-
     
     public static void main(String[] args) {
         int [] arr = ArrayInput.takeArrayInput();
@@ -67,5 +58,7 @@ public class S3_Leetcode169_MajorityElement {
         // int result = better(arr);
         int result = optimalApproch(arr);
         System.out.println(result);
+        bruteforce(arr);
+        better(arr);
     }
 }

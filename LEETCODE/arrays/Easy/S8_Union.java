@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+// import java.util.HashMap;
 import java.util.HashSet;
-import java.util.TreeSet;
+// import java.util.TreeSet;
 
 import LEETCODE.arrays.ArrayInput;
 
@@ -40,11 +40,13 @@ public class S8_Union {
 
         while (i < n && j < m) {
             if(nums1[i] <nums2[j]){
+                // agar nums1 mei chota hai toh 
                 if( list.size() == 0 || list.get(list.size() - 1) != nums1[i]){
                     list.add(nums1[i]);
                 }
                 i++;
             }else if( nums1[i] >  nums2[j]){
+                // agar nums 2 mei chota hai toh 
                 if(list.size() == 0 || list.get(list.size() - 1) != nums2[j]){
                     list.add(nums2[j]);
                 }

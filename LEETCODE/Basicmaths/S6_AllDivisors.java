@@ -27,7 +27,7 @@ public class S6_AllDivisors {
             }
             } 
         }
-        // sorting array list 
+        // sorting array list   
         Collections.reverse(large);
         // merging both 
         small.addAll(large);

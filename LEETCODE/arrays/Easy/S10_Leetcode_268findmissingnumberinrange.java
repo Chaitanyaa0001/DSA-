@@ -11,6 +11,7 @@ public class S10_Leetcode_268findmissingnumberinrange {
 
         return actualsum - sum;
     }
+    
     public static void main(String[] args) {
         int nums[] = ArrayInput.takeArrayInput();
         functionnumber(nums);

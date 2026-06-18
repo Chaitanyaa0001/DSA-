@@ -19,7 +19,7 @@ public class S1_Leetcode1_TwoSum {
         }
         return new int [] {};
     }
-    // optiml 
+    // better 
     private static int[] betterApproch(int nums[], int target){
         int n = nums.length;
         HashMap<Integer,Integer> hm =  new HashMap<>();
@@ -31,7 +31,7 @@ public class S1_Leetcode1_TwoSum {
         }
         return new int [] {};
     }
-
+// optimal 
     private static int[] optimalApproch(int [] nums, int target){
         int n = nums.length;
         Arrays.sort(nums);
