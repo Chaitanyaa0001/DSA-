@@ -9,11 +9,13 @@ import LEETCODE.trees.BinaryTree;
 public class s1_PreorderIterative {
     private static List<Integer> preorder(BinaryTree.Node root){
 
+        // root  left right 
         Stack<BinaryTree.Node> stack = new Stack<>();
         List<Integer> list = new ArrayList<>();
         if(root == null){
             return list;
         }
+
         stack.push(root);
         while (!stack.isEmpty()) {
             

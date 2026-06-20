@@ -33,6 +33,8 @@ public class deletitioninLL {
             temp = temp.next;
         }
     }
+    // -------------------------
+    
     // delete form head 
     private static Node deleteNode(Node head){
         //  h

@@ -1,8 +1,6 @@
 package LEETCODE.LinkedList.mediumquesofLL;
 
-import org.w3c.dom.NodeList;
 
-import LEETCODE.LinkedList.LinkedListUtil;
 import LEETCODE.LinkedList.LinkedListUtil.Node;
 
 public class S1_Leetcode_MiddleOfLinkedList {
@@ -37,6 +35,8 @@ public class S1_Leetcode_MiddleOfLinkedList {
     }
     public static void main(String[] args) {
         int [] arr = {1,2,3,4,5};
+        BruteForce(null);
+        TortoiseHareAlgorithm(null);
         
     }
 }
