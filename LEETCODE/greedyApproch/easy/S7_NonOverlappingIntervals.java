@@ -21,6 +21,7 @@ public class S7_NonOverlappingIntervals {
     }
     public static void main(String[] args) {
         int a[][] = {{1,2},{2,3},{3,4},{1,3}};
+        eraseIntervals(a);
         
     }
 }
