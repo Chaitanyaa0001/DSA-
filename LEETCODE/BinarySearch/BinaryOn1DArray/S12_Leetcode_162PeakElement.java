@@ -40,6 +40,7 @@ public class S12_Leetcode_162PeakElement {
 
     public static void main(String[] args) {
         int [] nums = ArrayInp.takeArrayInput();
+        optimal_Binary(nums);
         System.out.println(brute(nums));
     }
 }

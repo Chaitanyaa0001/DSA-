@@ -1,6 +1,5 @@
 package LEETCODE.BinarySearch.BinaryOn1DArray;
 
-import java.util.Scanner;
 
 import LEETCODE.BinarySearch.ArrayInp;
 

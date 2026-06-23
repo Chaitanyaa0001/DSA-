@@ -24,5 +24,6 @@ public class S3_LowerBound {
         int[] nums = ArrayInp.takeArrayInput();
         int x = sc.nextInt();
         System.out.println(lower_Bound(nums, x));
+        sc.close();
     }
 }

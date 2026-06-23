@@ -29,5 +29,8 @@ public class S2_UpperBound {
         Scanner sc =  new Scanner(System.in);
         int [] nums = ArrayInp.takeArrayInput();
         int x = sc.nextInt();
+
+        upper_bound(nums, x);
+        sc.close();
     }
 }

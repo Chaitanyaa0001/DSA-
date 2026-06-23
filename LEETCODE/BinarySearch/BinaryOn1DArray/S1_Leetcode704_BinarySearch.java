@@ -27,5 +27,6 @@ public class S1_Leetcode704_BinarySearch {
         int [] nums = ArrayInp.takeArrayInput();
         int target =  sc.nextInt();
         System.out.println(brute(nums, target));
+        sc.close();
     }
 }
