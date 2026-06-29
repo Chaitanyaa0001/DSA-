@@ -6,7 +6,6 @@ public class S3_lcheckIfarrayisSorted {
             if( a[i] > a[i+1]){
                 count++;
             }
-
             if( count > 1){
                 return false;
             }

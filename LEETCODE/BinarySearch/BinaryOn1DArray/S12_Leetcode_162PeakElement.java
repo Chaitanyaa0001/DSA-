@@ -15,6 +15,7 @@ public class S12_Leetcode_162PeakElement {
         }
         return -1;
     }
+    
     private static int optimal_Binary(int [] nums){
         int n = nums.length;
         int start = 1;
@@ -42,5 +43,6 @@ public class S12_Leetcode_162PeakElement {
         int [] nums = ArrayInp.takeArrayInput();
         optimal_Binary(nums);
         System.out.println(brute(nums));
+
     }
 }

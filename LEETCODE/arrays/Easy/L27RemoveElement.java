@@ -58,5 +58,6 @@ public class L27RemoveElement {
 
         int result = removeelement(nums,target);
         System.out.println("total number of counts and value of the final lenght of an array :" + result);
+        sc.close();
     }
 }

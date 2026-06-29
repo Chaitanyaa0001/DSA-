@@ -5,8 +5,8 @@ import java.util.*;
 
 import LEETCODE.trees.BinaryTree;
 
-public class InorderIteration {
-
+public class S3_InorderIteration {
+    //  ITERATIVE INORDER
     private static List<Integer> inorder(BinaryTree.Node root){
         List<Integer> ans  = new ArrayList<>();
         Stack<BinaryTree.Node> stack = new Stack<>();
@@ -36,6 +36,7 @@ public class InorderIteration {
     public static void main(String[] args) {
         
         BinaryTree.Node root  = BinaryTree.createTree();
+        inorder(root);
     }
 
 }

@@ -38,9 +38,9 @@ public class S5_JobSequencingProblem {
             int deadline = jobs[i][1];
             int id = jobs[i][0];
 
-            for(int j = visited.length; j>= 1; j--){
+            for(int j = deadline; j>= 1; j--){
                 if(visited[j] == -1){
-                    visited[j] = jobs[i][0];
+                    visited[j] = id;
                     profit += jobs[i][2];
                     count++;
                     break;
@@ -55,6 +55,7 @@ public class S5_JobSequencingProblem {
     }
     public static void main(String[] args) {
         int[][] jobs1 = { {1,4,20}, {2,1,10}, {3,1,40}, {4,1,30} };
+        jobseqprob(jobs1);
        
     }
 }

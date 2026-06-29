@@ -17,8 +17,6 @@ public class S6_Nmeetings {
 
     private static int  nmeetings(int s[], int e[]){
         int n = s.length;
-        int m = e.length;
-        int maxpeeting = 0;
         // isme maine apnmi sari meeting store kari hai 
         // ( start, end , index )
         meeting[] meet = new meeting[n];

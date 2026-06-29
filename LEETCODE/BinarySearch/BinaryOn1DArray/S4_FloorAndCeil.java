@@ -25,14 +25,10 @@ public class S4_FloorAndCeil {
         }
         return new int[]{floor,ceil};
     }
-
     public static void main(String[] args) {
-
         int [] nums = ArrayInp.takeArrayInput();
         int x =  5;
-
         int [] res = floorAndCeil(nums, x);
-
         
         System.out.println("Floor: " + res[0]);
         System.out.println("Ceil: " + res[1]);

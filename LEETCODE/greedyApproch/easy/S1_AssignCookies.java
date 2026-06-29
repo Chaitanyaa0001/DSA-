@@ -17,7 +17,7 @@ public class S1_AssignCookies {
         // har ek chidren ka greed factor  g[i]  jo ek bache ko bhook lagi hai 
         //  cokkie size s[i]
 
-    //    g =  { 1,2 3}   s= {1,1}
+        //    g =  { 1,2 3}   s= {1,1}
 
     Arrays.sort(g);
     Arrays.sort(s);

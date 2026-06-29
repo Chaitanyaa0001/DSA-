@@ -8,10 +8,10 @@ import LEETCODE.arrays.ArrayInput;
 public class S8_Union {
     // O(n + m)
     // O(k log k)
-
     // O(n + m + k log k)
 
     private static int[] findUnionfromarrays(int[] num1, int[] num2){
+        
         HashSet<Integer> union = new HashSet<>();
         // O(n) 
         for(int i = 0; i < num1.length; i++){
