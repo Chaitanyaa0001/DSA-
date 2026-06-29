@@ -24,8 +24,8 @@ public class S2_PostorderIteration {
                 stack1.push(node.right);
             }
         }
-        while (stack1.isEmpty()) {
-            stack1.pop();
+        while (!stack2.isEmpty()) {
+            ans.add(stack1.pop().data);
         }
 
         return ans;
