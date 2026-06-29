@@ -5,7 +5,8 @@ import java.util.*;
 import LEETCODE.trees.BinaryTree;
 
 // int this we can use 2 stack and 1 stack 
-public class PostorderIteration {
+public class S2_PostorderIteration {
+    // ITERATIVE POSTORDER 
     private static List<Integer> postorderDOUBLE(BinaryTree.Node root){
         List<Integer> ans = new ArrayList<>();
         Stack<BinaryTree.Node> stack1 = new Stack<>();
