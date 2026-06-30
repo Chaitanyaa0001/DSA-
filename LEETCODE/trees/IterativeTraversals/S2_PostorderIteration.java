@@ -32,7 +32,6 @@ public class S2_PostorderIteration {
     }
 
     private static List<Integer> postorderSINGLE(BinaryTree.Node root) {
-
     List<Integer> list = new ArrayList<>();
     Stack<BinaryTree.Node> stack = new Stack<>();
 
