@@ -3,14 +3,13 @@ package LEETCODE.trees.medium;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import javax.swing.tree.TreeNode;
 
 import LEETCODE.trees.BinaryTree;
 
 public class S1_MaximumDepth {
 
     
-    private static int findmaxdeptOfaNodeRECURSIVE(BinaryTree.Node root){
+    public static int findmaxdeptOfaNodeRECURSIVE(BinaryTree.Node root){
         if(root == null){
             return 0;
         }

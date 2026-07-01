@@ -3,11 +3,12 @@ package LEETCODE.trees.medium;
 import LEETCODE.trees.BinaryTree;
 
 public class S2_BalancedTree {
-    private static int  getHeight(BinaryTree.Node root){
+    public static int  getHeight(BinaryTree.Node root){
         int left = getHeight(root.left);
         int right = getHeight(root.right);
         return 1+ Math.max(left,right);
     }
+
     private static boolean bruteforce(BinaryTree.Node root){
         if(root == null){
             return true;
