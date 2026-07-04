@@ -90,7 +90,7 @@ public class S6_VerticalOrderTraversal {
         dfs(root, map, 0, 0);
         for(Map.Entry <Integer,TreeMap<Integer,PriorityQueue<Integer>>> col : map.entrySet()){
             List<Integer> list  = new ArrayList<>();
-            for(Map.Entry <Integer,PriorityQueue<Integer>> level : map.get(col).entrySet()){
+            for(Map.Entry <Integer,PriorityQueue<Integer>> level : col.getValue().entrySet()){
                 PriorityQueue<Integer> pq = level.getValue();
                 while (!pq.isEmpty()) {
                     list.add(pq.poll());
@@ -103,7 +103,7 @@ public class S6_VerticalOrderTraversal {
     public static void main(String[] args) {
         BinaryTree.Node root = BinaryTree.createTree();
         verticaltravrsalBFS(root);
-        verticaltravrsalBFS(root);
+        veriticalDFS(root);
 
     }
 }
