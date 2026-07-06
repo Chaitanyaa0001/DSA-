@@ -1,4 +1,4 @@
-package LEETCODE.trees.easy;
+package LEETCODE.trees.IterativeTraversals;
 
 import java.util.ArrayList;
 import java.util.*;

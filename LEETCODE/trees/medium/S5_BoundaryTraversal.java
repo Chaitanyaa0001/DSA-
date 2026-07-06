@@ -58,17 +58,12 @@ public class S5_BoundaryTraversal {
     }
 
     private static List<Integer> boundary(BinaryTree.Node root){
-
-        
         List<Integer>  ans = new ArrayList<>();
-
         if(root == null)
             return ans;
-    
         if(!isleaf(root)){
             ans.add(root.data);
-
-        }
+        } 
 
         leftboundry(root, ans);
         leafnodes(root, ans);

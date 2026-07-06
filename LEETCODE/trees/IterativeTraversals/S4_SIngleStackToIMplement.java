@@ -1,4 +1,4 @@
-package LEETCODE.trees.easy;
+package LEETCODE.trees.IterativeTraversals;
 
 import LEETCODE.trees.BinaryTree;
 import java.util.*;;
@@ -39,9 +39,7 @@ public class S4_SIngleStackToIMplement {
             }else if(p.value == 3){
                 postorder.add(p.node.data);
                 p.value++;
-                if(p.node.right != null){
-                    stack.push(new pair(p.node.right, 1));
-                }
+                
             }
         }
     }
