@@ -5,6 +5,8 @@ import java.util.*;
 import LEETCODE.arrays.ArrayInput;
 public class S7_Leetcode2149reaarangetheSIgns {
     private static int[]  brutesignArrays(int [] nums){
+        // given equal posive 
+        // given equal negative elements 
         int n = nums.length;
         ArrayList <Integer> pos = new ArrayList<>(); 
         ArrayList <Integer> neg = new ArrayList<>(); 
@@ -25,16 +27,18 @@ public class S7_Leetcode2149reaarangetheSIgns {
 
     private static int [] optimal(int[] nums){
         int n = nums.length;
+
         int [] ans =  new int[n];
-        int x = 0;
         int positive = 0; 
         int negative = 1;
         for(int i = 0; i < n; i++){
             if(nums[i]>0){
+                // agar mera positive hai to even pnace pe dalke index +2 se padha do 
                 ans[positive] = nums[i];
                 positive = positive+2;
             }else if(nums[i]<0){
                 ans[negative]  = nums[i];
+                // same for negative 
                 negative = negative+2;
             }
         }
@@ -43,8 +47,8 @@ public class S7_Leetcode2149reaarangetheSIgns {
     public static void main(String[] args) {
         int[] nums = ArrayInput.takeArrayInput();
 
-        // int[] ans = brutesignArrays(nums);
-        // System.out.println(Arrays.toString(ans));
+        int[] ans = brutesignArrays(nums);
+        System.out.println(Arrays.toString(ans));
 
          int[] ans2 = optimal(nums);
         System.out.println(Arrays.toString(ans2));

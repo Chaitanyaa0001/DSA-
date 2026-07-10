@@ -74,6 +74,7 @@ public class S2_Leetcode75_SortColors {
         // brute(nums);
 
         optimal(nums);
+        brute(nums);
 
         for(int i = 0; i < nums.length; i++){
             System.out.print(nums[i]);
