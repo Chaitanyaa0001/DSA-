@@ -41,8 +41,7 @@ public class S13_Positive_LongestSubarraywithsumK {
        for(int i = 0; i < n; i++){
            sum += nums[i];
            if( sum == k ){
-              maxlen = i + 1;
-
+            maxlen = i + 1;
            }
            if(map.containsKey(sum -k)){
                int j = map.get(sum-k); 
@@ -63,17 +62,17 @@ public class S13_Positive_LongestSubarraywithsumK {
         int n = nums.length;
         int maxlen = 0;
 
-        int i = 0;
-        int j = 0; 
-        int sum = 0;
-        while (j < n) {
-            sum += nums[i];
+        int left = 0;
+        int right = 0; 
+        int sum = nums[0];
+        while (right < n) {
+            sum += nums[right];
             while(sum > k){
-               sum = sum - nums[i];
-               i++;
+               sum = sum - nums[left];
+               left++;
             }  
             if(sum == k){
-                int len = j - i + 1;
+                int len = right - left + 1;
                 maxlen = Math.max(maxlen, len);
             } 
             

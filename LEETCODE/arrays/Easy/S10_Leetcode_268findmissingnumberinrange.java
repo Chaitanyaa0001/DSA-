@@ -11,10 +11,20 @@ public class S10_Leetcode_268findmissingnumberinrange {
 
         return actualsum - sum;
     }
+
+    private static int withzor(int nums[]){
+        int result = 0; 
+
+        for(int num : nums){
+            result ^= num;
+        }
+        return result;
+    }
     
     public static void main(String[] args) {
         int nums[] = ArrayInput.takeArrayInput();
         functionnumber(nums);
+        withzor(nums);
 
     }
 }
