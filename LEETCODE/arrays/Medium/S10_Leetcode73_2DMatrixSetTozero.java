@@ -65,7 +65,7 @@ public class S10_Leetcode73_2DMatrixSetTozero {
             for(int j = 0 ; j  < m; j++){
                 if(matrix[i][j] == 0){
                     Row[i] = 1;
-                    Row[j] = 1;
+                    Col[j] = 1;
                 }
             }
         }
@@ -80,19 +80,24 @@ public class S10_Leetcode73_2DMatrixSetTozero {
     // best approch 
 
     private static void bestapproch(int matrix[][]){
-        int n = matrix.length;
-        int m = matrix[0].length;
+        int n = matrix.length;  // row 
+        int m = matrix[0].length; // col 
         int col0 = 1;
-        // row matrix[0][...] 
+        // row matrix[0][   ...] 
         // col matrix[...][0]
         for(int i = 0; i < n; i++){
-            if(matrix[i][0] == 0){
-                col0 = 0;
-            }
             for(int j = 0; j < m; j++){
                 if(matrix[i][j] == 0){
-                    matrix[0][i] = 0;
-                    matrix[i][0] = 0;
+                    matrix[i][0] = 0; // row 
+                    // ab agar mera col mei koi elemet agar 0 hai 
+                    if( j != 0){
+                        // agar mera 0 vala col nhi hai to normal mark  karo 
+                        matrix[0][i] = 0; // col 
+                    }else{
+                        // or agar mera j == 0 first col hai 
+                        // to col0 ko  0 krdo 
+                        col0 = 0;
+                    }
                 }
             }
         }
@@ -120,6 +125,9 @@ public class S10_Leetcode73_2DMatrixSetTozero {
     
     public static void main(String[] args) {
         int matrix[][] = {{1,1,1},{1,0,1},{1,1,1}};
+        bruteforce(matrix);
+        betterapproch(matrix);
+        bestapproch(matrix);
         
     }
 }
