@@ -48,11 +48,10 @@ public class S5_NodesatDistanceK {
                     q.add(curr.right);
                     visited.put(curr.right,true);
                 }
-
                 
                 // explore parent 
                 if(parent.get(curr) != null && visited.get(parent.get(curr)) == null){
-                    q.add(parent.get(curr));
+                    q.add(parent.get    (curr));
                     visited.put(parent.get(curr),true);
                 }
             }

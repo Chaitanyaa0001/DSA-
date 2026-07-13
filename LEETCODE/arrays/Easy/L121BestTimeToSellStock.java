@@ -21,7 +21,6 @@
 // 0 <= prices[i] <= 104
 
 
-import java.util.Scanner;
 
 public class L121BestTimeToSellStock {
     private static int maxprofit(int prices[]){

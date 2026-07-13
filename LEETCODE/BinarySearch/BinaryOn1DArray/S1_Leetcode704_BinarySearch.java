@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 import LEETCODE.BinarySearch.ArrayInp;
 public class S1_Leetcode704_BinarySearch {
-
+    
     private static int brute(int[]nums, int target){
 
         int n = nums.length;

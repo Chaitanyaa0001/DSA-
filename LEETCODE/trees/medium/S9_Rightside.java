@@ -36,6 +36,7 @@ public class S9_Rightside {
             res.add(level.get(n-1));
         }
         return res;
+        // in left we will take the first elemet of tree 
     }
     public static void main(String[] args) {
         BinaryTree.Node  root  = BinaryTree.createTree();
