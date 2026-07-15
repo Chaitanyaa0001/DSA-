@@ -1,16 +1,17 @@
 package LEETCODE.trees.hard;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import LEETCODE.trees.BinaryTree;
-import java.util.*;
 
-public class S8_MorrisInorderTraversal {
-    private static List<Integer>  morrisTraversal(BinaryTree.Node root){
+public class S9_MorrishPreOrder {
+    private static List<Integer> preorder(BinaryTree.Node root){
         BinaryTree.Node curr = root;
-        List<Integer> inorder = new ArrayList<>();
+        List<Integer> preorder = new ArrayList<>();
         while (curr != null) {
             if(curr.left == null){
-                inorder.add(curr.data);
+                preorder.add(curr.data);
                 curr = curr.right;
             }else{
                 BinaryTree.Node prev = curr.left;
@@ -18,19 +19,21 @@ public class S8_MorrisInorderTraversal {
                     prev = prev.right;
                 }
                 if(prev.right == null){
+                    preorder.add(curr.data);
                     prev.right = curr;
                     curr = curr.left;
                 }else{
                     prev.right = null;
-                    inorder.add(curr.data);
                     curr = curr.right;
                 }
             }
         }
-        return inorder;
+        return preorder;
     }
+
     public static void main(String[] args) {
         BinaryTree.Node root = BinaryTree.createTree();
-        morrisTraversal(root);
-    }   
+        preorder(root);
+
+    }
 }
