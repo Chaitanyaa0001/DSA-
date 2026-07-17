@@ -19,6 +19,7 @@ public class L_3312_GcdHard {
         int[] ans = new int[queries.length];
         int gcdPairs[] = new int[m];
         int x = 0;
+        
         for(int i = 0; i < n; i++){
             for(int j = i + 1; j < n; j++){
                 int g =  gcd(nums[i],nums[j]);
@@ -28,6 +29,7 @@ public class L_3312_GcdHard {
         for(int i = 0; i < queries.length; i++){
             ans[i] = gcdPairs[(int)queries[i]];
         }
+
         return ans;
     }
     public static void main(String[] args) {
