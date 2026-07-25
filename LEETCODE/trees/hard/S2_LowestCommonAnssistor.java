@@ -68,6 +68,7 @@ public class S2_LowestCommonAnssistor {
     public static void main(String[] args) {
         BinaryTree.Node root = BinaryTree.createTree();
         bruteForce(root, root, root);
+        optimal(root, root, root);
 
     }
 }

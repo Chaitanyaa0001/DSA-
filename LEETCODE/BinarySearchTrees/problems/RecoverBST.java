@@ -96,6 +96,7 @@ public class RecoverBST {
     public static void main(String[] args) {
         BinaryTree.Node root = BinaryTree.createTree();
         bruteforce(root);
+        optimaApproch(first);
 
     }
 }

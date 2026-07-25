@@ -17,9 +17,11 @@ public class S8_MorrisInorderTraversal {
                 while (prev.right != null && prev.right != curr) {
                     prev = prev.right;
                 }
+
                 if(prev.right == null){
                     prev.right = curr;
                     curr = curr.left;
+                    // move left 
                 }else{
                     prev.right = null;
                     inorder.add(curr.data);

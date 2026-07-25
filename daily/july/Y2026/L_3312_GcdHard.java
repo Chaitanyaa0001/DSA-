@@ -32,10 +32,16 @@ public class L_3312_GcdHard {
 
         return ans;
     }
+    private static int[] optimal(int nums[], long q[]){
+        // merko isme constrains 10 *5 given h or har pair ka check krnne mei n square ayaga to we can do that  
+        int ans[] = new int[nums.length];
+        return ans;
+    }
     public static void main(String[] args) {
         int nums[] = {2,3,4};
         long q[] = {0,2,2};
         brute(nums, q);
+        optimal(nums, q);
         
     }
 }
