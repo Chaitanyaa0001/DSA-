@@ -17,9 +17,14 @@ public class AdjacencyList {
             int u = edges[i][0];
             int v = edges[i][1];
             graph.get(u).add(v);
-            graph.get(v).add(u);
+            graph.get(v).add(u); // for directed graph we dont right this only one direction is stored 
 
         }
+        // 0 -> 
+        // 1 -> 2 3 
+        // 2 -> 1 4 5 
+        // 3 -> 1 4 
+        // 4 -> 2 3 5 
         // Print the graph
         for (int i = 0; i < n; i++) {
 
@@ -31,5 +36,6 @@ public class AdjacencyList {
 
             System.out.println();
         }
+        
     }
 }

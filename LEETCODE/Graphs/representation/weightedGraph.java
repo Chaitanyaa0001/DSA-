@@ -5,7 +5,7 @@ public class weightedGraph {
         for(int i = 0; i < edges.length; i++){
             int u = edges[i][0];// soruce
             int v = edges[i][1]; // destination 
-            int w = edges[0][2]; // weight
+            int w = edges[i][2]; // weight
 
             graph[u][v] = w;
             graph[v][u] = w; // for directed we cant do this as it is only for one direction
@@ -47,7 +47,7 @@ public class weightedGraph {
         forMatrix(edges,n,graph);
         List<List<Pair>> graphh = new ArrayList<>();
         forList(edges, n, graphh);
-        
+
         
     }
 }

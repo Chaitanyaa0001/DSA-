@@ -6,7 +6,7 @@ public class breadthFirstSearch {
 
     // Returns BFS Traversal starting from node 0
     public static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
-
+        // time ; runns on all its neighbours or degreees 
         int V = adj.size();
 
         // Queue for BFS
@@ -22,7 +22,7 @@ public class breadthFirstSearch {
         q.offer(0);
         vis[0] = true;
 
-        while (!q.isEmpty()) {
+        while (!q.isEmpty()) {  //----> O(n)
 
             // Remove front node
             int node = q.poll();
@@ -31,11 +31,11 @@ public class breadthFirstSearch {
             ans.add(node);
 
             // Traverse all neighbours
-            for (int neighbour : adj.get(node)) {
+            for (int neighbour : adj.get(node)) {  // --> degrees O(2E) twice of edges 
 
                 // If not visited
                 if (!vis[neighbour]) {
-
+ 
                     vis[neighbour] = true;
                     q.offer(neighbour);
                 }

@@ -78,7 +78,7 @@ public class S5_NumberOfIslands {
             for (int j = 0; j < col; j++) {
 
                 // New island found
-                if (grid[i][j] == '1' && !vis[i][j]) {
+                if (grid[   i][j] == '1' && !vis[i][j]) {
 
                     count++;
 

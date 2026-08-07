@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class S6_DetectaCycle {
+public class S6_DetectaCycleinUndirectedGraph {
     static class Pair{
         int node;
         int parent;

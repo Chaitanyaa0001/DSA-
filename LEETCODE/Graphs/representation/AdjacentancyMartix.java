@@ -21,7 +21,7 @@ public class AdjacentancyMartix {
             int v = edges[i][1]; 
             
             graph[u][v] = 1;
-            graph[v][u] = 1;
+            graph[v][u] = 1; // for directed grapph we dont write this  as fircted graph is only of onr direction 
         }
 
         for (int i = 0; i < n; i++) {

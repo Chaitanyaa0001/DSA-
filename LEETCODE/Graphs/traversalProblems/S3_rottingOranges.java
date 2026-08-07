@@ -61,7 +61,7 @@ public class S3_rottingOranges {
                 if( 0 <= neighbourRow && neighbourRow < m && neighbourCol <= 0 && neighbourCol < n && !vis[neighbourRow][neighbourCol] && grid[neighbourRow][neighbourCol] == 1){
                     q.add(new Pair(neighbourRow, neighbourCol, t+1));
                     vis[neighbourRow][neighbourCol] = true;
-                    rotton++;
+                    rotton++;   
                 }
             }
 
