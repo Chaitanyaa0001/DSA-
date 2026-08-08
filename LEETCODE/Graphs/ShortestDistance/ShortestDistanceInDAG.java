@@ -10,10 +10,19 @@ public class ShortestDistanceInDAG {
             this.weight = weight;
         }
     }
-    private static void dfs(int nde , boolean[] vis, List<List<pair>> adj,Stack<)[
+    private static void dfs(int nde , boolean[] vis, List<List<pair>> adj,Stack<Integer> stk)[
         vis[nde] = true;
-        for(int )
-    ]
+
+        for(pair nei : adj.get(nde)){
+            int curr = nei.node;
+            int w = nei.weight;
+            if(!vis[curr]){
+                dfs(curr, vis, adj, stk);
+            }
+        }
+
+        stk.add(nde);
+}
     private static void shortestpathindag(int edges[][]){
         int V = 0;
         for (int[] edge : edges) {
@@ -33,12 +42,31 @@ public class ShortestDistanceInDAG {
 
         // now perform topo sort or dfs from connected components 
         boolean vis[] = new boolean[V];
-
+        Stack<Integer> stk = new Stack<>();
         for(int i = 0; i < V; i++){
             if(!vis[i]){
-                dfs();
+                dfs(i,vis, adj,stk);
             }
         } 
+        int dis[] = new int[V];
+        Arrays.fill(dis,Integer.MAX_VALUE);
+        int src = 6; // any source can be given ;
+        int distance = 0;
+        dis[src] = distance;
+        while (!stk.isEmpty()) {
+            int elem = stk.peek();  
+            stk.pop();  // 6 iska dis mera 0 hai kyuki sourcr node h
+
+            for(pair nei :adj.get(elem)){
+                //  6 - [4,2]
+                int nde = nei.node; // 4
+                int w = nei.weight; // 2
+
+                if(dis[elem] +  w < dis[nde]){
+                    dis[nde] = dis[elem] + w;
+                }
+            }
+        }
     }
     public static void main(String[] args) {
         int[][] edges = {
