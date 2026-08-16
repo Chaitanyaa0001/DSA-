@@ -1,27 +1,45 @@
 package LEETCODE.BitManupulation.intro;
-
 import java.util.Scanner;
 
+/**
+ * convert2Decimal
+ */
 public class convert2Decimal {
-    private static int converttodecimal(String x){
-        // 1101
-        // 1 * 2 pow 0 + 0 * 2 pow 1 + ......
-        int len = x.length();
-        int num = 0;
-        int pow = 1;
-        for(int i = len -1; i >= 0; i++){
-            if(x.charAt(i) == 1){
-                num +=  pow;
-            }
-            pow *= 2;
+
+    private static int convertToDecimal(String binaryString) {
+        int  number  = 0;
+        int power = 0;
+
+        for (int i =  binaryString.length() - 1; i >= 0; i--) {
+            int bit = binaryString.charAt(i) - '0';
+            number += bit * ((int) Math.pow(2, power));
+            power++;
         }
-        return num;
+        
+        return number;
     }
+    private static int strivermethod(String s){
+
+        int number = 0; int power = 0;
+
+        for(int i  = s.length() - 1; i >= 0; i--){
+            int bit = s.charAt(i) - '0';
+
+            if(bit == 1){
+                number += (1 << power);
+            }
+            power++;
+        }
+        return number;
+    }
+
     public static void main(String[] args) {
-        Scanner sc  = new Scanner(System.in);
-        String x =  sc.nextLine();
-
+        Scanner scanner = new Scanner(System.in);
+        
+        String binaryString = scanner.nextLine();
+        
+        // System.out.println(convertToDecimal(binaryString));
+        System.out.println(strivermethod(binaryString));
     }
+    
 }
-
-

@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 public class convert2Binary {
     private static String convert2binary(int n){
-        String ans = "";
+        StringBuilder sb = new StringBuilder();
 
-        while (n != 1) {
-            if(n % 2 == 1) {
-                ans += '1';
-            }else{
-                ans += '0';
-            }
-            n  = n / 2;
+        while (n > 0) {
+            int bit = n & 1;
+            sb.append(bit);
+            n = n >> 1;
         }
-        return  ans;
+        return sb.reverse().toString();
     }
     public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
         int n = sc.nextInt();
-        convert2binary(n);
+       String res =  convert2binary(n);
+       System.out.println(res);
+        sc.close();
     }
 }
