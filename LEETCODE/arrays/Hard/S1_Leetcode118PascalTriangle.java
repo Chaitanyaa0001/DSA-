@@ -18,6 +18,6 @@ public class S1_Leetcode118PascalTriangle {
          
     }
     public static void main(String[] args) {
-        int 
+    
     }
 }

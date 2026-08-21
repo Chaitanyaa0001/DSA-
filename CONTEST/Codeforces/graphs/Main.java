@@ -1,3 +1,5 @@
+package CONTEST.Codeforces.graphs;
+
 import java.util.*;
 
 public class Main {

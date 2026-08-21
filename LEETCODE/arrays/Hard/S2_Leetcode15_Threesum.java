@@ -49,6 +49,7 @@ public class S2_Leetcode15_Threesum {
     private static List<List<Integer>> betterapproch(int[] nums){
         int n = nums.length;
         HashSet <List<Integer>> ans = new HashSet<>();
+
         for(int i = 0; i < n; i++){
             HashSet<Integer> temp = new HashSet<>();
             for(int j = i+1; j < n; j++){
@@ -69,6 +70,7 @@ public class S2_Leetcode15_Threesum {
     private static List<List<Integer>> optimalpproch(int[] nums){
         int n = nums.length;
         Arrays.sort(nums);
+        
         HashSet<List<Integer>> set = new HashSet<>();
         for(int i = 0; i < n; i++){
             if(i > 0 && nums[i] == nums[i-1]) continue;
