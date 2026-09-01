@@ -4,12 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class S5_NumberOfIslands {
-    
-
     class Pair {
         int r;
         int c;
-
         Pair(int r, int c) {
             this.r = r;
             this.c = c;
