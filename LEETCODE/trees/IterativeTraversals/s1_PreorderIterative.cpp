@@ -1,40 +1,39 @@
-package LEETCODE.trees.IterativeTraversals;
-import java.util.*;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
+struct Node {
+    int val;
+    Node* left;
+    Node* right;
+    Node(int val){
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
+    };
+};
+vector<int> preorder(Node* root){
 
-// in this we will use iterative not recurssion  
-// in this we will use stack   
+    stack<Node*> st;
+    st.push(root);
+    vector<int> ans;
 
-public class s1_PreorderIterative {
-    // ITERATIVE PREORDER
-    private static List<Integer> preorder(BinaryTree.Node root){
-
-        // root  left right 
-        Stack<BinaryTree.Node> stack = new Stack<>();
-        List<Integer> list = new ArrayList<>();
-        if(root == null){
-            return list;
-        }
-
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            
-            BinaryTree.Node curr = stack.pop();
-            list.add(curr.data);
-
-            if(curr.right != null){
-                stack.push(curr.right);
+    while (!st.empty()){
+        int size = st.size();
+        
+        for(int i = 0; i < size; i++){
+            auto curr = st.top();
+            st.pop();
+            ans.push_back(curr->val);
+            if(curr->right != nullptr){
+                st.push(curr->right);
             }
-            if(curr.left != null){
-                stack.push(curr.left);
+            if(curr->left != nullptr){
+                st.push(curr->right);
             }
-            
         }
-        return list;
     }
-    public static void main(String[] args) {
-
-        preorder(null);
-    }
+    return ans;
+}
+int main(){
+    
 }

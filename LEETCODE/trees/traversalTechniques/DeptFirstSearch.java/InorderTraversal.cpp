@@ -1,20 +1,26 @@
-import LEETCODE.trees.BinaryTree;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class InorderTraversal {
-
-    public static void inorder(BinaryTree.Node root) {
-        if( root == null){
-            return ;
-        }
-        inorder(root.left);
-        System.out.println(root.data);
-        inorder(root.right);
+struct Node{
+    int data;
+    Node* left;
+    Node* right;
+    Node(int data){
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
     }
+};
 
-    public static void main(String[] args) {
-
-        BinaryTree.Node root = BinaryTree.createTree();
-
-        inorder(root);
+int inorder(Node* root, vector<int> &ans){
+    if(root == nullptr){
+        return ;
     }
+    inorder(root->left, ans);
+    ans.push_back(root->data);
+    inorder(root->right, ans);
+}
+
+int main(){    
+    return 0;
 }

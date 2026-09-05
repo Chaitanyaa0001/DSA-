@@ -21,22 +21,29 @@
 // 0 <= prices[i] <= 104
 
 
+#include<bits/stdc++.h>
+using namespace std;
 
-public class L121BestTimeToSellStock {
-    private static int maxprofit(int prices[]){
-        int totalprofit = 0;
-        for(int i = 1; i < prices.length; i++){
-            if(prices[i] > prices[i-1]){
-                totalprofit += prices[i] - prices[i-1] ;
-            }
+int maxProfit(vector<int>& prices) {
+    int n = prices.size();
+    int buyprice =  prices[0];
+    int maxp = 0;
+    for(int i = 1 ; i < n; i++){
+        if(prices[i] < buyprice){
+            buyprice = prices[i];
+        }else {
+            int profit = prices[i] - buyprice;
+            maxp = max(maxp, profit);
         }
-        return totalprofit;
     }
-    public static void main(String[] args) {
-    
-        int prices[] = {7,1,5,3,6,4};
-        int result = maxprofit(prices);
-        System.out.println(result);
+    return maxp
+};
+int main(){
+    int n ;
+    cin >> n;
+    vector<int> V(n);
+    for(int i = 0; i < n; i++){
+        cin >> V[i];
     }
-    
+    return 0;
 }

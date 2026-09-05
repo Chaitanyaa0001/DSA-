@@ -1,23 +1,39 @@
-package LEETCODE.BitManupulation.intro;
+#include<bits/stdc++.h>
+using namespace std;
 
-import java.util.Scanner;
-
-public class convert2Binary {
-    private static String convert2binary(int n){
-        StringBuilder sb = new StringBuilder();
-
-        while (n > 0) {
-            int bit = n & 1;
-            sb.append(bit);
-            n = n >> 1;
-        }
-        return sb.reverse().toString();
+void convert_to_binary(int n) {
+    if (n == 0) {
+        cout << "0";
+        return;
     }
-    public static void main(String[] args) {
-        Scanner sc  = new Scanner(System.in);
-        int n = sc.nextInt();
-       String res =  convert2binary(n);
-       System.out.println(res);
-        sc.close();
+    string binary;
+    while (n > 0) {
+        int bit = n & 1; // bit = n % 2
+        binary += (bit + '0');
+        n = n >> 1;  // n = n / 2
     }
+    reverse(binary.begin(), binary.end());
+    cout << binary;
+}
+
+int convert_int(int n){
+
+    int res = 0;
+    int power = 1;
+
+    while (n > 0)
+    {
+        int bit = n & 1;
+        res = res + (bit * power);
+        power = power * 10;
+    }
+    return res;
+}
+
+
+int main(){
+    int n;
+    cin >> n;
+    convert_to_binary(n);
+    return 0;
 }

@@ -46,7 +46,7 @@ public:
             int v = connections[i][1];
 
             if(ds.fp(u) != ds.fp(v)){
-                O(4 alpha)
+                // O(4 alpha)
                 ds.unionsize(u,v);
             }else{
                 extra++;

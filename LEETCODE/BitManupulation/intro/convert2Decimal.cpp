@@ -1,45 +1,29 @@
-package LEETCODE.BitManupulation.intro;
-import java.util.Scanner;
+#include<bits/stdc++.h>
+using namespace std;
 
-/**
- * convert2Decimal
- */
-public class convert2Decimal {
 
-    private static int convertToDecimal(String binaryString) {
-        int  number  = 0;
-        int power = 0;
-
-        for (int i =  binaryString.length() - 1; i >= 0; i--) {
-            int bit = binaryString.charAt(i) - '0';
-            number += bit * ((int) Math.pow(2, power));
-            power++;
-        }
-        
-        return number;
+int convert_into_decimal(int n){
+    // 1101 - 13
+    int power = 0;
+    int ans = 0;
+    while (n >  0){
+        int bit = n % 10;
+        // bit * 2 pow 
+        ans = ans +  (bit * pow(2,power));
+        n = n / 10;
+        power++;
+        // 1- 1  ans = 1 pow 0
+        // 2- 0 ans = 1 pow 1
+        // 3  -  ans = 4 pow 2
+        // 4 - 1 ans = 8 pow 3
+        // 13 
     }
-    private static int strivermethod(String s){
-
-        int number = 0; int power = 0;
-
-        for(int i  = s.length() - 1; i >= 0; i--){
-            int bit = s.charAt(i) - '0';
-
-            if(bit == 1){
-                number += (1 << power);
-            }
-            power++;
-        }
-        return number;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        String binaryString = scanner.nextLine();
-        
-        // System.out.println(convertToDecimal(binaryString));
-        System.out.println(strivermethod(binaryString));
-    }
+    return ans;
     
+}
+int main(){
+    int n;
+    cin >> n;
+    convert_into_decimal(n);
+    return 0;
 }

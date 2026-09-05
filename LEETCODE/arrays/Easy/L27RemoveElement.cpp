@@ -33,31 +33,27 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
-import java.util.Scanner;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class L27RemoveElement {
-    private static int removeelement(int nums[], int target){
-        int  n = nums.length;
-        int index = 0;
-        int count = 0;
-        for(int i = 0; i < n; i++){
-            if(nums[i] != target ){
-                nums[index] = nums[i];
-                index++;
-                count++;
-            }
+int removeElement(vector<int>& nums, int val) {
+    int count = 0;
+    int n = nums.size();
+    int index = 0;
+    for(int i = 0; i < n; i++){
+        if(nums[i] != val){
+            nums[index] = nums[i];
+            index++;
         }
-        return count;
     }
-
-    public static void main(String[] args) {
-        int nums [] = {0,1,2,2,3,0,4,2};
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value whihc you want to remove form an array ");
-        int target = sc.nextInt();
-
-        int result = removeelement(nums,target);
-        System.out.println("total number of counts and value of the final lenght of an array :" + result);
-        sc.close();
+    return index;
+}
+int main(){
+    int n;
+    cin >>n;
+    vector<int> v(n);
+    for(int i = 0 ; i < n; i++){
+        cin >> v[i];
     }
+    return 0;
 }

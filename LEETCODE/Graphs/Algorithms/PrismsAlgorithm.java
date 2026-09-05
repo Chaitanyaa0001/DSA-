@@ -41,8 +41,10 @@ public class PrismsAlgorithm {
             adj.get(v).add(new Pair(u, w));
 
         }
+
         List<List<Integer>> mst = new ArrayList<>();
         PriorityQueue<Data> q = new PriorityQueue<Data>((a,b) -> a.weight - b.weight);
+        
         boolean vis[] = new boolean[V];
         q.offer(new Data(0, 0, -1));
         int sum = 0;

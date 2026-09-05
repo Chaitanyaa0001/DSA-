@@ -1,50 +1,81 @@
-package LEETCODE.trees.IterativeTraversals;
+#include <bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
-import java.util.*;;
+struct Node {
+    int val;
+    Node* left;
+    Node* right;
 
-public class S4_SIngleStackToIMplement {
-    static class pair {
-        BinaryTree.Node node; 
-        int value;
-        pair(BinaryTree.Node node, int value){
-            this.node = node;
-            this.value = value;
-        }
+    Node(int val) {
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    private static void allinone(BinaryTree.Node root){
-        List< Integer> preorder = new ArrayList<>();
-        List< Integer> inorder = new ArrayList<>();
-        List<Integer> postorder = new ArrayList<>();
-        Stack<pair> stack = new Stack<>(); 
+};
+void allinone(Node* root) {
+    vector<int> preorder;
+    vector<int> inorder;
+    vector<int> postorder;
+    if(root == nullptr) return;
+    stack<pair<int, Node*>> s;
 
-        stack.push(new pair(root, 1));
+    s.push({1, root});
+    while(!s.empty()) {
+        auto it = s.top();
+        s.pop();
 
-        while (!stack.isEmpty()) {
-            pair p  = stack.peek();
-
-            if(p.value == 1){
-                preorder.add(p.node.data);
-                p.value++;
-                if(p.node.left != null){
-                    stack.push(new pair (p.node.left,1));
-                }
-            }else if(p.value == 2){
-                inorder.add(p.node.data);
-                p.value++;
-                if(p.node.right != null){
-                    stack.push(new pair(p.node.right, 1));
-                }
-                
-            }else if(p.value == 3){
-                postorder.add(p.node.data);
-                p.value++;
-                
+        int state = it.first;
+        Node* node = it.second;
+        // State 1 → Preorder
+        if(state == 1) {
+            preorder.push_back(node->val);
+            // Change state to 2
+            s.push({2, node});
+            // Go left
+            if(node->left != nullptr) {
+                s.push({1, node->left});
+            }
+        }else if(state == 2) {
+            inorder.push_back(node->val);
+            // Change state to 3
+            s.push({3, node});
+            // Go right
+            if(node->right != nullptr) {
+                s.push({1, node->right});
             }
         }
+        // State 3 → Postorder
+        else {
+            postorder.push_back(node->val);
+        }
     }
-    public static void main(String[] args) {
-        allinone(null);
-        
-    }
+    cout << "Preorder: ";
+    for(int x : preorder)
+        cout << x << " ";
+
+    cout << "\nInorder: ";
+    for(int x : inorder)
+        cout << x << " ";
+
+    cout << "\nPostorder: ";
+    for(int x : postorder)
+        cout << x << " ";
+}
+
+int main() {
+
+    Node* root = new Node(1);
+
+    root->left = new Node(2);
+    root->right = new Node(3);
+
+    root->left->left = new Node(4);
+    root->left->right = new Node(5);
+
+    root->right->left = new Node(6);
+    root->right->right = new Node(7);
+
+    allinone(root);
+
+    return 0;
 }

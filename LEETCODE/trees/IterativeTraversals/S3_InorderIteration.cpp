@@ -1,42 +1,40 @@
-package LEETCODE.trees.IterativeTraversals;
+#include<bits/stdc++.h>
+using namespace std;
 
-import java.util.ArrayList;
-import java.util.*;
+struct Node{
+    int val;
+    Node* left;
+    Node* right;
 
-import LEETCODE.trees.BinaryTree;
+    Node(int val){
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
 
-public class S3_InorderIteration {
-    //  ITERATIVE INORDER
-    private static List<Integer> inorder(BinaryTree.Node root){
-        List<Integer> ans  = new ArrayList<>();
-        Stack<BinaryTree.Node> stack = new Stack<>();
-        
-        if(root == null){
-            return ans;
-        }
+    }
+};
+vector<int> inorder(Node* root){
+    stack<Node*> s;
 
-        BinaryTree.Node  node = root;
-    // left root right 
-        while (true) {
-            if(node != null){
-                stack.push(node);
-                node = node.left;
-            }else{
-                if(stack.isEmpty()){
-                    break;
-                }
-                node = stack.pop();
-                ans.add(node.data);
-                node = node.right;
+    auto node = root;
+    vector<int> ans;
+
+    while (true){
+        if(node != nullptr){
+            s.push(node);
+            node = node->left;
+        }else{
+            if(s.empty()){
+                break;
             }
+            node = s.top();
+            s.pop();
+            ans.push_back(node->val);
+            node = node->right;
         }
-        return ans;
     }
-
-    public static void main(String[] args) {
-        
-        BinaryTree.Node root  = BinaryTree.createTree();
-        inorder(root);
-    }
-
+    
+}
+int main(){
+    return 0;
 }
