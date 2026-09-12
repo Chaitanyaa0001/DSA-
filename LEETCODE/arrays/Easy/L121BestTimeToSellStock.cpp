@@ -36,7 +36,7 @@ int maxProfit(vector<int>& prices) {
             maxp = max(maxp, profit);
         }
     }
-    return maxp
+    return maxp;
 };
 int main(){
     int n ;

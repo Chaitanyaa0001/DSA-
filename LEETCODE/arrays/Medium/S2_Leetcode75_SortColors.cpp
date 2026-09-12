@@ -14,70 +14,37 @@
 // // 1 <= n <= 300
 // // nums[i] is either 0, 1, or 2.
 // // Follow up: Could you come up with a one-pass algorithm using only constant extra space?
-package LEETCODE.arrays.Medium;
-import LEETCODE.arrays.ArrayInput;
-public class S2_Leetcode75_SortColors {
-    // by ducks national flag algotithm 
-    private static int[] brute(int[] nums){
-        int n = nums.length;
-        int count = 0, count1 = 0, count2 = 0;
-        for(int i = 0; i < n; i++){
-            if(nums[i] == 0){
-                count++;
-            }else if(nums[i] == 1){
-                count1 ++;
-            }else{
-                count2 ++;
-            }
-        }
-        int index = 0;
-        for(int i = 0; i < count; i++){
-            nums[index]  = 0;
-        }
-        for(int i = 0; i < count1; i++){
-            nums[index]  = 1;
-        }
-        for(int i = 0; i < count2; i++){
-            nums[index]  = 2;
-        }
-        return nums;
-    }
+#include<bits/stdc++.h>
+using namespace std;
+// 0 red 
+// 1 white 
+// 2 blue
 
-    private static void swap(int nums[], int i, int j){
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
-    
-    private static void optimal(int [] nums){
-        
-        int n = nums.length;
-        int low = 0, mid = 0, high = n-1;
-        while (mid <= high) {
-            if(nums[mid] == 0){
-                swap(nums, mid, low);
-                low++;
-                mid++;
-            }else if(nums[mid] == 1){
-                mid++;
-            }else{
-                swap(nums, mid, high);
-                high--;
-            }   
+void sortcolorw(vector<int> nums, int n){
+    int low = 0;
+    int mid = 0;
+    int high = n-1;
+
+    while (mid <= high){
+        /* code */
+        if(nums[mid] == 0){
+            swap(nums[mid], nums[low]);
+            low ++; mid++;
+        }else if(nums[mid] == 1){
+            mid++;
+        }else{
+            swap(nums[mid], nums[high]);
+            high--;
         }
     }
+}
 
-    
-    public static void main(String[] args) {
-        // nums = [2,0,2,1,1,0]
-        int[] nums = ArrayInput.takeArrayInput();
-        // brute(nums);
-
-        optimal(nums);
-        brute(nums);
-
-        for(int i = 0; i < nums.length; i++){
-            System.out.print(nums[i]);
-        }
+int main(){
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for(int i = 0; i < n; i++){
+        cin >> v[i];
     }
+    return 0;
 }

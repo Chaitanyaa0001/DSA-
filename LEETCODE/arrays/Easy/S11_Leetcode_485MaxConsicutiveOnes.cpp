@@ -14,25 +14,29 @@
 // 1 <= nums.length <= 105
 // nums[i] is either 0 or 1.
 
-import LEETCODE.arrays.ArrayInput;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class S11_Leetcode_485MaxConsicutiveOnes {
-    private static int findmaxconsecutiveones(int nums[]) {
-        int number = 0;
-        int count = 0;
-        for(int i = 0; i < nums.length; i++){
-            if(nums[i] == 1){
-                count++;
-                number = Math.max(count, number);
-            }else{
-                count = 0;
-            }
+int findMaxConsecutiveOnes(vector<int>& nums) {
+    int n = nums.size();
+    int count = 0;
+    int maxcount = 0;
+    for(int i = 0; i < n; i++){
+        if(nums[i] == 1){
+            count++;
+            maxcount = max(count,maxcount);
+        }else{
+            count = 0;
         }
-        return count;
     }
-    public static void main(String[] args) {
-        int nums [] =  ArrayInput.takeArrayInput();
-       int result =  findmaxconsecutiveones(nums);
-       System.out.println(result);
+    return maxcount;
+}
+int main(){
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for(int i = 0; i < n; i++){
+        
     }
+    return 0;
 }

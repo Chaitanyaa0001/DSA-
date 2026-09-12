@@ -41,3 +41,7 @@ int betterapprochusinghashMap(vector<int> nums, int k){
     //    time : O(n)  hashmap is constant 
        return maxlen;
 }
+int main(){
+    
+    return 0;
+}

@@ -33,7 +33,7 @@ vector<int> unionfind(vector<int>nums1, vector<int> nums2){
             j++;
         }
     }
-
+    
     while(i < n1){
         if(ans.empty() || ans.back() != nums1[i]){
             ans.push_back(nums1[i]);
