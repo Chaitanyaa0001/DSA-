@@ -14,6 +14,26 @@ int majority(vector<int> nums){
     }
     return -1;
 }
+
+
+int majorityElement(vector<int>& nums) {
+    int count = 0;
+    int ele = 0;
+    for(int i = 0; i < nums.size(); i++) {
+        if(count == 0) {
+            ele = nums[i];
+            count = 1;
+        }
+        else if(ele == nums[i]) {
+            count++;
+        }
+        else {
+            count--;
+        }
+    }
+    return ele;
+}
+
 int main(){
     int n;
     cin >> n;

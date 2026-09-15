@@ -1,21 +1,24 @@
-/**
- * S16_leadersInanArray
- */
-import java.util.*;
-public class S16_leadersInanArray {
-    private static ArrayList<Integer>  leaders(int arr[]){
-        int n= arr.length;
-        ArrayList<Integer> ans = new ArrayList<>();
-        int max = -1;
-        for(int i = n -1 ; i >= 0; i--){
-            if(arr[i] > max){
-                ans.add(arr[i]);
-            }
-            max = Math.max(max,arr[i]);
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i =0; i < n; i++){
+        cin >> nums[i];
+    }
+
+    vector<int> ans ;
+    int maxi = 0;
+    for(int i = n-1; i >= 0; i--){
+        if(nums[i] > maxi){
+            ans.push_back(nums[i]);
+            maxi = nums[i];
         }
-        return ans;
     }
-    public static void main(String[] args) {
-        int arr[] = {10,22,12,3,0,6};
-    }
+    reverse(ans.begin(), ans.end());
+    
+    return  0;
 }

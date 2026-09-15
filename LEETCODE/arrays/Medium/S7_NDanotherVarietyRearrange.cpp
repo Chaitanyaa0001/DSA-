@@ -18,6 +18,51 @@ using namespace std;
 
 // Output:
 // [2, -1, 4, -3, 5, 6]
-int main(){
-    return 0;
+
+vector<int> maintainorder(vector<int> nums){
+    int n = nums.size();
+    vector<int> pos;
+    vector<int> neg;
+    int countP = 0;
+    int countN = 0;
+    for(int i = 0; i < n; i++){
+        if(nums[i]  < 0){
+            neg.push_back(nums[i]);
+            countN++;
+        }else{
+            countP++;
+            pos.push_back(nums[i]);
+        }
+    }
+
+    int r = min(neg.size(),  pos.size());
+    vector<int> ans;
+    for(int i =0; i < r; i++ ){
+        ans.push_back(pos[i]);
+        ans.push_back(neg[i]);
+    }
+    if(countP > countN){
+        for(int i = r; i < pos.size(); i++){    
+            ans.push_back(pos[i]);
+        }
+    }else if(countN > countP){
+        for(int i = r; i  < neg.size(); i++){
+            ans.push_back(neg[i]);
+        }
+    }
+    return ans;
 }
+int main(){
+    int n; 
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i < n; i++){
+        cin >> nums[i];
+    }
+    auto res = maintainorder(nums);
+
+    for(int i : res){
+        cout << i << endl;
+    }
+    return 0;
+} 
