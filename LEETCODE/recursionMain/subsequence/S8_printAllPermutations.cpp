@@ -22,10 +22,14 @@ void brute(int n,vector<int> nums,vector<vector<int>> ans, vector<int>& map, vec
 
 void optimal(int index,int n ,vector<int>& nums, vector<vector<int>>& ans, vector<int>& ds){
 
+    if(index == n ){
+        ans.push_back(nums);
+        return ;
+    }
     for(int i = index ; i < nums.size(); i++){
         swap(nums[index],nums[i]);
         optimal(index + 1, n, nums, ans,ds);
-        
+        swap(nums[index], nums[i]);
     }
 }
 int main(){
