@@ -23,19 +23,22 @@ int type1(int row, int col){
 // ----------------
 // optimal
 int ncr(int n, int r){
-    int res = 1;
+    int ans = 1;
     for(int i = 0; i < r; i++){
-        res  = res * (n-i);
-        res = res/(i+1);
+        ans  = ans * (n-1);
+        ans = ans / (i+1);    
     }
+    return ans;
 }
 // now type 2 
 // print  the entire row 
 vector<int> pascal(int row){
     vector<int> ans;
     int res = 1;
-    for(int i =0; i < row; i++){
-        res =   res * (row - i);
+    
+    ans.push_back(res);
+    for(int i = 1; i <= row; i++){
+        res  = res * (row - i + 1);
         res = res / i;
         ans.push_back(res);
     }

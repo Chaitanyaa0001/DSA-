@@ -43,10 +43,8 @@ vector<vector<int>> optimal(vector<int> nums, int target){
         int k = n-1;
         long long sum = nums[i] + nums[j] + nums[k];
 
-        while (j < k)
-        {
-            /* code */
-            
+        while (j < k){
+
             if(sum > 0){
                 k--;
             }else if( sum < 0){

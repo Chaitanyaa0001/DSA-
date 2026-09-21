@@ -19,7 +19,7 @@ public :
             return;
         }
         int mid = low + (high- low) / 2;
-        bt(2 * i, low, high, nums);
+        bt(2 * i, low, mid, nums);
         bt(2 * i + 1, mid+1, high,nums);
         s[i] = s[2*i] + s[2* i +1];
     }
@@ -65,10 +65,12 @@ class Solution {
         vector<int> ans;
         SegmentTree st(arr);
         
-        for(int i =0; i < n; i++){
-           int u = q[i][0];
-           int v = q[i][1];
-           int res = st.requestQuery()
+        for(int i =0 ; i < n; i++){
+           int u = q[i][0] -1;
+           int v = q[i][1] -1 ;
+           int res = st.checkSum(u,v);
+           ans.push_back(res);
         }
+        return ans;
     }
 };

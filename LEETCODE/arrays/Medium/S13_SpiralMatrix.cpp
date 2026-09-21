@@ -1,56 +1,41 @@
-package LEETCODE.arrays.Medium;
-import java.util.*;
-public class S13_SpiralMatrix {
+#include<bits/stdc++.h>
+using namespace std;
 
-    private static List<Integer> spiralMatrix(int matrix[][]){
-        int n = matrix.length;
-        int m = matrix[0].length;
-        List<Integer> list = new ArrayList<>();
-        int left = 0; 
-        int right = m - 1; // col
-    
-        int top = 0;
-        int bottom = n -1 ;  // row
 
-        while (top <= bottom && left <= right) {
-             // print top 
-            for(int i = left; i <=right; i++){
-                list.add(matrix[top][i]);
-            }
-            top++;
-            // ptint right 
-            for(int i = top; i <= bottom; i++){
-                list.add(matrix[i][right]);
-            }
-            right--;
-            // print bottom 
-            // if agar meri koi row hi nhi bachi to ye dubara print kr dega 
-            if(top <= bottom){
-                for(int i = right; i >= left; i--){
-                    list.add(matrix[bottom][i]);
-                }
-                 bottom--;
-            }
-            if(left <= right){
-                for(int i = bottom; i >= top; i--){
-                    list.add(matrix[i][left]);
-                }
-                left++;
-            }
-           
+vector<int> spiralOrder(vector<vector<int>>& matrix) {
+    int m = matrix.size();
+    int n = matrix[0].size();
+    int top  = 0; 
+    int bottom = m - 1;
+    int low = 0;
+    int high = n - 1;
+    vector<int> ans;
+    while(low <= high){
+    // top 
+        for(int i = low ; i <= high; i++){
+            ans.push_back(matrix[top][i]);
         }
-        return list;
-       
-
-
+        top++;
+        for(int i = top; i <= bottom; i++){
+            ans.push_back(matrix[i][high]);
+        }
+        high--;
+        if(top <= bottom){
+            for(int i  = high; i >= low; i--){
+                ans.push_back(matrix[bottom][i]);
+            }
+        bottom--;
+        }
+        if(low <= high){
+            for(int i = bottom; i >= top; i--){
+                ans.push_back(matrix[i][low]);
+            }
+        low++;
+        }
     }
-    public static void main(String[] args) {
-        int [][] matrix = {
-            {1,2,3},
-            {4,5,6},
-            {7,8,9},
-            {10,11,12}
-        };
-        spiralMatrix(matrix);
-    }
+    return ans;
+
+}
+int main(){
+    return 0;
 }
