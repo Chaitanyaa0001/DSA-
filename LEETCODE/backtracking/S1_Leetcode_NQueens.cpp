@@ -1,60 +1,117 @@
-package LEETCODE.backtracking;
-import java.util.*;
-public class S1_Leetcode_NQueens {
-    private static boolean isSafe(int row, int col, char[][] board, int n){
-        // to check row 
-        for(int i = 0; i <= col; i++){
-            if(board[row][i] == 'Q'){
-                return false;
-            }
-        }
-        // to check col 
-        for(int i  = 0; i<= row; i++){
-            if(board[i][col] == 'Q') {
-                return false;
-            
-            }
-        }
-        // now to check upper left diagnal and lower left diagnal 
-        for(int i = row,j = col; i >= 0  && j >= 0; i--, j--){
-            if(board[row][col] == 'Q'){
-                return false;
-            }
-        }
-        return false;
-        
-    }
-    private static void backtrack(char[][] board, int col, int n, List<List<String>> ans){
+#include <bits/stdc++.h>
+using namespace std;
 
-        if(col ==  ans.size()){
-            List<String> temp = new ArrayList<>();
-            for(char [] row : board){
-                temp.add(new String(row));
-            }
+class Solution {
+public:
+
+    bool isSafe(int row, int col, vector<string>& board, int n) {
+
+        // 1. Check upper-left diagonal
+        int r = row;
+        int c = col;
+        while (r >= 0 && c >= 0) {
+            if (board[r][c] == 'Q')
+                return false;
+
+            r--;
+            c--;
         }
-        for(int  row = 0; row <= n; row++){
-            if(isSafe(row, col, board, n)){
+        // 2. Check left side
+        r = row;
+        c = col;
+        while (c >= 0) {
+            if (board[r][c] == 'Q')
+                return false;
+
+            c--;
+        }
+        // 3. Check lower-left diagonal
+        r = row;
+        c = col;
+        while (r < n && c >= 0) {
+            if (board[r][c] == 'Q')
+                return false;
+            r++;
+            c--;
+        }
+        return true;
+    }
+
+    void solve(vector<string>& board, vector<vector<string>>& ans, int col, int n) {
+        // Base case:
+        // We successfully placed queens in all columns
+        if (col == n) {
+            ans.push_back(board);
+            return;
+        }
+        // Try every row in current column
+        for (int row = 0; row < n; row++) {
+            if (isSafe(row, col, board, n)) {
+                // Place queen
                 board[row][col] = 'Q';
-                backtrack(board, col, n, ans);
+                // Move to next column
+                solve(board, ans, col + 1, n);
+                // BACKTRACK
                 board[row][col] = '.';
             }
         }
     }
+    void solve2Optimal(int n, int col, vector<string>& board, vector<vector<string>>& ans, vector<int>& lowerD, vector<int>& upperD, vector<int>& currentRow){
 
-    private static List<List<String>> nQueens(int n){
-        // reuslt ans store krvane ke liye 
-        List<List<String>> ans = new ArrayList<>();
-        // board jo mera ans mei store hoga 
-        char[][] board = new char[n][n];
-        for(char[] row : board){
-            Arrays.fill(row,'.');
+        if(col == n){
+            ans.push_back(board);
+            return ;
         }
-        backtrack(board,0,n,ans);
+        // for upper the formula is n - 1 + row - col 
+        // for lower the formula is row + col 
+        for(int row = 0; row < board.size(); row++){
+            if(lowerD[row+col] == 0 && upperD[n-1 + row - col] == 0 && currentRow[row] == 0){
+                board[row][col] = 'Q';
+                upperD[n - 1 + row - col] = 1;
+                lowerD[ row + col] = 1;
+                currentRow[row] = 1;
+                solve2Optimal(n,col + 1, board, ans,lowerD,upperD,currentRow);
+                board[row][col] = '.';
+                upperD[n - 1 + row - col] = 0;
+                lowerD[ row + col] = 0;
+                currentRow[row] = 0;
+            }
+        }
+    }
+
+    vector<vector<string>> solveNQueens(int n) {
+
+        vector<vector<string>> ans;
+
+        // Create n x n board filled with '.'
+        vector<string> board(n, string(n, '.'));
+
+        solve(board, ans, 0, n);
+        vector<int> currentRow(n, 0);
+
+        // 2n - 1 diagonals
+        vector<int> lowerD(2 * n - 1, 0);
+        vector<int> upperD(2 * n - 1, 0);
+        solve2Optimal(n,0,board,ans,lowerD,upperD,currentRow);
+
         return ans;
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        nQueens(n);
+};
+int main() {
+
+    int n;
+    cin >> n;
+
+    Solution obj;
+
+    vector<vector<string>> ans = obj.solveNQueens(n);
+    for (auto board : ans) {
+        for (auto row : board) {
+            cout << row << endl;
+        }
+
+        cout << endl;
     }
+
+    return 0;
 }

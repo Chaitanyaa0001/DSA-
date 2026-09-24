@@ -2,27 +2,23 @@
 using namespace std;
 
 // Added '&' to h and dp to prevent massive memory copying
-int solve(int index, int k, vector<int>& h, vector<int>& dp){
-    if(index == 0){
+
+int solve(int n, int k, vector<int>& h, vector<int>& dp){
+    if(n == 0){
         return 0;
     }
-    
-    // 1. Check the memoization array first
-    if(dp[index] != -1){
-        return dp[index];
+    if(dp[n] != -1){
+        return dp[n];
     }
-    
-    int minsteps = INT_MAX;
-    
+    // int j1 , j2, j3 at most k jumps;
+    int minjumps = INT_MAX;
     for(int i = 1; i <= k; i++){
-        if(index - i >= 0){
-            int jump = solve(index - i, k, h, dp) + abs(h[index] - h[index - i]);
-            minsteps = min(minsteps, jump);
+        if(n - i >= 0){
+            int jumps = solve(n - i, k, h, dp) + abs(h[n] - h[n-i]);
+            minjumps = min(jumps,minjumps);
         }
     }
-    
-    // 2. Save the result in the dp array before returning
-    return dp[index] = minsteps;
+    return dp[n] = minjumps;
 }
 
 int forKsteps(int n, int k, vector<int>& h){
