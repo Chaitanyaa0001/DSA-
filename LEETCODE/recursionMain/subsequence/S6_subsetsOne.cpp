@@ -18,7 +18,17 @@ public:
         solve(index + 1, n, nums, ds);
     }
 
-    vector<vector<int>> subsets(int n, const vector<int>& nums) {
+    // other approch could be 
+    void solve2(int index, int n, vector<int>& nums, vector<int>& ds){
+        
+        ans.push_back(ds);
+        for(int i = index; i < nums.size(); i++){
+            ds.push_back(nums[i]);
+            solve2(i+1, n, nums, ds);
+            ds.pop_back();
+        }
+    }
+    vector<vector<int>> subsets(int n,vector<int>& nums) {
         vector<int> ds;
         solve(0, n, nums, ds);
         return ans;

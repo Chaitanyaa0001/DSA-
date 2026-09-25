@@ -21,7 +21,6 @@ void brute(int n,vector<int> nums,vector<vector<int>> ans, vector<int>& map, vec
 }
 
 void optimal(int index,int n ,vector<int>& nums, vector<vector<int>>& ans, vector<int>& ds){
-
     if(index == n ){
         ans.push_back(nums);
         return ;
