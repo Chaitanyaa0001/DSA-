@@ -49,6 +49,10 @@ bool sudoku(vector<vector<char>>& board) {
     // No empty cells left
     return true;
 }
+
+
+
+
 int main() {
     vector<vector<char>> board(9, vector<char>(9));
     // Take Sudoku input
