@@ -30,7 +30,11 @@ int knapsack(int w, int n, vector<int> wt, vector<int> val){
 
 int tabulation(int w, vector<int> wt, vector<int> val){
     int n = wt.size();    
-    vector<vector<int>> dp(n,vector<int>(w+1, -1));
+    vector<vector<int>> dp(n,vector<int>(w+1, -1));\
+
+    for(int i = wt[0]; i < n; i++){
+        dp[0][i] = wt[0];
+    }
 
 }
 int main(){    
