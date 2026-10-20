@@ -1,36 +1,21 @@
-package LEETCODE.sortng;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.patterns.BasicPatterns.starPattern;
 
-public class bubblesort {
-    private static void bubble(int [] arr){
-        int n = arr.length;
-        for(int i = 0; i < n-1; i++){
-            for(int j = 0; j < n-i-1; j++){
-                if(arr[j] > arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
+void bubble_sort(int n, vector<int> nums){
+
+    for(int i = 0; i < n; i++){
+        
     }
+}
+int main(){
 
-
-    
-    private static void sortedarr(int  [] arr){
-        for(int i =0; i< arr.length; i++ ){
-            System.out.print( "" + arr[i]  );
-        }
-        System.out.println();
+    int n; 
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i <n; i++){
+        cin >> nums[i];
     }
-
-    public static void main(String[] args) {
-
-        int arr [] = {8,5,4,3,5,6,7};
-        bubble(arr);
-        sortedarr(arr);
-
-    }
-    
+    bubble_sort(n,nums);
+    return 0;
 }
