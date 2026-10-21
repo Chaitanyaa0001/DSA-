@@ -1,112 +1,89 @@
-package LEETCODE.LinkedList.singleLinkedList;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class Insertion {
-     static class Node{
-        int data;
-        Node next;
-        Node(int data, Node next){
-            this.data = data;
-            this.next = next;
-        }
-        Node(int data){
-            this.data = data;
-            this.next = null;
-        }
+
+struct Node{
+    /* data */
+    int data;
+    Node* next;
+    Node(int data){
+        this->data = data;
+        this->next = nullptr;
     }
-    private static Node ArrayIntoLinkedList(int[] arr){
-        int n = arr.length; 
-        Node head = new Node(arr[0]);
-        Node mover = head;
-        for(int i = 1; i < n; i++){
-            Node temp = new Node(arr[i]);
-            mover.next = temp;
-            mover = temp;
-        }
+};
+
+Node* insert_at_head(Node* head, int x){
+    Node* temp = new Node(x);
+    temp->next = head;
+    return temp;
+}
+Node* insert_at_tail(Node* head, int x){
+    Node* temp = head;
+
+    while (temp->next != nullptr)
+    {
+        temp = temp->next;
+    }
+    Node* newNode = new Node(x);
+    temp->next = newNode;
+    return head;
+}
+
+Node* insert_at_k_position(Node* head, int k, int data){
+    if(head  == NULL){
         return head;
     }
-    private static void  printfun(Node head){
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+    if(k == 1){
+        Node* node = new Node(data);
+        node->next = head;
+        return node;
+    }
+    int counter = 0;
+    Node* temp = head; Node* prev = nullptr;
+    while (temp != nullptr){
+        /* code */
+        counter++;
+        if(counter == k){
+            Node* newnode = new Node(data);
+            prev->next = newnode;
+            newnode->next = temp;
+            return head;
+        }
+        prev  = temp;
+        temp = temp->next;
+    }
+    return head;
+}
+
+Node* insert_at_val(Node* head, int ele){
+    if(head == nullptr){
+        return nullptr;
+    }
+    if(head->next != nullptr){
+        if(head->data == ele){
+            Node* temp = new Node(ele);
+            head->next = temp;
+            return head;
+        }else{
+            return nullptr;
         }
     }
 
-    private static Node insertathead(Node head, int val){
-        Node temp = new Node(val,head);
-        return temp;
-    }
-    private static Node InsterAtTail(Node head, int val){
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
+    Node* temp = head; Node* prev  = nullptr;
+    while (temp != nullptr){
+            // 0 -> 1 -> 2 -> 3 -> 4 -> 5
+                 // p    t 
+        if(temp->data == ele){
+            Node* newNode = new Node(ele);
+            prev->next = newNode;
+            newNode->next  = temp; 
+            return head;
         }
-        Node newNode = new Node(val);
-        temp.next = newNode;
-        return head;
+        prev = temp;
+        temp = temp->next;
     }
-
-    private static Node Insertatk(Node head, int k, int val){
-        if(head == null) return new Node(val);
-        // k == 1
-        if(k == 1){
-            Node temp = new Node(val,head);
-            return temp;
-        }
-        Node temp  = head; int count = 0;
-        while (temp != null) {
-            count++;
-            if(count == k-1){
-                Node x = new Node(val);
-                x.next = temp.next;
-                temp.next = x;
-                break;
-            }
-            temp = temp.next;
-        }
-        return head;
-    }
-    private static Node insertbeforeValue(Node head, int value, int ele){
-                                                    
-
-        if(head == null) return null;
-        if(head.data == value){
-            Node temp = new Node(ele, head);
-            return temp;
-        }
-        Node temp = head ;
-        // prev = null;
-        // while (temp != null) {
-        //     if(temp.data == value){
-        //         Node x = new Node(ele);
-        //         prev.next = x;
-        //         x.next = temp;
-        //         break;
-        //     }
-        //     prev = temp;
-        //     temp = temp.next;
-        // }
-        // return head;
-        while (temp.next != null) {
-            if(temp.next.data == value){
-                Node x = new Node(ele);
-                x.next = temp.next;
-                temp.next = x;
-                break;
-            }
-            temp = temp.next;
-        }
-        return head;
-
-    }
-    public static void main(String[] args) {
-        int arr[] = {3,1,5,8};
-        Node head = ArrayIntoLinkedList(arr);   
-        // head
-        // Node heaad = insertathead(head, 10);
-        // printfun(heaad);
-        //  tail at the end of ll
-        Node insertvalueatbeforek = insertbeforeValue(head, 10, 100);
-        printfun(insertvalueatbeforek);
-    }
+    return head;
+}
+int main(){
+    return 0;
 }
