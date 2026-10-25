@@ -19,23 +19,25 @@ vector<vector<int>> levelorder(TreeNode* root) {
     }
     queue<TreeNode*> q;
     q.push(root);
-    while(!q.empty()) {
+    vector<vector<int>> levelorder;
+    while (!q.empty()){
         int size = q.size();
         vector<int> level;
-        for(int i = 0; i < size; i++) {
+        for(int i = 0; i < size; i++){
             auto curr = q.front();
-            q.pop();
-            // Add current node to this level
-            level.push_back(curr->data);
-            if(curr->left != nullptr) {
+            int data = curr->data;
+            level.push_back(data);
+
+            if(curr->left != nullptr){
                 q.push(curr->left);
             }
-            if(curr->right != nullptr) {
+            if(curr->right != nullptr){
                 q.push(curr->right);
             }
         }
-        ans.push_back(level);
+        levelorder.push_back(level);
     }
+    
 
-    return ans;
+    return levelorder;
 }
