@@ -1,54 +1,63 @@
-package LEETCODE.trees.medium;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
-import java.util.*;
 
-public class S4_zigzagTree {
+struct TreeNode
+{
+    /* data */
+    int data;
+    TreeNode* left ;
+    TreeNode* right;
+    TreeNode(int data){
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
+    }
+};
 
-    
-    private static List<List<Integer>> zigzac(BinaryTree.Node root){
+vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
 
-        if(root == null){
-            return new ArrayList<>();
-        }
-        List<List<Integer>> ans = new ArrayList<>();
-        Deque<BinaryTree.Node> dq = new LinkedList<>();
-        boolean lefttoright = true;
-        dq.addFirst(root);
+    deque<TreeNode*> dq;
 
-        while (!dq.isEmpty()) {
-            int size = dq.size();
-            List<Integer> level = new ArrayList<>();
-            for(int i = 0; i < size; i++){
-                if(lefttoright){
-                    BinaryTree.Node curr =  dq.removeFirst();
-                    level.add(curr.data);
-                    if(curr.left != null){
-                        dq.addLast(curr.left);
-                    }
-                    if(curr.right != null){
-                        dq.addLast(curr.right);
-                    }
-                }else{
-                    BinaryTree.Node curr = dq.removeLast();
-                    level.add(curr.data);
-                    if(curr.right != null){
-                        dq.addFirst(curr.right);
-                    }
-                    if(curr.left != null){
-                        dq.addFirst(curr.left);
-                    }
+    bool lefttoright  = true;
+    dq.push_front(root);
+    vector<vector<int>> ans;
+    while (!dq.empty()){
+        int size = dq.size();
+        vector<int> level;
+        for(int i = 0; i < size; i++){
+            if(!lefttoright){
+                auto curr = dq.front();
+                dq.pop_front();
+                level.push_back(curr->data);
+                if(curr->left != nullptr){
+                    dq.push_back(curr->left);
                 }
+                if(curr->right != nullptr){
+                    dq.push_back(curr->right);
+                }
+            }else{
+                auto curr = dq.back();
+                dq.pop_back();
+                level.push_back(curr->data);
+
+                if(curr->right != nullptr){
+                    dq.push_front(curr->right);
+                }
+
+                if(curr->left != nullptr){
+                    dq.push_front(curr->left);
+                }
+                
             }
-            lefttoright = !lefttoright;
-            ans.add(level);
         }
-        return ans;
-
+        lefttoright = !lefttoright;
+        ans.push_back(level);
     }
-    public static void main(String[] args) {
-        BinaryTree.Node  root = BinaryTree.createTree();
-        zigzac(root);
+    return ans;
+    
+}
+int main(){
 
-    }
+    return 0;
 }
