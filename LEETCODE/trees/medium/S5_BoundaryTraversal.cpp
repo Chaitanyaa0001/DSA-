@@ -1,78 +1,81 @@
-package LEETCODE.trees.medium;
 
-import LEETCODE.trees.BinaryTree;
-import java.util.*;
+#include <bits/stdc++.h>
+using namespace std;
 
-public class S5_BoundaryTraversal {
+struct TreeNode {
+    int data;
+    TreeNode* left;
+    TreeNode* right;
 
-    private static boolean isleaf(BinaryTree.Node root){
-        return root != null &&  root.left == null &&  root.right == null;
+    TreeNode(int data) {
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    private static void leftboundry(BinaryTree.Node root, List<Integer> res){
+};
 
-        // leftbounary  
-        BinaryTree.Node  curr = root.left;
-        while (curr != null) {
-            // agar mera ye false hai to ye mera leaf node nhi hai 
-            if(!isleaf(curr)){
-                res.add(curr.data);
-            }
-            if(curr.left != null){
-                curr = curr.left;
-            }else{
-                curr = curr.right;
-            }
+bool isleaf(TreeNode* root) {
+    return root != nullptr && root->left == nullptr && root->right == nullptr;
+}
+
+void left(TreeNode* root, vector<int>& temp) {
+    TreeNode* curr = root->left;
+
+    while (curr != nullptr) {
+        if (!isleaf(curr)) {
+            temp.push_back(curr->data);
+        }
+        if (curr->left != nullptr) {
+            curr = curr->left;
+        } else {
+            curr = curr->right;
         }
     }
+}
 
-    private static  void rightmostboundary(BinaryTree.Node root,List<Integer> res){
-        Stack<Integer> stack = new Stack<>();
-        BinaryTree.Node curr = root.right;
-
-        while (curr != null) {
-            if(!isleaf(curr)){
-                stack.push(curr.data);
-            }
-            if(curr.right != null){
-                curr = curr.right;
-            }else{
-                curr = curr.left;
-            }
+void leafnodes(TreeNode* root, vector<int>& temp) {
+    if (root == nullptr) return;
+    if (isleaf(root)) {
+        temp.push_back(root->data);
+        return;
+    }
+    leafnodes(root->left, temp);
+    leafnodes(root->right, temp);
+}
+void right(TreeNode* root, vector<int>& temp) {
+    TreeNode* curr = root->right;
+    stack<int> s;
+    while (curr != nullptr) {
+        if (!isleaf(curr)) {
+            s.push(curr->data);
         }
-
-        while (!stack.isEmpty()) {
-            res.add(stack.pop());
+        if (curr->right != nullptr) {
+            curr = curr->right;
+        } else {
+            curr = curr->left;
         }
     }
-    private static void leafnodes(BinaryTree.Node root,List<Integer> res){
-        if(isleaf(root)){
-            res.add(root.data);
-            return;
-        }
-        if(root.left != null){
-            leafnodes(root.left, res);
-        }
-        if(root.right != null){
-            leafnodes(root.right, res);
-        }
+    while (!s.empty()) {
+        temp.push_back(s.top());
+        s.pop();
+    }
+}
+vector<int> boundary(TreeNode* root) {
+    vector<int> res;
+    if (root == nullptr) return res;
+    if (!isleaf(root)) {
+        res.push_back(root->data);
+    } else {
+        res.push_back(root->data);
+        return res;
     }
 
-    private static List<Integer> boundary(BinaryTree.Node root){
-        List<Integer>  ans = new ArrayList<>();
-        if(root == null)
-            return ans;
-        if(!isleaf(root)){
-            ans.add(root.data);
-        } 
+    left(root, res);
+    leafnodes(root, res);
+    right(root, res);
+    return res;
+}
 
-        leftboundry(root, ans);
-        leafnodes(root, ans);
-        rightmostboundary(root, ans);
-        return ans;
-    }
-    public static void main(String[] args) {
-        BinaryTree.Node  root = BinaryTree.createTree();
-        boundary(root);
-
-    }
+int main() {
+    return 0;
 }
