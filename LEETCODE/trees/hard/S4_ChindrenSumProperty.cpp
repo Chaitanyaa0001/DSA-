@@ -1,44 +1,54 @@
-package LEETCODE.trees.hard;
+#include <bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
 
-public class S4_ChindrenSumProperty {
-    private static void childerensuproperty(BinaryTree.Node root){
-        if(root == null){
-            return;
+    TreeNode(int val) {
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
+    }
+};
+
+void changeTree(TreeNode* root) {
+    if (root == nullptr) {
+        return;
+    }
+
+    int childSum = 0;
+    if (root->left != nullptr) {
+        childSum += root->left->val;
+    }
+    if (root->right != nullptr) {
+        childSum += root->right->val;
+    }
+    if (childSum >= root->val) {
+        root->val = childSum;
+    }else {
+        if (root->left != nullptr) {
+            root->left->val = root->val;
         }
-        int child = 0;
-        if(root.left != null){
-            child += root.left.data;
-        }
-        if(root.right != null){
-            child += root.right.data;
-        }
-        if(child > root.data){
-            root.data = child;
-        }else{
-            if(root.left != null){
-                root.left.data = child;
-            }
-            if(root.right != null){
-                root.right.data = child;
-            }
-        }
-        childerensuproperty(root.left);
-        childerensuproperty(root.right);
-        int total = 0;
-        if(root.left != null){
-            total += root.left.data;
-        }
-        if(root.right != null){
-            total += root.right.data;
-        }
-        if(root.left != null || root.right != null){
-            root.data = total;
+        if (root->right != nullptr) {
+            root->right->val = root->val;
         }
     }
-    public static void main(String[] args) {
-        BinaryTree.Node root = BinaryTree.createTree();
-
+    changeTree(root->left);
+    changeTree(root->right);
+    int total = 0;
+    if (root->left != nullptr) {
+        total += root->left->val;
     }
+    if (root->right != nullptr) {
+        total += root->right->val;
+    }
+    if (root->left != nullptr || root->right != nullptr) {
+        root->val = total;
+    }
+}
+
+int main() {
+    return 0;
 }
