@@ -24,9 +24,9 @@ int main(){
     string s; 
     cin >> s;
     
-    string s1 = s;
-    reverse(s.begin(), s.end());
-    int res  = longest_common_subsequence(s1,s);
+        string s1 = s;
+        reverse(s.begin(), s.end());
+        int res  = longest_common_subsequence(s1,s);
 
     cout << res << endl;
 
