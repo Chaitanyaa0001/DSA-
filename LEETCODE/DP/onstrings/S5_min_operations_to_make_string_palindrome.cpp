@@ -26,6 +26,9 @@ public:
         string s1 = s;
         reverse(s.begin(), s.end());
         int res  = longest_common_subsequence(s1,s);
+
+
+        
         return res;
     }
     int minInsertions(string s) {
