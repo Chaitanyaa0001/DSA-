@@ -1,45 +1,46 @@
-package LEETCODE.trees.medium;
 
-import LEETCODE.trees.BinaryTree;
+#include <bits/stdc++.h>
+using namespace std;
 
-public class S3_DiameterofBinaryTree {
-    // diameter of binary tree is  longest path between 2 noded  path does not to excedd via rot 
-   static int maxi = 0;
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
 
-    public static int  getHeight(BinaryTree.Node root){
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-        return 1+ Math.max(left,right);
+    Node(int data) {
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    private static int bruteforce(BinaryTree.Node root){
-        if(root == null){
-            return 0;
-        }
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-        maxi = Math.max(maxi,left + right);
+};
 
-        bruteforce(root.left);
-        bruteforce(root.right);
-        return 1+ Math.max(left, right);
-        // time : O(n square )
+int solve(Node* root, int& maxi) {
+    if (root == nullptr) {
+        return 0;
     }
 
-    private static int optimalAppproch(BinaryTree.Node root, int maxi){
-        if(root == null){
-            return 0;
-        }
-        int left = optimalAppproch(root.left, maxi);
-        int right = optimalAppproch(root, maxi);
+    int left = solve(root->left, maxi);
+    int right = solve(root->right, maxi);
 
-        maxi = Math.max(maxi,left +  right);
+    maxi = max(maxi, left + right);
 
-        return 1 + Math.max(left, right);
-    }
-    public static void main(String[] args) {
-        BinaryTree.Node  root = BinaryTree.createTree();
-        bruteforce(root);
-        optimalAppproch(root, maxi);
+    return 1 + max(left, right);
+}
 
-    }
+int diameterOfBinaryTree(Node* root) {
+    int maxi = 0;
+    solve(root, maxi);
+    return maxi;
+}
+
+int main() {
+    Node* root = new Node(1);
+    root->left = new Node(2);
+    root->right = new Node(3);
+    root->left->left = new Node(4);
+    root->left->right = new Node(5);
+
+    cout << diameterOfBinaryTree(root) << '\n';
+
+    return 0;
 }

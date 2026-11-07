@@ -1,71 +1,73 @@
-package LEETCODE.Graphs.traversalProblems;
+#include<bits/stdc++.h>
+using namespace std;
+// You are given a 2D matrix grid of size N × M, where each cell contains either 0 or 1. Find the number of distinct islands where a group of connected 1s (horizontally or vertically) forms an island. Two islands are considered to be same if and only if one island is equal to another (not rotated or reflected).
+// Example 1:
+// Input: grid = [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 1, 1],[0, 0, 0, 1, 1]]
+// Output: 1
+// Explanation:
+// Same colored islands are equal. We have 2 equal islands, so we have only 1 distinct island.
+// Example 2:
+// Input: grid = [[1, 1, 0, 1, 1], [1, 0, 0, 0, 0], [0, 0, 0, 0, 1],[1, 1, 0, 1, 1]]
+// Output: 3
+// Explanation:
+// Same colored islands are equal. We have 4 islands, but 2 of them are equal, So we have 3 distinct islands..
 
+void bfs(vector<vector<int>>& grid, int row, int col, vector<vector<int>>& vis, set<vector<pair<int,int>>>& s){
 
-import java.util.*;
+    int m = grid.size();
+    int n = grid[0].size();
+    queue<pair<int,int>> q;
+    q.push({row,col});
+    vis[row][col] = true;
+    int baser = row;
+    int basec = col;
+    vector<pair<int,int>>  shape;
 
-public class S10_NumberOfDistinctIslands {
-    
-   
-    class Pair{
-        int r;
-        int c;
-        Pair(int r, int c){
-            this.r = r;
-            this.c = c;
-        }
-    }
-    private ArrayList<String> bfs(int row, int col, int m, int n, boolean[][] vis, char[][] grid){
-        Queue<Pair> q = new LinkedList<>();
+    while (!q.empty()){
+        auto curr = q.front();
+        int r = curr.first;
+        int c  = curr.second;
+        q.pop();
+        int a = r - baser;
+        int b = c - basec;
         
-        q.offer(new Pair(row,col));
-        vis[row][col] = true;
-        
-        ArrayList<String> shape = new ArrayList<>();
-        int br = row;
-        int bc = col;
-        
-        int[] dr = {-1,0,+1,0};
-        int[] dc = {0,+1,0,-1};
-        
-        while(!q.isEmpty()){
-            Pair curr = q.poll(); 
-            int r = curr.r;
-            int c = curr.c;
-            // Two islands are considered distinct if their shapes are different.c;
-            shape.add((r - br) + "," + (c - bc));
-    
-            
-            for(int i = 0; i < 4; i++){
-                int nr = r + dr[i];
-                int nc = c + dc[i];
-                
-                if(0 <= nr && nr < m && 0 <= nc && nc < n && !vis[nr][nc] && grid[nr][nc] == 'L'){
-                    q.offer(new Pair(nr,nc));
-                    vis[nr][nc] = true;
-                }
+        shape.push_back({a,b});
+
+        int dr[] = {-1,0,+1,0};
+        int dc[] = {0,+1,0,-1};
+
+        for(int i = 0; i < 4; i++){
+            int nr = r + dr[i];
+            int nc = c + dc[i];
+
+            if(0 <= nr && nr < m && 0<= nc && nc < n && grid[nr][nc] == 1 && !vis[nr][nc]){
+                q.push({nr,nc});
+                vis[nr][nc] = true;
             }
         }
-        return shape;
-    }
-    public int countDistinctIslands(char[][] grid) {
-        // code here
-        int m = grid.length;
-        int n = grid[0].length;
-        boolean vis[][] = new boolean[m][n];
-        HashSet<ArrayList<String>> set = new HashSet<>();
-        
-        for(int i = 0; i < m; i++){ // for every row 
-            for(int j = 0; j < n; j++){ // for every col
-                if(!vis[i][j] && grid[i][j] == 'L'){
-                    ArrayList<String> shape =  bfs(i, j, m, n,vis, grid);
-                    set.add(shape);
-                }
-            }
-        }
-        return set.size();
     }
 
-    public static void main(String[] args) {
-        
+    sort(shape.begin(), shape.end());
+    s.insert(shape);
+}
+int number_of_distinct_islands(vector<vector<int>> grid){
+
+    int m = grid.size();
+    int n  = grid[0].size();
+    vector<vector<int>> vis(m,vector<int>(n,0));
+    set<vector<pair<int,int>>> s;
+
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < n; j++){
+            if(grid[i][j] == 1 && !vis[i][j]){
+                bfs(grid,i,j,vis,s);
+            }
+        }
     }
+
+    return s.size();
+}
+int main(){
+
+    return 0;
 }

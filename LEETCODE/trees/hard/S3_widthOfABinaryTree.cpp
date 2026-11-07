@@ -1,56 +1,56 @@
-package LEETCODE.trees.hard;
+#include<bits/stdc++.h>
+using namespace std;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
-import LEETCODE.trees.BinaryTree;
-
-public class S3_widthOfABinaryTree {
-    static class Pair{
-        BinaryTree.Node node ; 
-        int i;
-        Pair(BinaryTree.Node node , int i){
-            this.node = node;
-            this.i = i;
-        }
+struct Node
+{
+    /* data */
+    int val;
+    Node* left;
+    Node* right;
+    Node(int val){
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    private static int width(BinaryTree.Node root){
+};
 
-        Queue<Pair> q  = new LinkedList<>();
-        q.add( new Pair(root, 0));
-        int maxwidth = 0;
-        
-        
-        while (!q.isEmpty()) {
-            int size = q.size();
-            int min = q.peek().i; 
-            int first = 0; 
-            int last  = 0;  
-            for(int j  = 0; j < size; j++){
-                Pair curr = q.poll(); // 3 
-                int index = curr.i;   // 1
-                index = index - min;
-                if(j == 0){
-                    first = index
-                    ;
-                }
-                if(j == size - 1){
-                    last = index;
-                }
-                if(curr.node.left != null){
-                    q.add(new Pair(curr.node.left, 2 * index + 1));
-                }
-                if(curr.node.right != null){
-                    q.add(new Pair(curr.node.right,2 * index + 2));
-                }
+int width_of_a_binary_tree(Node* root){
+
+    queue<pair<int,Node*>> q;
+    q.push({0,root});
+    int maxwidth = 0;
+
+    while (!q.empty()){
+        int size = q.size();
+        int first  = 0;
+        int last = 0;
+        int mini_index = q.front().first;
+
+        for(int i = 0; i < size; i++){
+            auto curr = q.front();
+            int index  = curr.first;
+            Node* nde = curr.second;
+            q.pop();
+            index = index - mini_index;
+            if(i == 0){
+                first = index;
             }
-            maxwidth = Math.max(maxwidth, last - first + 1);
+            if(i == size - 1){
+                last = index;
+            }
+            if(nde->left != nullptr){
+                q.push({2*index+1,nde->left});
+            }
+            if(nde->right != nullptr){
+                q.push({2*index+2, nde->right});
+            }
         }
-        return maxwidth;
+        maxwidth = max(maxwidth, last - first + 1);
+    }
+    return maxwidth;
+}
+int main(){
 
-    }
-    public static void main(String[] args) {
-        BinaryTree.Node root = BinaryTree.createTree();
-        width(root);
-    }
+    return 0;
 }

@@ -1,51 +1,39 @@
-package LEETCODE.trees.medium;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
 
-public class S2_BalancedTree {
-    public static int  getHeight(BinaryTree.Node root){
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-        return 1+ Math.max(left,right);
+struct Node{
+    /* data */
+    int data;
+    Node* left;
+    Node* right;
+    Node(int data){
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
+    }
+};
+
+int  balancedTree(Node* root){
+    if(root == nullptr){
+        return 0;
+    }
+    int left  = balancedTree(root->left);
+    if(left  == -1) return -1;
+    int right = balancedTree(root->right);
+    if(right == -1) return -1;
+    if(abs(left - right) > 1){
+        return -1;
     }
 
-    private static boolean bruteforce(BinaryTree.Node root){
-        if(root == null){
-            return true;
-        }
-        int left = getHeight(root.left);
-        int right = getHeight(root.right);
-        if(Math.abs(left - right) <= 1 && bruteforce(root.left) && bruteforce(root.right) ){
-            return true;
-        }
-        return false;
-    }
+    return 1 + max(left, right);
+}
 
-    private static int optimalAppproch(BinaryTree.Node root){
-        
-        int left = optimalAppproch(root.left);
-        int right = optimalAppproch(root.right);
+bool balance_check(Node* root){
+    return balancedTree(root) != -1;
+}
 
-        if(left == -1){
-            return -1;
-        }
-        if(right == -1){
-            return -1;
-        }
-        if(Math.abs(left - right) > 1){
-            return -1;
-        }   
+int main(){
 
-        return 1 + Math.max(left, right);
-    }
-
-    private static boolean ans(BinaryTree.Node root){
-        return optimalAppproch(root) != -1;
-    }
-    public static void main(String[] args) {
-        BinaryTree.Node  root = BinaryTree.createTree();
-        bruteforce(root);
-
-        ans(root);
-    }
+    return 0;
 }

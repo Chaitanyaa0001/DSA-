@@ -37,7 +37,7 @@ public:
         return mini;
 
     }
-
+// ----------------------------------
     int tabulation(vector<vector<int>> grid){
         int n = grid.size();
         vector<vector<int>> dp(n,vector<int>(n,0));
@@ -68,6 +68,7 @@ public:
         }
         return ans;
     }
+    // -----------------------------
     int spaceOptimize(vector<vector<int>>& grid){
         int n = grid.size();
         vector<int> prev(n,0);

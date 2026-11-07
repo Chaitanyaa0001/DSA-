@@ -1,54 +1,48 @@
-package LEETCODE.trees.medium;
+#include<bits/stdc++.h>
+using namespace std;
 
-import java.util.*;
-
-import LEETCODE.trees.BinaryTree;
-
-public class S7_TopView {
-    static class Pair {
-        BinaryTree.Node node ;
-        int num;
-        Pair(BinaryTree.Node node, int num){
-            this.node = node;
-            this.num = num;
-        }
+struct Node{
+    /* data */
+    int val;
+    Node* left;
+    Node* right;
+    Node(int val){
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    private static List<Integer> topviewBFS(BinaryTree.Node root){
-        ArrayList<Integer> res = new ArrayList<>();
 
-        if(root == null){
-            return  res;
+};
+
+vector<int> topview(Node* root){
+    if (root == nullptr) return {};
+    map<int,Node*> mp;
+    queue<pair<Node*, int>> q;
+    q.push({root,0});
+    vector<int> ans;
+    while (!q.empty()){
+
+        auto curr = q.front();
+        Node* nde = curr.first;
+        int c = curr.second;
+        q.pop();
+        if(mp.find(c) == mp.end()){
+            mp[c] = nde;
         }
-        TreeMap<Integer,Integer> map = new TreeMap<>();
-
-        Queue<Pair> q = new LinkedList<>();
-        q.add(new Pair(root, 0));
-
-        while (!q.isEmpty()) {
-            Pair curr = q.poll();
-            int x = curr.num;
-            
-            map.putIfAbsent(x,curr.node.data);
-
-            if(curr.node.left != null){
-                q.add(new Pair(curr.node.left, x-1));
-            }
-            if(curr.node.right != null){
-                q.add(new Pair(curr.node.right, x+1));
-            }
+        if(nde->left!= nullptr){
+            q.push({nde->left,c-1});
         }
-
-        for(Map.Entry <Integer,Integer> tm : map.entrySet()){
-            res.add(tm.getValue());   
+        if(nde->right != nullptr){
+            q.push({nde->right,c+1});
         }
-        return res;
-     
-
+        
     }
-    public static void main(String[] args) {
-        BinaryTree.Node root = BinaryTree.createTree();
-
-
-        topviewBFS(root);
+    for(auto & it : mp){
+        ans.push_back(it.second->val);
     }
+    return ans;
+    
+}
+int main (){
+    return 0;
 }

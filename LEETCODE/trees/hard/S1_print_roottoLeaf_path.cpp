@@ -1,36 +1,43 @@
-package LEETCODE.trees.hard;
+#include <bits/stdc++.h>
+using namespace std;
 
+struct Node {
+    int val;
+    Node* left;
+    Node* right;
 
-import LEETCODE.trees.BinaryTree;
-import java.util.*;
+    Node(int val) {
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
+    }
+};
 
-public class S1_printRoottoLeadPath {
-    private static boolean isleaf(BinaryTree.Node root){
-        return root != null && root.left == null && root.right == null;
+void solve(Node* root, vector<int>& temp,vector<vector<int>>& ans) {
+    if (root == nullptr) {
+        return;
     }
-    private static void dfs(BinaryTree.Node  root,List<List<Integer>> res, List<Integer>sub){
-        if(root == null){
-            return ;
-        }
-        
-        sub.add(root.data);
-        if(isleaf(root)){
-            res.add(new ArrayList<>(sub));
-        }else{
-            dfs(root.left, res,sub);
-            dfs(root.right, res,sub);
-        }
-        sub.remove(sub.size() - 1);
-       
-        
+    temp.push_back(root->val);
+    if (root->left == nullptr && root->right == nullptr) {
+        ans.push_back(temp);
+        temp.pop_back();
+        return;
     }
-    private static List<List<Integer>> printrootoPath(BinaryTree.Node root){
-        List<List<Integer>> res = new ArrayList<>();
-        dfs(root, res, new ArrayList<>());
-        return res;
-    }
-    public static void main(String[] args) {
-        BinaryTree.Node  root = BinaryTree.createTree();
-        printrootoPath(root);
-    }
+
+    solve(root->left, temp, ans);
+    solve(root->right, temp, ans);
+    temp.pop_back();  // Backtracking
+}
+
+vector<vector<int>> print_root_to_leaf(Node* root) {
+    vector<vector<int>> ans;
+    vector<int> temp;
+
+    solve(root, temp, ans);
+
+    return ans;
+}
+
+int main() {
+    return 0;
 }

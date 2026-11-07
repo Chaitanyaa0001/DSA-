@@ -1,46 +1,44 @@
-package LEETCODE.LinkedList.doubleLinkedlist;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class ArrayintoDll {
-    static class Node {
-        int data;
-        Node next;
-        Node back;
-        Node(int data, Node next, Node back){
-            this.data = data;
-            this.next = next;
-            this.back = back;
-        }
-        Node(int data){
-            this.data = data;
-            this.next = null;
-            this.back = null;
-        }
-    }
-    private static Node arraytodll (int [] arr){
-        int n = arr.length;
-        Node head = new Node(arr[0]);
-        Node prev = head;
 
-        for(int i = 1; i < n;i++){
-            Node temp = new Node(arr[i],null,prev);
-            prev.next =  temp;
-            prev = prev.next;
-        }
-        return head;
+struct Node{
+    /* data */
+    int data;
+    Node* next;
+    Node* back;
+    Node(int data){
+        this->data = data;
+        this->next = nullptr;
+        this->back = nullptr;
     }
+};
 
-    private static void printal(Node head){
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.data + " ");
-            temp = temp.next;
-        }
+// given an array u need to make a doubly linkedlist with with array 
+Node* doublyLinkedList(vector<int> nums){
+    if(nums.empty()){
+        return nullptr;
     }
-    public static void main(String[] args) {
-        int[] arr ={2,3,4,5,6};
+    int n = nums.size();
+    Node* head = new Node(nums[0]);
+    Node* temp = head;
+    //  <- 0  ->    <-(node)->
+    for(int i = 1; i < n; i++){
+        Node* node = new Node(nums[i]);
+        temp->next = node;
+        node->back  = temp;
+        temp = temp->next;
+    }
+    return head;
+}
 
-        Node head = arraytodll(arr);
-        printal(head);
-       
+int main(){
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+
+    for(int i= 0; i < n; i++){
+        cin >> nums[i];
     }
+    return 0;
 }

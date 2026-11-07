@@ -25,6 +25,7 @@ vector<vector<int>> levelorder(TreeNode* root) {
         vector<int> level;
         for(int i = 0; i < size; i++){
             auto curr = q.front();
+            q.pop();
             int data = curr->data;
             level.push_back(data);
 

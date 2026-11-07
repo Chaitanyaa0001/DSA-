@@ -1,147 +1,99 @@
-package LEETCODE.LinkedList.singleLinkedList;
+#include<bits/stdc++.h>
+using namespace std;
 
-import A2Darrays.number7s;
 
-public class deletitioninLL {
-    static class Node{
-        int data;
-        Node next;
-        Node(int data, Node next){
-            this.data = data;
-            this.next = next;
-        }
-        Node(int data){
-            this.data = data;
-            this.next = null;
-        }
+
+struct Node
+{
+    /* data */
+    int val;
+    Node* next;
+    Node(int val){
+        this->val = val;
+        this->next = nullptr;
     }
-    private static Node ArrayIntoLinkedList(int[] arr){
-        int n = arr.length; 
-        Node head = new Node(arr[0]);
-        Node mover = head;
-        for(int i = 1; i < n; i++){
-            Node temp = new Node(arr[i]);
-            mover.next = temp;
-            mover = temp;
-        }
-        return head;
+};
+
+Node* delete_head(Node* head){
+
+    if(head  == nullptr){
+        return nullptr;
     }
-    private static void  printfun(Node head){
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
-    }
-    // -------------------------
+    Node* temp = head;
+    temp = head->next;
+    delete  (head);
     
-    // delete form head 
-    private static Node deleteNode(Node head){
-        //  h
-        // 12   ->  5  ->  8  ->  7
-        // temp
-        Node temp = head;
-        head = head.next;
-        return head;
-    }
-    private static Node deleteformtail(Node head){
-        Node temp = head;
+    return temp;
+}
 
-        if(head == null || head.next == null){
-            return null;
-        }
+Node* delete_from_tail(Node* head){
 
-        while (temp.next.next != null) {
-            temp = temp.next;
-        }
-        temp.next = null;
-        return head;
+    if(head == nullptr){
+        return nullptr;
     }
-    private static Node deletefromKposition(Node head, int node){
-        if(head == null){
+    Node* temp = head;
+    while (temp->next->next != nullptr){
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = nullptr;
+
+    return head;
+}
+
+Node* delete_the_kth_element(Node* head, int k){
+    if(head == nullptr){
+        return nullptr;
+    }
+
+    if(k == 1){
+        Node* temp = head;
+        temp= head->next;
+        delete head;
+        return temp;
+    }
+
+    int counter  = 0;
+    Node* temp = head; Node* prev = nullptr;
+    while(temp != nullptr){
+        counter++;
+        if(k == counter){
+            prev->next = temp->next;
+            delete temp;
             return head;
         }
-        if( node == 1){
-            Node temp = head;
-            head = head.next;
+        prev = temp;
+        temp = temp->next;    
+    }
+    return head;
+}
+Node* delete_the_element(Node* head, int ele){
+    if(head == nullptr){
+        return nullptr;
+    }
+
+    if(head->val == ele){
+        Node* temp = head;
+        temp= head->next;
+        delete head;
+        return temp;
+    }
+
+    Node* temp = head; Node* prev = nullptr;
+    while(temp != nullptr){
+        if(temp->val == ele){
+            prev->next = temp->next;
+            delete temp;
             return head;
         }
-        int count = 0;
-        Node temp = head,  previous = null;
-        while (temp != null) {
-            count++;
-            if(count == node){
-                previous.next = previous.next.next;
-                break;
-            }
-            previous = temp;
-            temp = temp.next;
-        }
-        return head;
-
-        // better approch 
-        // while (temp != nul; count < node) {
-            // previous = temp
-            // temp = temp.next
-            // count ++ 
-        // }
-        // if(temp != null){
-        //     previous.next = temp.next;
-        // }
+        prev = temp;
+        temp = temp->next;    
     }
-    private static Node valueapproch(Node head, int ele){
-        if(head == null) return head ;
+    return head;
+}
 
-        if(head.data == ele){
-            return head.next;
-        }
-        Node temp = head, prev =  null;
 
-        while (temp != null) {
-            if(temp.data == ele){
-                prev.next = temp.next;
-            }
-            prev = temp;
-            temp = temp.next;
-        }
-        return head;
-    }
-
-    // for multiple  occurance 
-     private static Node valueapprochalloccurence(Node head, int ele){
-        if(head == null) return head ;
-        
-        if(head.data == ele){
-            return head.next;
-        }
-        Node temp = head, prev =  null;
-        while (temp != null) {
-            if(temp.data == ele){
-                prev.next = temp.next;
-            }else{
-                prev = temp;
-            }
-            temp = temp.next;
-        }
-        return head;
-    }
-    
-    public static void main(String[] args) {
-        int arr[] = {12,5,8,7,5,8,8,8,7,8,8};
-        Node head = ArrayIntoLinkedList(arr);
-        
-        // from head 
-        // Node deletenode =  deleteNode(head);
-        // printfun(deletenode);
-
-        // from tail 
-        // Node deletenodeFromtail = deleteformtail(head);
-        // printfun(deletenodeFromtail);
-
-        // Node deleteformk = deletefromKposition(head,3);
-        // printfun(deleteformk);
-        Node deletevalue = valueapprochalloccurence(head, 8);
-        printfun(deletevalue);
-
-    }
+int main(){
+    int n;
+    return 0;
 }

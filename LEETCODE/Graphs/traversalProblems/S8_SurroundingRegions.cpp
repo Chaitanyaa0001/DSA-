@@ -20,45 +20,66 @@ using namespace std;
 // board[i][j] is 'X' or 'O'.
 
 
-void bfs(vector<vector<int>> board){
+void bfs(vector<vector<char>>& board, int row, int col,vector<vector<int>>& isSafe){
+    queue<pair<int,int>> q;
+    q.push({row,col});
+    isSafe[row][col] = true;
+
     int m = board.size();
     int n = board[0].size();
-    queue<pair<int,int>> q;
     while (!q.empty()){
-        int row = q.front().first;
-        int col = q.front().first;
-        
+        auto curr = q.front();
+        q.pop();
+
+        int r = curr.first;
+        int c = curr.second;
+
         int dr[] = {-1,0,+1,0};
         int dc[] = {0,+1,0,-1};
-        
-        for(int i = 0; i < 4; i++){
-            int nr = row + dr[i];
-            int nc = col + dc[i];
+        for(int i = 0 ; i < 4; i++){
 
-            if(0 <= nr && nr < m && 0 <= nc && nc < n && vis[nr][nc] == 0 && board[nr][nc] == 'O'){
-                
+            int nr = r + dr[i];
+            int nc = c + dc[i];
+
+            if(0 <= nr &&  nr < m && 0 <= nc && nc < n && board[nr][nc] == 'O' && !isSafe[nr][nc]){
+                q.push({nr,nc});
+                isSafe[nr][nc] = true;
             }
         }
     }
 }
-void solve(vector<vector<char>>& board) {
 
+void surrounding_regions(vector<vector<char>>& board){
     int m = board.size();
-    int n = board[0].size();    
-    vector<vector<int,int>> vis( m, vector<int>(n,0));
+    int n = board[0].size();
 
-    int low  = 0, high =  n - 1;
-    int top = 0, bottom = m - 1;
+    vector<vector<int>> isSafe(m,vector<int>(n,0));
 
-    while (low <= high){
+    for(int i = 0; i < n; i++){
+        if(board[0][i] == 'O'){
+            bfs(board,0,i,isSafe);
+        }
+        if( board[m-1][i] == 'O'){
+            bfs(board,m-1,i,isSafe);
+        }
+    }
+    for(int i = 1; i < m-1; i++){
+        if(board[i][0] == 'O'){
+            bfs(board, i, 0, isSafe);
+        }
+        if(board[i][n-1] == 'O'){
+            bfs(board,i,n-1,isSafe);
+        }
+    }
 
-        for(int i = low ; i < high; i++){
-            if(board[i][j] == 'O'){
-                bfs(i,j)
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < n; j++){
+
+            if(board[i][j] == 'O' && isSafe[i][j]){
+                board[i][j] = 'X';
             }
         }
     }
-    
 }
 int main(){
 

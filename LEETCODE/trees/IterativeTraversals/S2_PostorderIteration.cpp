@@ -21,7 +21,7 @@ vector<int> postorder(Node* root){
     stack<Node*> s2;
 
     s1.push(root);
-    while (s1.empty()){
+    while (!s1.empty()){
         /* code */
         auto curr = s1.top(); s1.pop();
         s2.push(curr);
@@ -32,8 +32,15 @@ vector<int> postorder(Node* root){
             s1.push(curr->right);
         }
     }
-    
-
+    vector<int> ans;
+    while (!s2.empty())
+    {
+        /* code */
+        auto data =  s2.top()->data;
+        s2.pop();
+        ans.push_back(data);
+    }
+    return ans;
 }
 int main(){
 

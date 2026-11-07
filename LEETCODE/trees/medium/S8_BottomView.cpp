@@ -1,49 +1,43 @@
-package LEETCODE.trees.medium;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.trees.BinaryTree;
-import java.util.*;
-
-
-public class S8_BottomView {
-    static class Pair{
-        int num;
-        BinaryTree.Node node; 
-        Pair(int num, BinaryTree.Node node){
-            this.node = node;
-            this.num = num;
-        }
+struct Node{
+    int val;
+    Node* left;
+    Node* right;
+    Node(int val){
+        this->val = val;
+        this->left = nullptr;
+        this->right = nullptr;
     }
+};
 
-    private static List<Integer> bottomview(BinaryTree.Node root){
-        List<Integer> res = new ArrayList<>();
-        TreeMap<Integer,Integer> map = new TreeMap<>();
-        Queue<Pair> q = new LinkedList<>();
-        while (!q.isEmpty()) {
-            Pair curr = q.poll();
-            int x = curr.num;
-
-            // map.put(x, curr.node.data);  we can also write this as  condition is always true 
-            if(!map.containsKey(x) || map.containsKey(x)){
-                map.put(x, curr.node.data);
-            }
-
-            if(curr.node.left != null){
-                q.add(new Pair(x-1,curr.node.left));
-            }
-            if(curr.node.right != null){
-                q.add(new Pair(x+1, curr.node.right));
-            }
+vector<int> bottom_view(Node* root){
+    if (root == nullptr) return {};
+    map<int,Node*> mp;
+    queue<pair<Node*, int>> q;
+    q.push({root,0});
+    vector<int> ans;
+    while (!q.empty()){
+        auto curr = q.front();
+        Node* nde = curr.first;
+        int c = curr.second;
+        q.pop();
+        mp[c] = nde;
+        if(nde->left!= nullptr){
+            q.push({nde->left,c-1});
         }
-
-        for(Map.Entry<Integer,Integer> Map : map.entrySet()){
-            res.add(Map.getValue());
+        if(nde->right != nullptr){
+            q.push({nde->right,c+1});
         }
-        return res;
+        
     }
-    
-    public static void main(String[] args) {
-        BinaryTree.Node root = BinaryTree.createTree();
-        bottomview(root);
+    for(auto & it : mp){
+        ans.push_back(it.second->val);
     }
+    return ans;
+}
+int main(){
 
+    return 0;
 }

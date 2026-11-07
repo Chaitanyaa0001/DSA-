@@ -8,13 +8,14 @@ class solution{
     int solve(int n, vector<int>& nums){
         
     }
+
     int houserobber(int n, vector<int>& nums){
         vector<int> dp;
         int n  = nums.size();
         
     }
 
-}
+};
 
 int main(){
     int n;

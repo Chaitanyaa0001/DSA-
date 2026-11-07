@@ -1,52 +1,51 @@
-package LEETCODE.trees.medium;
-
-import java.util.LinkedList;
-import java.util.Queue;
+#include<bits/stdc++.h>
+using namespace std;
 
 
-import LEETCODE.trees.BinaryTree;
 
-public class S1_MaximumDepth {
+struct Node{
+    /* data */
+    int data;
+    Node* left;
+    Node* right;
+    Node(int data){
+        this->data = data;
+        this->left = nullptr;
+        this->right = nullptr;
+    }
+};
 
+int solve(Node* root){
+
+    if(root == nullptr){
+        return 0;
+    }
+    int left = solve(root->left);
+    int right = solve(root->right);
+
+    return 1 + max(left,right);
+}
+int maxdept(Node* root){
+
+    return solve(root);
+}
+Node* createTree(int index, vector<int>& nums) {
     
-    public static int findmaxdeptOfaNodeRECURSIVE(BinaryTree.Node root){
-        if(root == null){
-            return 0;
-        }
-        int left = findmaxdeptOfaNodeBFS(root.left);
-        int right = findmaxdeptOfaNodeBFS(root.right);
-        
-        return 1+ Math.max(left, right);
+    if (index >= nums.size()) {
+        return nullptr;
     }
-    // --------------------------------------------------------
-
-    private static int findmaxdeptOfaNodeBFS(BinaryTree.Node root){
-       if(root == null){
-           return 0;
-       }
-       Queue<BinaryTree.Node> queue = new LinkedList<>();
-       int count = 0; 
-       queue.add(root);
-       
-       while(!queue.isEmpty()){
-           int size = queue.size();
-           for(int i = 0; i < size; i++){
-               BinaryTree.Node curr = queue.poll();
-               if(curr.left != null){
-                   queue.add(curr.left);
-               }
-               if(curr.right != null){
-                   queue.add(curr.right);
-               }
-           }
-           count++;
-       }
-       return count;
+    Node* parent = new Node(nums[index]);
+    parent->left = createTree(2 * index + 1, nums);
+    parent->right = createTree(2 * index + 2, nums);
+    return parent;
+}
+int main(){
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i < n; i++){
+        cin >> nums[i];
     }
-
-    public static void main(String[] args) {
-        BinaryTree.Node root = BinaryTree.createTree();
-        findmaxdeptOfaNodeBFS(root);
-        findmaxdeptOfaNodeRECURSIVE(root);
-    }
+    createTree(0, nums);
+    return 0;
 }

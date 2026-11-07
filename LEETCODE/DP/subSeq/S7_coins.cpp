@@ -1,68 +1,201 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 
+// ============================================================
+// 1. MEMOIZATION
+// ============================================================
 
+int solve(int index, int target, vector<int>& coins,
+          vector<vector<int>>& dp) {
 
-int solve(int index, int target, vector<int> coins, vector<vector<int>>& dp){
-
-
-    if(index == 0){
-        if(target % coins[0] == 0){
+    // Base case: only coin[0] is available
+    if(index == 0) {
+        if(target % coins[0] == 0) {
             return target / coins[0];
-        }else{
-            return 1e9;
         }
+
+        return 1e9;
     }
 
-    if(dp[index][target] != -1){
+    if(dp[index][target] != -1) {
         return dp[index][target];
     }
-    int skip = 0 +  solve(index - 1, target, coins, dp);
+
+    // Don't take current coin
+    int skip = solve(index - 1, target, coins, dp);
+
+    // Take current coin
     int pick = 1e9;
 
-    if(coins[index] <= target){
-        pick = 1 +  solve(index, target - coins[index], coins, dp);
+    if(coins[index] <= target) {
+        pick = 1 + solve(index, target - coins[index], coins, dp);
     }
 
-    return min(pick,skip);
-}
-int mincoinscount(vector<int> coint, int n, int target){
-    vector<vector<int>> dp(n,vector<int>(target + 1, -1));
-    return solve(n-1,target, coint, dp);
+    return dp[index][target] = min(pick, skip);
 }
 
-int tabulation(int target, vector<int> coins){
+
+int minCoinsMemoization(vector<int>& coins, int target) {
+
     int n = coins.size();
-    vector<vector<int>> dp(n, vector<int>(target+1,1e9));
 
-    for(int i = 1; i <= target; i++){
-        if(i % coins[0] == 0){
+    vector<vector<int>> dp(
+        n,
+        vector<int>(target + 1, -1)
+    );
+
+    int ans = solve(n - 1, target, coins, dp);
+
+    return ans;
+}
+
+
+// ============================================================
+// 2. TABULATION
+// ============================================================
+
+int tabulation(int target, vector<int>& coins) {
+
+    int n = coins.size();
+
+    vector<vector<int>> dp(
+        n,
+        vector<int>(target + 1, 1e9)
+    );
+
+    // Base case
+    // Only coins[0] is available
+    for(int i = 0; i <= target; i++) {
+
+        if(i % coins[0] == 0) {
             dp[0][i] = i / coins[0];
         }
     }
 
-    for(int index = 1; index < n; index++){
 
-        for(int k = 1; k <= target; k++){
-            int skip = 0 +  dp[index - 1][k];
+    for(int index = 1; index < n; index++) {
+
+        for(int k = 0; k <= target; k++) {
+
+            // Don't take current coin
+            int skip = dp[index - 1][k];
+
+            // Take current coin
             int pick = 1e9;
-            if(coins[index] <= k){
-                pick = 1 +  dp[index][k - coins[index]];
+
+            if(coins[index] <= k) {
+                pick = 1 + dp[index][k - coins[index]];
             }
-            dp[index][k] = min(skip,pick);
+
+            dp[index][k] = min(skip, pick);
         }
     }
-    return dp[n-1][target];
+
+    return dp[n - 1][target];
 }
-int main(){
+
+
+// ============================================================
+// 3. SPACE OPTIMIZATION
+// ============================================================
+
+int space(int target, vector<int>& coins) {
+
+    int n = coins.size();
+
+    vector<int> prev(target + 1, 1e9);
+
+
+    // Base case
+    // Only coins[0]
+    for(int i = 0; i <= target; i++) {
+
+        if(i % coins[0] == 0) {
+            prev[i] = i / coins[0];
+        }
+    }
+
+
+    for(int index = 1; index < n; index++) {
+
+        vector<int> temp(target + 1, 1e9);
+
+        for(int k = 0; k <= target; k++) {
+
+            // Don't take current coin
+            int skip = prev[k];
+
+            // Take current coin
+            int pick = 1e9;
+
+            if(coins[index] <= k) {
+                pick = 1 + temp[k - coins[index]];
+            }
+
+            temp[k] = min(skip, pick);
+        }
+
+        prev = temp;
+    }
+
+    return prev[target];
+}
+
+
+// ============================================================
+// MAIN
+// ============================================================
+
+int main() {
 
     int n;
-    cin >>n;
+    cin >> n;
 
     vector<int> coins(n);
-    for(int i = 0; i <n ; i++){
+
+    for(int i = 0; i < n; i++) {
         cin >> coins[i];
     }
+
+    int target;
+    cin >> target;
+
+
+    // -------------------------------
+    // Memoization
+    // -------------------------------
+
+    int ans1 = minCoinsMemoization(coins, target);
+
+
+    // -------------------------------
+    // Tabulation
+    // -------------------------------
+
+    int ans2 = tabulation(target, coins);
+
+
+    // -------------------------------
+    // Space Optimized
+    // -------------------------------
+
+    int ans3 = space(target, coins);
+
+
+    // -------------------------------
+    // Print answers
+    // -------------------------------
+
+    if(ans1 >= 1e9) {
+        cout << "No solution\n";
+    }
+    else {
+        cout << "Memoization: " << ans1 << endl;
+        cout << "Tabulation: " << ans2 << endl;
+        cout << "Space Optimized: " << ans3 << endl;
+    }
+
+
     return 0;
 }

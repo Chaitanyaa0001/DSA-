@@ -1,125 +1,114 @@
-package LEETCODE.LinkedList.doubleLinkedlist;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class insertition {
-         static class Node {
-        int data;
-        Node next;
-        Node back;
-        Node(int data, Node next, Node back){
-            this.data = data;
-            this.next = next;
-            this.back = back;
-        }
-        Node(int data){
-            this.data = data;
-            this.next = null;
-            this.back = null;
-        }
+struct Node{
+    /* data */
+    int data;
+    Node* next;
+    Node* back;
+
+    Node(int data){
+        this->data = data;
+        this->next = nullptr;
+        this->back  = nullptr;
+    }
+};
+
+
+Node* insert_at_head(Node* head, int val){
+    if(head == nullptr){
+        return nullptr;
+    }
+    Node* newNode = new Node(val);
+    newNode->next = head;
+    head->back = newNode;
+    return newNode;
+    
+}
+
+Node* insert_at_tail_before(Node* head, int val){
+    if(head == nullptr){
+        return nullptr;
+    }
+    Node* temp = head;
+
+    while (temp->next->next != nullptr){
+        temp = temp->next;
+    }
+    Node* newNode = new Node(val);
+    newNode->next = temp->next;
+    temp->next->back = newNode;
+    temp->next = newNode;
+    newNode->back = temp;
+    // 0 - 0 - 0
+            // 0   
+    return head;   
+}
+
+Node* insert_at_tail_after(Node* head, int val) {
+    Node* newNode = new Node(val);
+
+    // Case 1: Empty list
+    if (head == nullptr) {
+        return newNode;
     }
 
-    private static Node arrtodll(int[]arr){
-        int n = arr.length;
-        Node head = new Node(arr[0]);
-        Node prev = head;
-        for(int i = 1; i < n; i++){
-            Node temp = new Node(arr[i], null, prev);
-            prev.next = temp;
-            prev = temp;
-        }
+    Node* temp = head;
+
+    // Reach the last node
+    while (temp->next != nullptr) {
+        temp = temp->next;
+    }
+
+    // Insert after the last node
+    temp->next = newNode;
+    newNode->back = temp;
+
+    return head;
+}
+
+Node* insert_at_kthposition(Node* head, int k, int val) {
+    if (k <= 0) {
         return head;
     }
-    private static void printall(Node head){
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
+
+    if (k == 1) {
+        Node* temp = new Node(val);
+        temp->next = head;
+
+        if (head != nullptr) {
+            head->back = temp;
         }
-    }
-    // ---------------------------------------------------------------------
-    private static Node headinseet(Node head, int val){
-        Node temp  = new Node(val,head,null);
-        head.back = temp;
+
         return temp;
     }
-    // ----------------------------------------------------------------------
-    private static Node tailinsert(Node head, int ele){
-        if(head == null) return null;
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
-        Node newNode = new Node(ele,null,temp);
-        temp.next = newNode;
-        return head;
-    }
-    // -----------------------------------------------------------------
-    private static Node beforetail(Node head, int ele){
-        if(head == null){
-            return head;
-        }
-        if(head.next == null){
-            Node x = new Node(ele,head, null);
-            head.back = x;
-            return x;
-        }
-        Node temp = head;
-        while (temp.next.next != null) {
-            temp = temp.next;
-        }
-        Node newNode = new Node(ele,temp.next,temp);
-        temp.next.back = newNode;
-        temp.next  =  newNode;
-        return head ;
-    }
-    // ---------------------------------------------------------------
-    private static Node kelement(Node head, int ele, int k){
-        // if my list is empty ret  urn null 
-        boolean flag = true;
-        if(head == null){
-            return null;
-        }
-        if(head.next == null ){
-            if(k == 1){
-                Node temp  = new Node(ele,head,null);
-                head.back = temp;
-                return temp;
-            }else{
-                System.out.println("false");
-            }
-        } 
-        if(k == 1){
-            Node newNode = new Node(ele,head,null);
-            head.back = newNode;
-            return newNode;
-        }
-        
-        Node temp = head; int count = 0;
-        while (temp != null) {
-            count++;
-            if(count == k){
-                break;
-            }
-            temp = temp.next;
-        } 
-        if(temp == null){
-            System.out.println("position out of bound");
-            return head;
-        }
-        Node prev = temp.back;
-        Node newNode = new Node(ele,temp,prev);
-        prev.next = newNode;
-        temp.back = newNode;
-        return head;
-    }
-    // ------------------------------------------------------------------------
-    
-    public static void main(String[] args) {
-        int arr[] = {10,20,30,40};
-        Node head = arrtodll(arr);
 
-        // Node h = headinseet(head, 100);
-        // printall(h);
-        Node K = kelement(head, 100, 5);
-        printall(K);
+    Node* temp = head;
+    int counter = 1;
+
+    while (temp != nullptr) {
+        if (counter == k) {
+            break;
+        }
+        counter++;
+        temp = temp->next;
     }
+
+    if (temp == nullptr) {
+        return head;
+    }
+
+    Node* newNode = new Node(val);
+    Node* prev = temp->back;
+
+    prev->next = newNode;
+    newNode->back = prev;
+    newNode->next = temp;
+    temp->back = newNode;
+
+    return head;
+}
+int main(){
+
+    return 0;
 }

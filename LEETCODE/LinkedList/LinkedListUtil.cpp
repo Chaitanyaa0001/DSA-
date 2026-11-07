@@ -1,42 +1,36 @@
-package LEETCODE.LinkedList;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class LinkedListUtil {
 
-    public static class Node {
-        public int val;
-        public Node next;
-
-        public Node(int val) {
-            this.val = val;
-        }
-
-        public Node(int val, Node next) {
-            this.val = val;
-            this.next = next;
-        }
+class Node{
+    public:
+    int data;
+    Node* next;
+    Node(int data){
+        this->data = data;
+        this->next = nullptr;
     }
+};
 
-    // Convert Array → Linked List
-    public static Node arrayToLinkedList(int[] arr) {
+// or 
 
-        if (arr == null || arr.length == 0) return null;
-
-        Node head = new Node(arr[0]);
-        Node current = head;
-
-        for (int i = 1; i < arr.length; i++) {
-            current.next = new Node(arr[i]);
-            current = current.next;
-        }
-
-        return head;
+struct Nodee
+{
+    /* data */
+    int data ;
+    Nodee* next;
+    Nodee(int data){
+        this->data = data;
+        this->next = nullptr;
     }
-    // Print Linked List
-    public static void print(Node head) {
-        while (head != null) {
-            System.out.print(head.val + " -> ");
-            head = head.next;
-        }
-        System.out.println("null");
-    }
+};
+
+int main(){
+
+    Node* head = new Node(10);
+
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+    return 0;
 }

@@ -1,36 +1,29 @@
-package LEETCODE.sortng;
+#include<bits/stdc++.h>
+using namespace std;
 
-public class selectionsort {
-    private static void selectionSort( int  [] arr ){
-        int n = arr.length;
-        for(int i = 0; i < n; i++ ){
-            int smallest = i;
-            for(int j = i; j < n;j++){
-                if(arr[j] < arr[smallest]){
-                    smallest = j; 
-                }
+
+
+void selection_sort(int n, vector<int>& nums) {
+    for (int i = 0; i < n; i++) {
+        int minindex = i;
+
+        for (int j = i + 1; j < n; j++) {
+            if (nums[minindex] > nums[j]) {
+                minindex = j;
             }
-            int temp = arr[smallest];
-            arr[smallest] = arr[i];
-            arr[i] = temp;
-               
         }
-    }
-    
 
-    // sorted array 
-    private static void sortedarrprint(int arr[]){
-        for(int i = 0; i< arr.length; i++){
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println(" ");
+        swap(nums[i], nums[minindex]);
     }
-    public static void main(String[] args) {
-        int arr [] = {5,4,7,8,4,5,2,1};
-        System.out.println("selection sort algo");
-        selectionSort(arr);
-        // printing 
-        sortedarrprint(arr);
+}
 
+int main(){
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i< n; i++){
+        cin >> nums[i];
     }
+    selection_sort(n,nums);
+    return 0;
 }
