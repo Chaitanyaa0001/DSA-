@@ -16,6 +16,8 @@ using namespace std;
 
 string shortest_common_sequence(string s){
 
+
+
 }
 int main(){
     string s; 
