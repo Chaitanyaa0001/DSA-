@@ -1,37 +1,48 @@
-package LEETCODE.BinarySearch.BinaryOn1DArray;
 
+#include <bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.BinarySearch.ArrayInp;
+pair<int, int> floor_ceil(int n, int key, vector<int>& nums) {
 
-public class S4_FloorAndCeil {
-    private static int[]  floorAndCeil(int[] nums, int x){
-        int n = nums.length;
-        int start = 0, end = n-1;
-        int floor = -1;
-        int ceil = -1;
-        while ( end >= start) {
-           int mid = start + (end - start) / 2;
-           if( nums[mid] == x){
-            floor = nums[mid];
-            ceil = nums[mid];
-            break;
-           }else if(nums[mid] > x){
-               ceil = nums[mid];
-               end = mid -1;
-            }else{
-               floor = nums[mid];
-            start = mid + 1;
-           }
+    int low = 0;
+    int high = n - 1;
+
+    int floor = -1;
+    int ceil = -1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (nums[mid] == key) {
+            return {key, key};
         }
-        return new int[]{floor,ceil};
+        else if (nums[mid] < key) {
+            floor = nums[mid];
+            low = mid + 1;
+        }
+        else {
+            ceil = nums[mid];
+            high = mid - 1;
+        }
     }
-    public static void main(String[] args) {
-        int [] nums = ArrayInp.takeArrayInput();
-        int x =  5;
-        int [] res = floorAndCeil(nums, x);
-        
-        System.out.println("Floor: " + res[0]);
-        System.out.println("Ceil: " + res[1]);
-        
+
+    return {floor, ceil};
+}
+
+int main() {
+
+    int n, key;
+    cin >> n >> key;
+
+    vector<int> nums(n);
+
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
     }
+
+    auto ans = floor_ceil(n, key, nums);
+
+    cout << "Floor: " << ans.first << endl;
+    cout << "Ceil: " << ans.second << endl;
+
+    return 0;
 }

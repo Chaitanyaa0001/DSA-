@@ -3,8 +3,7 @@ using namespace std;
 
 
 int lcs(string s1, string s2){
-    int n = s1.size();
-    int m = s2.size();
+    int n = s1.size();;
     
     vector<int> curr(n+1);
     vector<int> prev(n+1);

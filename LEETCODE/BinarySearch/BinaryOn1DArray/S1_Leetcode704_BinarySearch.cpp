@@ -1,32 +1,35 @@
-package LEETCODE.BinarySearch.BinaryOn1DArray;
-import java.util.Scanner;
+#include<bits/stdc++.h>
+using namespace std;
 
-import LEETCODE.BinarySearch.ArrayInp;
-public class S1_Leetcode704_BinarySearch {
-    
-    private static int brute(int[]nums, int target){
 
-        int n = nums.length;
-        int start = 0;
-        int end = n-1;
-        while (end >= start) {
-            int mid = start + (end-start)/2;
-            if(nums[mid] == target){
-                return mid;
-            }else if(nums[mid] < target){
-                start = mid +1;
-            }else{
-                end = mid-1;
-            }
+
+int binary_search(int n, int target, vector<int> nums){
+
+    int low = 0; int high = n -1 ;
+    int ans = -1;
+    while ( low <= high){
+        
+        int mid = low + (high - low) / 2;
+        if(nums[mid] == target){
+            ans = mid;
+            break;
+        }else if(target < nums[mid]){
+            high = mid - 1;
+        }else{
+            low = mid + 1;
         }
-        return -1;
+    }
+    return ans;
+}
+int main(){
+    int n;
+    int target;
+    cin >> n >> target;
+    vector<int> nums(n);
+    for(int i= 0; i < n; i++){
+        cin >> nums[i];
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int [] nums = ArrayInp.takeArrayInput();
-        int target =  sc.nextInt();
-        System.out.println(brute(nums, target));
-        sc.close();
-    }
+    auto  ans = binary_search(n,target,nums);
+    cout << ans << endl;
 }
